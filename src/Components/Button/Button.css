@@ -1,0 +1,17 @@
+.btn {
+  background: var(--sec-clr);
+  border-radius: 4px;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 56px;
+  font-style: normal;
+  font-family: var(--secfntfam);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 27px;
+  border: none;
+  color: white;
+}

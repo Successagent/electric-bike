@@ -1,0 +1,12 @@
+.border-btn {
+  height: 46px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #606060;
+  font-family: var(--secfntfam);
+  background-color: transparent;
+  border: 1px solid #ccc5c5;
+  border-radius: 6px;
+}

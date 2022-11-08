@@ -1,0 +1,48 @@
+.card-one {
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  gap: 40px;
+}
+
+.card-one > div {
+  height: 250px;
+  width: 33.3%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--other-clr);
+  padding: 30px;
+  border-radius: 10px;
+  font-family: var(--prim-fntfam);
+}
+
+.card-one > div > div {
+  z-index: 11;
+}
+
+.card-one .btn {
+  margin-top: 50px;
+}
+
+.card-one img {
+  position: absolute;
+  z-index: 10;
+  left: 100px;
+}
+
+.card-one .p {
+  color: var(--sec-clr);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.card-one .h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: #22343d;
+}

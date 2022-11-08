@@ -1,0 +1,36 @@
+header {
+  background-color: var(--pri-clr);
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.header-logo-con {
+  width: 25%;
+}
+
+.header-list,
+.header-icons-con {
+  display: flex;
+  align-items: center;
+  font-family: var(--prim-fntfam);
+  gap: 20px;
+  width: 40%;
+  margin-right: 100px;
+}
+
+.header-list li {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: var(--prim-fntfam);
+  margin-right: 0;
+}
+
+.header-icons-con {
+  width: 35%;
+  gap: 50px;
+}
