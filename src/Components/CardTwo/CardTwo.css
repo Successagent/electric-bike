@@ -1,5 +1,47 @@
-
 .card-two {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  justify-content: center;
+  font-family: var(--secfntfam);
+  z-index: 11;
+}
+
+.card-two > div {
+  width: 25%;
+  background-color: white;
+  z-index: 11;
+  border-radius: 8px;
+  border: 1px solid rgba(240, 62, 61, 0.2);
+}
+
+.card-two > div > div {
+  background-image: url(../../assets/image203.svg);
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-two .h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  padding-bottom: 30px;
+  color: var(--sec-clr);
+}
+
+.card-two .p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #606060;
+  margin: 10px 0;
 }

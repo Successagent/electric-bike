@@ -10,6 +10,11 @@
   gap: 60px;
 }
 
+.home-page >button{
+ width: 20%;
+ margin: auto;
+}
+
 .home-hero-social-link {
   display: flex;
   flex-direction: column;
@@ -56,20 +61,6 @@
   background-color: var(--pri-clr);
 }
 
-.home-feature-section {
-  display: flex;
-  align-items: center;
-  padding: 50px 130px;
-  gap: 40px;
-}
-
-.home-feature-section .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 50%;
-  gap: 20px;
-  margin: 40px 0;
-}
 
 .feature-footer {
   display: flex;
@@ -100,6 +91,10 @@
   line-height: 160%;
 }
 
-.product-section {
-  font-family: var(--sec-clr);
+.feature-card-two .home-feature-section >div:nth-child(1) {
+  background-color: var(--pri-clr);
+  color: white !important;
+  height: 100%;
 }
+
+.feature-card-two .home-feature-section >div:nth-child(1) 
