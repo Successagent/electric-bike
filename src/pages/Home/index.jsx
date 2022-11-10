@@ -87,6 +87,9 @@ const index = () => {
         <div className="feature-card-two">
           <FeatureCard reverse="reverse" />
         </div>
+        <div className='faq-section'>
+          <FeatureCard faq="faq" />
+        </div>
       </div>
     </>
   )

@@ -153,3 +153,60 @@
 .feature-card-two .home-feature-section > div:nth-child(1) .btn {
   width: 204px;
 }
+
+.faq-section {
+  width: 90%;
+  margin: auto;
+}
+
+.faq-section .home-feature-section {
+  padding: 0;
+  background: #f6f6f6;
+  border-radius: 16px;
+  padding: 50px;
+  gap: 0px;
+}
+
+.faq-section .home-feature-section > div {
+  width: 50%;
+  font-family: var(--secfntfam);
+}
+
+.faq-section .home-feature-section > div:nth-child(1) .h2{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.faq-section .home-feature-section > div:nth-child(2) {
+  background-color: white;
+  border-radius: 16px;
+  padding: 50px 30px;
+  padding-bottom: 20px;
+}
+
+.faq-section .home-feature-section > div:nth-child(2) .p{
+ display: none;
+}
+
+.faq-section .home-feature-section > div > div {
+  border-bottom: 1.5px solid #d7d7d7;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.faq-section .home-feature-section > div:nth-child(2) .flex {
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.faq-section .icon-con {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
