@@ -68,6 +68,6 @@
   
   .home-product-card >div:nth-child(2) {
   position: absolute;
-  width: 93%;
+  min-width: 93.5%;
   margin: auto;
   }

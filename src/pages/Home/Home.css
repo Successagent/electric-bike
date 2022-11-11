@@ -157,6 +157,7 @@
 .faq-section {
   width: 90%;
   margin: auto;
+  margin-bottom: 50px;
 }
 
 .faq-section .home-feature-section {
@@ -164,7 +165,8 @@
   background: #f6f6f6;
   border-radius: 16px;
   padding: 50px;
-  gap: 0px;
+  align-items: flex-start;
+  gap: 30px;
 }
 
 .faq-section .home-feature-section > div {
@@ -172,11 +174,27 @@
   font-family: var(--secfntfam);
 }
 
-.faq-section .home-feature-section > div:nth-child(1) .h2{
+.faq-section .home-feature-section > div:nth-child(1) {
+  margin-top: 10px;
+}
+
+.faq-section .home-feature-section > div:nth-child(1) .h2 {
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
+  letter-spacing: 0.3rem;
+  margin-bottom: 20px;
+}
+
+.faq-section .home-feature-section > div:nth-child(1) .p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #22343d;
+  width: 60%;
+  margin-bottom: 20px;
 }
 
 .faq-section .home-feature-section > div:nth-child(2) {
@@ -186,8 +204,8 @@
   padding-bottom: 20px;
 }
 
-.faq-section .home-feature-section > div:nth-child(2) .p{
- display: none;
+.faq-section .home-feature-section > div:nth-child(2) .p {
+  display: none;
 }
 
 .faq-section .home-feature-section > div > div {
@@ -209,4 +227,175 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.order-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 100px 160px;
+  font-family: var(--sec-clr);
+}
+
+.order-section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.order-section .h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+  color: #22343d;
+}
+
+.order-section .p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #606060;
+  width: 60%;
+  margin: auto;
+}
+
+.home-footer-header {
+  display: flex;
+  align-items: center;
+  background: #f8f8f8;
+  padding: 50px 130px;
+}
+
+.home-footer-header > div {
+  width: 50%;
+}
+
+.home-footer-form {
+  width: 50%;
+}
+
+.home-footer-form > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #acacac;
+  border-radius: 60px;
+  width: 90%;
+  padding: 15px;
+  height: 50px;
+}
+
+.home-footer-form input {
+  border: none;
+  font-family: var(--secfntfam);
+  padding-left: 10px;
+}
+
+.home-footer-form .btn {
+  background: #f03e3d;
+  border-radius: 40px;
+  height: 37px;
+}
+
+.home-footer-header .h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  color: #252525;
+}
+
+.home-footer-header .p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #252525;
+}
+
+.home-footer-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 100px;
+}
+
+.home-footer-main > div .flex {
+  gap: 10px;
+}
+
+.home-footer-main > div .h3 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.home-footer-main > div .p {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.home-footer-main .h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #f03e3d;
+}
+
+.home-footer-main .p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 35px;
+  color: #252525;
+}
+
+.home-footer-footer {
+  padding: 50px 100px;
+  position: relative;
+}
+
+.home-footer-footer .hr {
+  background: #acacac;
+  height: 1px;
+}
+
+.home-footer-footer .flex {
+  position: absolute;
+  left: 600px;
+  top: 33px;
+  gap: 13px;
+}
+
+.home-footer-footer .flex > div {
+  border: 1px solid #acacac;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #acacac;
+  background-color: white;
+  height: 35px;
+  width: 35px;
+  font-size: 20px;
+}
+
+.home-footer-footer .p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  color: #252525;
+  margin-top: 30px;
+}
+
+.home-footer-footer .p span {
+  font-weight: 600;
 }

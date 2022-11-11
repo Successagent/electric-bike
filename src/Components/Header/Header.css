@@ -34,3 +34,14 @@ header {
   width: 35%;
   gap: 50px;
 }
+
+@media (max-width: 500px) {
+  header {
+    height: 80px;
+  }
+  .header-icons-con,
+  .header-list,
+  .header-logo-con {
+    display: none;
+  }
+}
