@@ -4,8 +4,8 @@ import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import Section from "../../Components/Section";
 import BorderButton from "../../Components/BorderButton";
-import GrayButton from "../../Components/GrayButton";
 import Button from "../../Components/Button";
+import GrayButton from "../../Components/GrayButton";
 import Description from "../Description";
 import Reviews from "../Reviews";
 
@@ -20,9 +20,14 @@ import { BsHeart, BsShare, BsStarFill } from "react-icons/bs";
 const index = () => {
   const [tab, setTab] = useState(1);
 
-  const toggleTab = () => {
-    tab == 1 ? setTab(2) : setTab(1);
-  };
+  function toggleTab(e) {
+    if (e.target.id == 2) {
+      setTab(2);
+    } else if (e.target.id == 1) {
+      setTab(1);
+    }
+    console.log(tab);
+  }
 
   return (
     <>
@@ -122,7 +127,11 @@ const index = () => {
             </div>
           </div>
         </section>
-        {tab == 2 ? <Description /> : <Reviews />}
+        <div className="description-hero-section flex">
+          <Button btn={toggleTab} title="Description"></Button>
+          <GrayButton btn={toggleTab} title="Customers Review"></GrayButton>
+        </div>
+        {tab == 1 ? <Description /> : <Reviews />}
         <div className="seller-sec">
           <Section card="1" headerTwo="Best Seller" />
           <Section card="1" headerTwo="Recently viewed" />

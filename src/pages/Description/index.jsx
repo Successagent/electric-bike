@@ -1,5 +1,3 @@
-import GrayButton from "../../Components/GrayButton";
-import Button from "../../Components/Button";
 
 import "../Description/Description.css";
 
@@ -8,10 +6,6 @@ import DescriptionLogo from "../../assets/description-logo.png";
 const index = () => {
   return (
     <section className="description-sec">
-      <div className="description-hero-section flex">
-        <Button title="Description" />
-        <GrayButton title="Customers Review" />
-      </div>
       <div className="flex description-main-sec">
         <div>
           <h3 className="h3">New and Improved</h3>

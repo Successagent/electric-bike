@@ -1,0 +1,9 @@
+.about-page .home-feature-section {
+    flex-direction: row-reverse;
+
+}
+
+.home-feature-sect .home-feature-section>div:nth-child(2)>div {
+    position: static;
+    inset: 0;
+}

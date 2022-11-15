@@ -23,7 +23,10 @@ const index = () => {
             </Link>
           </li>
           <li>
-            <Link style={{ color: "white", textDecoration: "none" }}>
+            <Link
+              to="/about"
+              style={{ color: "white", textDecoration: "none" }}
+            >
               About
             </Link>
           </li>

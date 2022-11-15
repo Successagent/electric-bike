@@ -26,7 +26,7 @@ const index = () => {
       <div className="home-page">
         <div className="home-hero">
           <ul className="home-hero-social-link">
-            <div className="solial-icon-con active">
+            <div className="solial-icon-con">
               <CgFacebook></CgFacebook>
             </div>
             <div className="solial-icon-con">
@@ -59,7 +59,9 @@ const index = () => {
             </div>
           </div>
         </div>
-        <FeatureCard />
+        <section className="home-feature-sect">
+          <FeatureCard />
+        </section>
         <div className="feature-footer">
           <div>
             <AiOutlineGlobal style={{ fontSize: "80px" }}></AiOutlineGlobal>

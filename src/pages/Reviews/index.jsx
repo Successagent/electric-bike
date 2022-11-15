@@ -1,5 +1,6 @@
-import Button from "../../Components/Button";
 import GrayButton from "../../Components/GrayButton";
+
+
 
 import { BsStarFill } from "react-icons/bs";
 import { GrPrevious, GrNext } from "react-icons/gr";
@@ -9,10 +10,6 @@ import "../Reviews/Reviews.css";
 const index = () => {
   return (
     <section className="reviews-page">
-      <div className="description-hero-section flex">
-        <Button title="Description" />
-        <GrayButton title="Customers Review" />
-      </div>
       <section className="flex">
         <section className="reviews-main-section">
           <h3 className="h3">12 Reviews</h3>

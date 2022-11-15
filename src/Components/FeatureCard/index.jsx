@@ -1,24 +1,24 @@
-import '../FeatureCard/FeatureCard.css'
-import FeatureLogo from '../../assets/FeatureLogo.png'
-import BorderButton from '../../Components/BorderButton'
-import Button from '../../Components/Button'
+import "../FeatureCard/FeatureCard.css";
+import FeatureLogo from "../../assets/FeatureLogo.png";
+import BorderButton from "../../Components/BorderButton";
+import Button from "../../Components/Button";
 
-import MotorBike from '../../assets/tabler_motorbike.png'
-import faqLogo from '../../assets/faq.png'
+import MotorBike from "../../assets/tabler_motorbike.png";
+import faqLogo from "../../assets/faq.png";
 
-import { CgArrowRight } from 'react-icons/cg'
-import { FaAngleUp, FaAngleDown } from 'react-icons/fa'
-import { useState } from 'react'
+import { CgArrowRight } from "react-icons/cg";
+import { FaAngleUp, FaAngleDown } from "react-icons/fa";
+import { useState } from "react";
 
 const index = ({ reverse, faq }) => {
-  const [active, setActive] = useState(1)
-  const toggleActive = (e) => {}
+  const [active, setActive] = useState(1);
+  const toggleActive = (e) => {};
   return (
     <div
       className="home-feature-section"
-      style={{ flexDirection: `${reverse == 'reverse' ? 'row-reverse' : ''}` }}
+      style={{ flexDirection: `${reverse == "reverse" ? "row-reverse" : ""}` }}
     >
-      {faq == 'faq' ? (
+      {faq == "faq" ? (
         <>
           <div>
             <h2 className="h2">Check out Frequently Answered Questions</h2>
@@ -39,7 +39,7 @@ const index = ({ reverse, faq }) => {
                   )}
                 </div>
               </div>
-              <p className={`p ${active === 1 ? 'active' : ''}`} id="1">
+              <p className={`p ${active === 1 ? "active" : ""}`} id="1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Praesent non ac augue interdum vel non enim enim neque. Aliquet
                 elementum sit dictum eget porta. Nulla phasellus malesuada
@@ -57,7 +57,7 @@ const index = ({ reverse, faq }) => {
                   )}
                 </div>
               </div>
-              <p className={`p ${active === 2 ? 'active' : ''}`} id="2">
+              <p className={`p ${active === 2 ? "active" : ""}`} id="2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Praesent non ac augue interdum vel non enim enim neque. Aliquet
                 elementum sit dictum eget porta. Nulla phasellus malesuada
@@ -75,7 +75,7 @@ const index = ({ reverse, faq }) => {
                   )}
                 </div>
               </div>
-              <p className={`p ${active === 3 ? 'active' : ''}`} id="3">
+              <p className={`p ${active === 3 ? "active" : ""}`} id="3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Praesent non ac augue interdum vel non enim enim neque. Aliquet
                 elementum sit dictum eget porta. Nulla phasellus malesuada
@@ -93,7 +93,7 @@ const index = ({ reverse, faq }) => {
                   )}
                 </div>
               </div>
-              <p className={`p ${active === 4 ? 'active' : ''}`} id="4">
+              <p className={`p ${active === 4 ? "active" : ""}`} id="4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Praesent non ac augue interdum vel non enim enim neque. Aliquet
                 elementum sit dictum eget porta. Nulla phasellus malesuada
@@ -106,7 +106,7 @@ const index = ({ reverse, faq }) => {
         <>
           <div className="feature-item-one">
             <h3 className="h3">Feature 1</h3>
-            {reverse == 'reverse' ? (
+            {reverse == "reverse" ? (
               <h2 className="h2">
                 Outstanding Products With Exceptional Brands
               </h2>
@@ -119,8 +119,8 @@ const index = ({ reverse, faq }) => {
               Massa volutpat amet odio urna vel aliquet. Cras vitae malesuada
               tortor enim dictum a quam consectetur tristique.
             </p>
-            {reverse == 'reverse' ? (
-              ''
+            {reverse == "reverse" ? (
+              ""
             ) : (
               <div className="grid">
                 <BorderButton
@@ -147,12 +147,14 @@ const index = ({ reverse, faq }) => {
             />
           </div>
           <div>
-            <img src={FeatureLogo} alt="" />
+            <div>
+              <img src={FeatureLogo} alt="" />
+            </div>
           </div>
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;
