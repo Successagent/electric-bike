@@ -19,13 +19,19 @@
   --pri-clr: black;
   --sec-clr: #f03e3d;
   --other-clr: #faf2ef;
-  --blk-clr:#22343D;
+  --blk-clr: #22343D;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+li,
+a {
+  text-decoration: none;
+  list-style: none;
 }
 
 .h1 {
@@ -68,5 +74,9 @@
 
 .grid {
   display: grid;
- 
+
+}
+
+img {
+  max-width: 100%;
 }

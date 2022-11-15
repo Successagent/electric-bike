@@ -35,6 +35,10 @@ header {
   gap: 50px;
 }
 
+.mobile-header {
+display: none;
+}
+
 @media (max-width: 500px) {
   header {
     height: 80px;

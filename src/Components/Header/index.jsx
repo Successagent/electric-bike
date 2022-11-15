@@ -1,13 +1,13 @@
-import '../Header/Header.css'
-import headerLogo from '../../assets/HeaderLogo.png'
-import searchLogo from '../../assets/search-normal.png'
-import cartLogo from '../../assets/cart.png'
-import profileLogo from '../../assets/profile.png'
-import heartLogo from '../../assets/heart.png'
-import { useState } from 'react'
-import MenuLogo from '../../assets/menu.svg'
-import MobileHeaderLogo from ""
-import { Link } from 'react-router-dom'
+import "../Header/Header.css";
+import headerLogo from "../../assets/HeaderLogo.png";
+import searchLogo from "../../assets/search-normal.png";
+import cartLogo from "../../assets/cart.png";
+import profileLogo from "../../assets/profile.png";
+import heartLogo from "../../assets/heart.png";
+import { useState } from "react";
+import MenuLogo from "../../assets/menu.svg";
+import MobileHeaderLogo from "../../assets/mobile-header.png";
+import { Link } from "react-router-dom";
 
 const index = () => {
   return (
@@ -18,30 +18,35 @@ const index = () => {
         </div>
         <ul className="header-list">
           <li>
-            <Link style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
+            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link style={{ color: 'white', textDecoration: 'none' }}>
+            <Link style={{ color: "white", textDecoration: "none" }}>
               About
             </Link>
           </li>
           <li>
-            <Link style={{ color: 'white', textDecoration: 'none' }}>
+            <Link
+              to="/products"
+              style={{ color: "white", textDecoration: "none" }}
+            >
               Products
             </Link>
           </li>
           <li>
-            <Link style={{ color: 'white', textDecoration: 'none' }}>
+            <Link style={{ color: "white", textDecoration: "none" }}>
               Deals
             </Link>
           </li>
           <li>
-            <Link style={{ color: 'white', textDecoration: 'none' }}>
+            <Link style={{ color: "white", textDecoration: "none" }}>
               Support
             </Link>
           </li>
           <li>
-            <Link style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
+            <Link style={{ color: "white", textDecoration: "none" }}>Blog</Link>
           </li>
         </ul>
         <ul className="header-icons-con">
@@ -54,11 +59,10 @@ const index = () => {
       <div className="mobile-header">
         <div className="menu">
           <img src={MenuLogo} alt="" />
-
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default index
+export default index;

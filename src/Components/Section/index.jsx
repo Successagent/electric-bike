@@ -1,19 +1,19 @@
-import '../Section/Section.css'
-import Button from '../Button'
-import CardTwo from '../../Components/CardTwo'
+import "../Section/Section.css";
+import Button from "../Button";
+import CardTwo from "../../Components/CardTwo";
 
-import BorderButton from '../BorderButton'
+import BorderButton from "../BorderButton";
 
-const index = ({ card }) => {
+const index = ({ card, headerTwo }) => {
   return (
     <div
       className="product-section"
       style={{
-        height: `${card < 2 ? '450px' : ''}`,
+        height: `${card < 2 ? "450px" : ""}`,
       }}
     >
-      <h2 className="h2">Browse Our Products</h2>
-      <p className="p" style={{ marginBottom: `${card < 2 ? '40px' : ''}` }}>
+      <h2 className="h2">{headerTwo}</h2>
+      <p className="p" style={{ marginBottom: `${card < 2 ? "40px" : ""}` }}>
         Check out what others are buying
       </p>
       {card == 2 ? (
@@ -23,15 +23,15 @@ const index = ({ card }) => {
           <BorderButton title="Recommended" />
         </div>
       ) : (
-        ''
+        ""
       )}
       <div
         className="slate"
-        style={{ display: `${card < 2 ? 'none' : ''}` }}
+        style={{ display: `${card < 2 ? "none" : ""}` }}
       ></div>
       <div
         className="home-product-card"
-        style={{ backgroundColor: `${card < 2 ? 'white' : ''}` }}
+        style={{ backgroundColor: `${card < 2 ? "white" : ""}` }}
       >
         {card == 2 ? (
           <>
@@ -61,7 +61,7 @@ const index = ({ card }) => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;
