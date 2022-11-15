@@ -1,9 +1,128 @@
 .about-page .home-feature-section {
     flex-direction: row-reverse;
+}
 
+.about-hero-section {
+    background: #F6F6F6;
+    padding: 70px 150px;
+    text-align: center;
+}
+
+.about-hero-section ul {
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.about-hero-section ul li {
+    color: var(--sec-clr);
+}
+
+.about-hero-section ul li::after {
+    content: "/";
+    padding-left: 10px;
+}
+
+.about-hero-section ul li:nth-child(2) {
+    color: #707070;
+}
+
+.about-hero-section ul li:nth-child(2):after {
+    content: "";
 }
 
 .home-feature-sect .home-feature-section>div:nth-child(2)>div {
     position: static;
     inset: 0;
+}
+
+.feature-card-two .home-feature-section img {
+    top: 50px;
+}
+
+.about-page>.flex {
+    padding: 0 100px;
+    gap: 30px;
+}
+
+.about-page>.flex>div {
+    border: 3px solid #E8E8E8;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.about-page>.flex .h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 60px;
+    font-family: var(--prim-fntfam);
+}
+
+.about-page .feature-card-two {
+    margin-top: 100px;
+}
+
+.about-page>.flex .p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: var(--secfntfam);
+    color: #606060;
+}
+
+
+.about-footer-sect {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-footer-sect>.p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    text-align: center;
+    color: #22343D;
+}
+
+.about-review {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    margin-top: 30px;
+}
+
+.sqre>.p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    text-align: center;
+    color: #22343D;
+}
+
+.sqre {
+    border: 3px solid #E8E8E8;
+    border-radius: 8px;
+    width: 760px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+    padding: 50px;
+}
+
+.next,
+.prev {
+    cursor: pointer;
 }

@@ -4,7 +4,7 @@ import CardTwo from "../../Components/CardTwo";
 
 import BorderButton from "../BorderButton";
 
-const index = ({ card, headerTwo }) => {
+const index = ({ card, headerTwo, button }) => {
   return (
     <div
       className="product-section"
@@ -16,7 +16,7 @@ const index = ({ card, headerTwo }) => {
       <p className="p" style={{ marginBottom: `${card < 2 ? "40px" : ""}` }}>
         Check out what others are buying
       </p>
-      {card == 2 ? (
+      {card && button == 2 ? (
         <div className="flex">
           <Button title="New Arrivals" />
           <Button title="Popular" />

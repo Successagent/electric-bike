@@ -39,17 +39,25 @@ const index = () => {
             </Link>
           </li>
           <li>
-            <Link style={{ color: "white", textDecoration: "none" }}>
+            <Link
+              to="/deals"
+              style={{ color: "white", textDecoration: "none" }}
+            >
               Deals
             </Link>
           </li>
           <li>
-            <Link style={{ color: "white", textDecoration: "none" }}>
+            <Link
+              to="/support"
+              style={{ color: "white", textDecoration: "none" }}
+            >
               Support
             </Link>
           </li>
           <li>
-            <Link style={{ color: "white", textDecoration: "none" }}>Blog</Link>
+            <Link to="/blog" style={{ color: "white", textDecoration: "none" }}>
+              Blog
+            </Link>
           </li>
         </ul>
         <ul className="header-icons-con">
