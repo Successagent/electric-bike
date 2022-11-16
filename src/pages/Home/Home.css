@@ -39,6 +39,10 @@
   padding: 70px 30px;
 }
 
+.section-comp-two .home-product-card {
+  height: auto;
+}
+
 .home-hero-intro .h1 {
   margin-bottom: 15px;
 }
