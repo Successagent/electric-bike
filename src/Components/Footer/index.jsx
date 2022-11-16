@@ -37,26 +37,28 @@ const index = () => {
         <ul>
           <h3 className="h3">Quick Links</h3>
           <p className="p">About</p>
-          <p className="p">About</p>
-          <p className="p">About</p>
-          <p className="p">About</p>
-          <p className="p">About</p>
+          <p className="p">Blog</p>
+          <p className="p">Product</p>
+          <p className="p">Terms and Conditions</p>
+          <p className="p">Privacy Policy</p>
         </ul>
         <ul>
-          <h3 className="h3">Quick Links</h3>
-          <p className="p">About</p>
-          <p className="p">About</p>
-          <p className="p">About</p>
-          <p className="p">About</p>
-          <p className="p">About</p>
+          <h3 className="h3">Help</h3>
+          <p className="p">Support</p>
+          <p className="p">Track Your Order</p>
         </ul>
         <ul>
-          <h3 className="h3">Quick Links</h3>
-          <p className="p">About</p>
-          <p className="p">About</p>
-          <p className="p">About</p>
-          <p className="p">About</p>
-          <p className="p">About</p>
+          <h3 className="h3">Contact Us</h3>
+          <p className="p">
+            <span>Address: </span> lorem ipsumlorem ipsum sdfsdfsdsdsdfdf sdfsd
+          </p>
+          <p className="p">
+            <span>Email: </span>amplemail@gmail.com
+          </p>
+          <p className="p">
+            <span>Phone: </span>+2349161364979
+          </p>
+         
         </ul>
       </section>
       <section className="home-footer-footer">

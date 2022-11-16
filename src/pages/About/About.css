@@ -126,3 +126,27 @@
 .prev {
     cursor: pointer;
 }
+
+@media(max-width:1020px) {
+    .about-page>.flex {
+        flex-direction: column;
+        padding: 30px;
+        padding-bottom: 0;
+    }
+
+    .about-footer-sect {
+        padding: 40px 20px;
+
+    }
+
+    .about-review {
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .sqre {
+        width: 100%;
+        height: auto;
+    }
+}
