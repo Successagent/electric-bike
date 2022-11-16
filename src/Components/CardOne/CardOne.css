@@ -57,4 +57,10 @@
   .card-one>div {
     width: 100%;
   }
+
+  .card-one img {
+    position: absolute;
+    left: 50px;
+  }
+
 }
