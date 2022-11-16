@@ -101,6 +101,8 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
-    line-height: 140%;
+    line-height: 24px;
+    font-family: 'Poppins';
   }
+
 }

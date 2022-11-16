@@ -15,6 +15,11 @@
   padding: 30px;
   border-radius: 10px;
   font-family: var(--prim-fntfam);
+  transition: all ease-in-out 400ms;
+}
+
+.card-one>div:hover {
+  background-color: #EDF2F8;
 }
 
 .card-one>div>div {
@@ -60,7 +65,7 @@
 
   .card-one img {
     position: absolute;
-    left: 50px;
+    left: 30px;
   }
 
 }

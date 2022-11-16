@@ -67,6 +67,7 @@ header {
     padding: 30px 0;
     overflow-y: scroll;
     transition: transform ease-in 400ms;
+    z-index: 99;
   }
 
   .hide-menu {

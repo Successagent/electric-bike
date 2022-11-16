@@ -89,7 +89,10 @@ const index = () => {
           </div>
         </div>
         <CardOne />
-        <Section card="2" button="2" headerTwo="Browse Our Products" />
+        <div className="section-1">
+       
+          <Section card="2" button="2" headerTwo="Browse Our Products" />
+        </div>
         <Button title="VIEW ALL PRODUCTS" />
         <div className="section-comp-two">
           <Section card="1" headerTwo="Featured Products" />

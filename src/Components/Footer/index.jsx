@@ -73,7 +73,7 @@ const index = () => {
           </div>
         </div>
         <p className="p">
-          Copyright @ 2022. All rights reserved. Developed by{" "}
+          Copyright @ 2022. All rights reserved. Developed by
           <span>Astrosoft</span>
         </p>
       </section>
