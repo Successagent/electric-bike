@@ -91,7 +91,7 @@
 }
 
 .feature-card-two {
-  margin-top: 300px;
+  margin-top: 0px;
   font-family: var(--secfntfam);
   padding-bottom: 60px;
 }
@@ -99,6 +99,10 @@
 .feature-card-two .home-feature-section {
   gap: 0px;
   padding: 0;
+}
+
+.section-comp-two .product-section {
+  margin-bottom: 0px;
 }
 
 .feature-card-two .home-feature-section>div:nth-child(1) {
@@ -375,7 +379,7 @@
   }
 
   .faq-section .home-feature-section {
-    padding: 30px;
+    padding: 20px;
   }
 
   .faq-section {

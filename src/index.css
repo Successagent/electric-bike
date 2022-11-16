@@ -88,4 +88,11 @@ img {
     font-size: 24px;
     line-height: 160%;
   }
+
+  .h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 140%;
+  }
 }
