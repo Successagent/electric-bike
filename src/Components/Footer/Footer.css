@@ -135,10 +135,16 @@
 
 
 @media(max-width:1020px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   .home-footer-header {
     flex-direction: column !important;
     padding: 30px 20px;
     gap: 20px;
+    width: 100%;
   }
 
   .home-footer-header>div,
@@ -148,6 +154,14 @@
 
   .home-footer-header>form>div {
     width: 100%;
+  }
+
+  .home-footer-header form input {
+    width: 70%;
+  }
+
+  .home-footer-header .btn {
+    width: 30%;
   }
 
   .home-footer-header>div .h3 {
