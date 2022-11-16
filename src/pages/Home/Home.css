@@ -500,7 +500,12 @@
   }
 
   .faq-section .home-feature-section>div:nth-child(2) {
-    padding: 30px;
+    padding: 20px;
+   
+  }
+
+  .faq-section .home-feature-section>div:nth-child(2) .flex {
+    gap: 30px;
   }
 
   .faq-section .home-feature-section>div:nth-child(2) .h3 {
