@@ -17,3 +17,13 @@
   display: block !important;
   width: 82%;
 }
+
+@media(max-width:1020px) {
+  .home-feature-section .grid {
+    width: 100%;
+  }
+
+  .home-feature-section .grid .btn {
+    width: 100%;
+  }
+}

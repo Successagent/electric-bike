@@ -91,7 +91,7 @@ const index = () => {
         <CardOne />
         <Section card="2" button="2" headerTwo="Browse Our Products" />
         <Button title="VIEW ALL PRODUCTS" />
-        <Section card="1" />
+        <Section card="1" headerTwo="Featured Products" />
         <div className="feature-card-two">
           <FeatureCard reverse="reverse" />
         </div>

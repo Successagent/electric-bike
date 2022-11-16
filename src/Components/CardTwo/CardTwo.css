@@ -8,7 +8,7 @@
   z-index: 11;
 }
 
-.card-two > div {
+.card-two>div {
   width: 25%;
   background-color: white;
   z-index: 11;
@@ -16,7 +16,7 @@
   border: 1px solid rgba(240, 62, 61, 0.2);
 }
 
-.card-two > div > div {
+.card-two>div>div {
   background-image: url(../../assets/image203.svg);
   height: 300px;
   background-position: center center;
@@ -44,4 +44,22 @@
   line-height: 24px;
   color: #606060;
   margin: 10px 0;
+}
+
+@media(max-width:1020px) {
+  .card-two {
+    flex-direction: column;
+  }
+
+  .card-two>div {
+    width: 100%;
+  }
+}
+
+@media(min-width:750px) and (max-width:1200px) {
+  .card-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 35px;
+  }
 }

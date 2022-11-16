@@ -9,7 +9,7 @@ const index = ({ card, headerTwo, button }) => {
     <div
       className="product-section"
       style={{
-        height: `${card < 2 ? "450px" : ""}`,
+        height: `${card < 2 ? "" : ""}`,
       }}
     >
       <h2 className="h2">{headerTwo}</h2>

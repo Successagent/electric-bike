@@ -15,3 +15,15 @@
   border: none;
   color: white;
 }
+
+
+@media(max-width:1020px) {
+  .btn {
+    width: 176.09px;
+    height: 36.6px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.8px;
+    line-height: 19px;
+  }
+}
