@@ -52,3 +52,22 @@
     font-weight: 500;
     color: black;
 }
+
+@media(max-width:1020px) {
+    .support-form-section {
+        padding: 30px;
+    }
+
+    .input-con {
+        flex-direction: column;
+    }
+
+    .input-con>div,
+    .input-con>form {
+        width: 100%;
+    }
+
+    .input-con>div {
+        margin-top: 20px;
+    }
+}

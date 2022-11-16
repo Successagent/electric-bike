@@ -1,6 +1,8 @@
 import Global from "../../assets/global.png";
 
 import "../PagesHero/PagesHero.css";
+
+
 const index = () => {
   return (
     <section>

@@ -60,3 +60,29 @@
     list-style: circle;
     margin-bottom: 10px;
 }
+
+@media(max-width:1020px) {
+    .description-sec {
+        padding: 30px;
+        padding-top: 0;
+    }
+
+    .description-main-sec,
+    .description-main-two {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .description-main-two .h3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .description-main-two>.p {
+        width: 100%;
+    }
+
+    .description-main-sec>div {
+        width: 100%;
+    }
+}
