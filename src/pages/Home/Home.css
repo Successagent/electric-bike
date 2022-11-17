@@ -447,7 +447,7 @@
   .home-feature-sect .home-feature-section>div,
   .feature-footer>div {
     width: 100%;
-
+    padding: 40px 20px;
   }
 
   .home-feature-sect .home-feature-section>div {
@@ -501,7 +501,7 @@
 
   .faq-section .home-feature-section>div:nth-child(2) {
     padding: 20px;
-   
+
   }
 
   .faq-section .home-feature-section>div:nth-child(2) .flex {

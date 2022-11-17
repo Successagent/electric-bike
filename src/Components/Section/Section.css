@@ -77,6 +77,12 @@
     padding: 0;
   }
 
+
+  .product-section>.h2 {
+    font-size: 25px;
+    margin-bottom: 10px !important;
+  }
+
   .product-section>.flex {
     flex-direction: column;
   }

@@ -56,16 +56,20 @@
 @media(max-width:1020px) {
   .card-one {
     flex-direction: column;
-    padding: 50px;
+    padding: 30px;
   }
 
   .card-one>div {
     width: 100%;
   }
 
+  .card-one .btn {
+    height: 50px;
+  }
+
   .card-one img {
     position: absolute;
-    left: 30px;
+    left: 50px;
   }
 
 }
