@@ -21,6 +21,29 @@
     border-radius: 8px;
     border: 1px solid rgba(240, 62, 61, 0.2);
     padding: 20px 15px;
+    position: relative;
+}
+
+.card-three section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 10px;
+    background-color: white;
+    position: absolute;
+    font-size: 30px;
+    top: 20px;
+    left: 16px;
+    color: #606060;
+    border-radius: 4px;
+    transition: all 800ms ease-in-out;
+    transform: translateX(-250px);
+    opacity: 0;
+}
+
+.card-three>div:hover section {
+    transform: translate(0px) !important;
+    opacity: 1 !important;
 }
 
 .bg-img {
@@ -56,6 +79,11 @@
 @media(max-width:1020px) {
     .card-three {
         flex-direction: column;
+        gap: 35px;
+    }
+
+    .card-three .flex {
+        display: none;
     }
 
     .card-three>div {
@@ -65,11 +93,17 @@
     .card-three>div .h3 {
         font-weight: 500;
         font-size: 22px;
+        margin-bottom: 10px;
     }
 
     .card-three>div .p {
         font-size: 16px;
         font-weight: 300;
+        margin-bottom: 5px;
+    }
+
+    .card-three .section {
+        display: none;
     }
 }
 

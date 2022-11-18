@@ -134,13 +134,13 @@ const index = () => {
             <p className="p">Free shpping to all orders in Lagos</p>
           </div>
           <div>
-            <img src={Message} alt="" />
-            <h3 className="h3">Shipping</h3>
+            <img src={Global} alt="" />
+            <h3 className="h3">Support</h3>
             <p className="p">Free shpping to all orders in Lagos</p>
           </div>
           <div>
-            <img src={Message} alt="" />
-            <h3 className="h3">Shipping</h3>
+            <img src={Security} alt="" />
+            <h3 className="h3">Secure Payment</h3>
             <p className="p">Free shpping to all orders in Lagos</p>
           </div>
         </div>

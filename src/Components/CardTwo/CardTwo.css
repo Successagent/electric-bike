@@ -88,6 +88,7 @@
 @media(max-width:1020px) {
   .card-two {
     flex-direction: column;
+    gap: 35px;
   }
 
   .card-two>div {
@@ -102,6 +103,16 @@
   .card-two>div .p {
     font-size: 16px;
     font-weight: 300;
+  }
+
+  .card-two>div:hover {
+    padding: 0 !important;
+  }
+
+  .card-two>div:hover .flex,
+  .card-two>div:hover section {
+    height: 0px !important;
+    opacity: 0 !important;
   }
 }
 

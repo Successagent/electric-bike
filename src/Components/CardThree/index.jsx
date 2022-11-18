@@ -1,11 +1,15 @@
 import "../CardThree/CardThree.css";
-import { BsStarFill } from "react-icons/bs";
+import { BsStarFill, BsHeart, BsCart3 } from "react-icons/bs";
 
 const index = ({ h2, h3, p }) => {
   return (
     <div className="card-three">
       <div>
         <div className="bg-img"></div>
+        <section>
+          <BsHeart />
+          <BsCart3 />
+        </section>
         <h3 className="h3">{h3}</h3>
         <div className="flex">
           <p className="p">
@@ -19,6 +23,10 @@ const index = ({ h2, h3, p }) => {
       </div>
       <div>
         <div className="bg-img"></div>
+        <section>
+          <BsHeart />
+          <BsCart3 />
+        </section>
         <h3 className="h3">{h3}</h3>
         <div className="flex">
           <p className="p">
@@ -32,6 +40,10 @@ const index = ({ h2, h3, p }) => {
       </div>
       <div>
         <div className="bg-img"></div>
+        <section>
+          <BsHeart />
+          <BsCart3 />
+        </section>
         <h3 className="h3">{h3}</h3>
         <div className="flex">
           <p className="p">
@@ -45,6 +57,10 @@ const index = ({ h2, h3, p }) => {
       </div>
       <div>
         <div className="bg-img"></div>
+        <section>
+          <BsHeart />
+          <BsCart3 />
+        </section>
         <h3 className="h3">{h3}</h3>
         <div className="flex">
           <p className="p">

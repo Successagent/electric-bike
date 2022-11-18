@@ -27,4 +27,12 @@
   .home-feature-section .grid .btn {
     width: 100%;
   }
+
+  .home-feature-sect .home-feature-section .btn {
+    width: 85%;
+  }
+
+  .home-feature-sect .home-feature-section>div {
+    padding-bottom: 10px;
+  }
 }
