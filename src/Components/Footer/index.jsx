@@ -1,5 +1,7 @@
 import Button from "../Button";
 
+import { Link } from "react-router-dom";
+
 import footerlogo from "../../assets/footerlogo.png";
 import Visa from "../../assets/image210.svg";
 import Master from "../../assets/image212.svg";
@@ -39,8 +41,10 @@ const index = () => {
           <p className="p">About</p>
           <p className="p">Blog</p>
           <p className="p">Product</p>
-          <p className="p">Terms and Conditions</p>
-          <p className="p">Privacy Policy</p>
+          <Link to="/terms&conditions">
+            <p className="p">Terms and Conditions</p>
+          </Link>
+          <Link to="/privacy&policy"> <p className="p">Privacy Policy</p></Link>
         </ul>
         <ul>
           <h3 className="h3">Help</h3>
@@ -58,7 +62,6 @@ const index = () => {
           <p className="p">
             <span>Phone: </span>+2349161364979
           </p>
-         
         </ul>
       </section>
       <section className="home-footer-footer">

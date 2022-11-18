@@ -31,6 +31,7 @@
 
 .section-1 {
   padding: 50px;
+  position: relative;
 }
 
 .section-1>.flex {
@@ -316,7 +317,27 @@
   top: -60px;
 }
 
+
+.slate {
+  background-color: #f9f9f9;
+  transform: skewY(-1.5deg);
+  padding: 50px;
+  position: absolute;
+  width: 97%;
+  margin: auto;
+  inset: 0;
+  top: -850px;
+  height: 20px;
+  z-index: -1;
+}
+
 @media(max-width:1020px) {
+
+  .slate {
+    display: none !important;
+    position: static;
+    inset: 0;
+  }
 
   .home-hero {
     padding: 0;

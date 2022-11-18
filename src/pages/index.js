@@ -4,5 +4,7 @@ import About from "./About"
 import Deals from "./Deals"
 import Support from "./Support"
 import Search  from "./Search";
+import TermsAndConditions from "./TermsAndConditions"
+import PrivacyAndPolicy from "./PrivacyAndPolicy"
 
-export { Home, Products,About,Deals,Support,Search};
+export { Home, Products,About,Deals,Support,Search,TermsAndConditions,PrivacyAndPolicy};

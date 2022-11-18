@@ -89,6 +89,7 @@ const index = () => {
         </div>
         <CardOne />
         <div className="section-1">
+          <div className="slate"></div>
           <CardHeader
             headerTwo="Feature Products"
             text="Check out what others are buying"

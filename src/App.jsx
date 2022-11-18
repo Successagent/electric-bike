@@ -1,5 +1,14 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, Products, About, Deals, Support, Search } from "../src/pages";
+import {
+  Home,
+  Products,
+  About,
+  Deals,
+  Support,
+  Search,
+  TermsAndConditions,
+  PrivacyAndPolicy,
+} from "../src/pages";
 
 import "./App.css";
 
@@ -13,6 +22,8 @@ function App() {
         <Route path="/deals" element={<Deals />} />
         <Route path="/support" element={<Support />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/terms&conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy&policy" element={<PrivacyAndPolicy />} />
       </Routes>
     </>
   );
