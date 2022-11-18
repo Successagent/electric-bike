@@ -5,6 +5,7 @@
   gap: 40px;
 }
 
+
 .home-feature-section .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

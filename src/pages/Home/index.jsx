@@ -1,21 +1,20 @@
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import CardOne from "../../Components/CardOne";
-import Section from "../../Components/Section";
+import CardThree from "../../Components/CardThree";
+import CardTwo from "../../Components/CardTwo";
+import CardHeader from "../../Components/CardHeader";
+import Button from "../../Components/Button";
+import BorderButton from "../../Components/BorderButton";
 import FeatureCard from "../../Components/FeatureCard";
 
 import "../Home/Home.css";
-import FeatureLogo from "../../assets/FeatureLogo.png";
-import Vector from "../../assets/Vector.png";
-import MotorBike from "../../assets/tabler_motorbike.png";
-import Skate from "../../assets/icons8-skateboard.png";
-import Cooter from "../../assets/icons8-gyroscooter.png";
+
 import Global from "../../assets/global.png";
 import Message from "../../assets/message-question.png";
-
 import Security from "../../assets/security-safe.png";
-import Button from "../../Components/Button";
-import { CgFacebook, CgInstagram, CgTwitter } from "react-icons/cg";
+
+import { CgFacebook, CgInstagram } from "react-icons/cg";
 import { CiTwitter } from "react-icons/ci";
 import { AiOutlineGlobal } from "react-icons/ai";
 
@@ -30,10 +29,10 @@ const index = () => {
               <CgFacebook></CgFacebook>
             </div>
             <div className="solial-icon-con">
-              <CgFacebook></CgFacebook>
+              <CgInstagram></CgInstagram>
             </div>
             <div className="solial-icon-con">
-              <CgFacebook></CgFacebook>
+              <CiTwitter></CiTwitter>
             </div>
           </ul>
           <div className="home-hero-intro">
@@ -90,12 +89,37 @@ const index = () => {
         </div>
         <CardOne />
         <div className="section-1">
-       
-          <Section card="2" button="2" headerTwo="Browse Our Products" />
+          <CardHeader
+            headerTwo="Feature Products"
+            text="Check out what others are buying"
+          />
+          <div className="flex">
+            <Button title="New Arrivals" />
+            <Button title="Popular" />
+            <BorderButton title="Recommended" />
+          </div>
+          <CardTwo
+            h3="Foldable E-Scooter"
+            p="luxuory electronic scooter"
+            h2="N 1, 150, 000"
+          />
+          <CardTwo
+            h3="Foldable E-Scooter"
+            p="luxuory electronic scooter"
+            h2="N 1, 150, 000"
+          />
         </div>
         <Button title="VIEW ALL PRODUCTS" />
         <div className="section-comp-two">
-          <Section card="1" headerTwo="Featured Products" />
+          <CardHeader
+            headerTwo="Featured Products"
+            text="Check out what others are buying"
+          />
+          <CardThree
+            h3="Foldable E-Scooter"
+            p="luxuory electronic scooter"
+            h2="N 1, 150, 000"
+          />
         </div>
         <div className="feature-card-two">
           <FeatureCard reverse="reverse" />

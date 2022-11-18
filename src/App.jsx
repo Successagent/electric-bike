@@ -1,8 +1,6 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { Routes, Route } from "react-router-dom";
-import { Home, Products, About, Deals, Support } from "../src/pages";
-import Header from "../src/Components/Header";
+import { Home, Products, About, Deals, Support, Search } from "../src/pages";
+
 import "./App.css";
 
 function App() {
@@ -14,6 +12,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/deals" element={<Deals />} />
         <Route path="/support" element={<Support />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </>
   );

@@ -167,7 +167,7 @@ const index = () => {
           </li>
         </ul>
         <ul className="header-icons-con">
-          <img src={searchLogo} alt="" />
+          <Link to="/search"> <img src={searchLogo} alt="" /></Link>
           <img src={heartLogo} alt="" />
           <img src={profileLogo} alt="" />
           <img src={cartLogo} alt="" />

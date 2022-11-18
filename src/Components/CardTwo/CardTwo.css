@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   text-align: center;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
   font-family: var(--secfntfam);
   z-index: 11;
@@ -14,9 +14,48 @@
   z-index: 11;
   border-radius: 8px;
   border: 1px solid rgba(240, 62, 61, 0.2);
+  padding: 0px;
+  cursor: pointer;
+  transition: all ease 400ms;
 }
 
-.card-two>div>div {
+.card-two>div .flex {
+  border-bottom: 1px solid rgba(240, 62, 61, 0.2);
+  padding-bottom: 15px;
+  margin: 10px 0;
+  height: 0px;
+  opacity: 0;
+  transition: all ease 400ms;
+}
+
+.card-two>div section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 0px;
+  opacity: 0;
+  transition: all ease 400ms;
+}
+
+
+.card-two>div:hover {
+  padding: 20px 15px;
+}
+
+.card-two>div:hover .flex,
+.card-two>div:hover section {
+  height: 40px !important;
+  opacity: 1 !important;
+}
+
+.card-two>div section .btn {
+  font-size: 13px;
+  font-weight: 400;
+  height: 37px;
+}
+
+.bg-img {
   background-image: url(../../assets/image203.svg);
   height: 300px;
   background-position: center center;
@@ -33,7 +72,7 @@
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 2px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   color: var(--sec-clr);
 }
 

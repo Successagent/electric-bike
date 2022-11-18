@@ -1,11 +1,12 @@
-import "../CardTwo/CardTwo.css";
-import { BsStarFill, BsHeart, BsCart3 } from "react-icons/bs";
-import Button from "../Button";
+import "../CardThree/CardThree.css";
+import { BsStarFill } from "react-icons/bs";
+
 const index = ({ h2, h3, p }) => {
   return (
-    <div className="card-two">
+    <div className="card-three">
       <div>
         <div className="bg-img"></div>
+        <h3 className="h3">{h3}</h3>
         <div className="flex">
           <p className="p">
             <BsStarFill className="bsStar"></BsStarFill>
@@ -13,16 +14,12 @@ const index = ({ h2, h3, p }) => {
           </p>
           <p className="p">12 Reviews</p>
         </div>
-        <h3 className="h3">{h3}</h3>
         <p className="p">{p}</p>
         <h2 className="h2">{h2}</h2>
-        <section className="hover">
-          <BsHeart></BsHeart>
-          <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
-        </section>
       </div>
       <div>
         <div className="bg-img"></div>
+        <h3 className="h3">{h3}</h3>
         <div className="flex">
           <p className="p">
             <BsStarFill className="bsStar"></BsStarFill>
@@ -30,16 +27,12 @@ const index = ({ h2, h3, p }) => {
           </p>
           <p className="p">12 Reviews</p>
         </div>
-        <h3 className="h3">{h3}</h3>
         <p className="p">{p}</p>
         <h2 className="h2">{h2}</h2>
-        <section className="hover">
-          <BsHeart></BsHeart>
-          <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
-        </section>
       </div>
       <div>
         <div className="bg-img"></div>
+        <h3 className="h3">{h3}</h3>
         <div className="flex">
           <p className="p">
             <BsStarFill className="bsStar"></BsStarFill>
@@ -47,16 +40,12 @@ const index = ({ h2, h3, p }) => {
           </p>
           <p className="p">12 Reviews</p>
         </div>
-        <h3 className="h3">{h3}</h3>
         <p className="p">{p}</p>
         <h2 className="h2">{h2}</h2>
-        <section>
-          <BsHeart></BsHeart>
-          <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
-        </section>
       </div>
       <div>
         <div className="bg-img"></div>
+        <h3 className="h3">{h3}</h3>
         <div className="flex">
           <p className="p">
             <BsStarFill className="bsStar"></BsStarFill>
@@ -64,16 +53,10 @@ const index = ({ h2, h3, p }) => {
           </p>
           <p className="p">12 Reviews</p>
         </div>
-        <h3 className="h3">{h3}</h3>
         <p className="p">{p}</p>
         <h2 className="h2">{h2}</h2>
-        <section>
-          <BsHeart></BsHeart>
-          <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
-        </section>
       </div>
     </div>
   );
 };
-
 export default index;

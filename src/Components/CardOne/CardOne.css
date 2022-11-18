@@ -15,7 +15,11 @@
   padding: 30px;
   border-radius: 10px;
   font-family: var(--prim-fntfam);
-  transition: all ease-in-out 400ms;
+  transition: all ease-in-out 100ms;
+}
+
+.card-one>div .h3 {
+  width: 80%;
 }
 
 .card-one>div:hover {

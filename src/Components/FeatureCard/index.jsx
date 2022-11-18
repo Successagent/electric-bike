@@ -1,10 +1,14 @@
 import "../FeatureCard/FeatureCard.css";
-import FeatureLogo from "../../assets/FeatureLogo.png";
+
 import BorderButton from "../../Components/BorderButton";
 import Button from "../../Components/Button";
 
 import MotorBike from "../../assets/tabler_motorbike.png";
 import faqLogo from "../../assets/faq.png";
+import Skate from "../../assets/icons8-skateboard.png";
+import Scooter from "../../assets/icons8-gyroscooter.png";
+import FeatureLogo from "../../assets/FeatureLogo.png";
+import Vector from "../../assets/Vector.png";
 
 import { CgArrowRight } from "react-icons/cg";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
@@ -128,16 +132,16 @@ const index = ({ reverse, faq }) => {
                   title="Electric Bikes"
                 />
                 <BorderButton
-                  icon={<img src={MotorBike} alt="" />}
-                  title="Electric Bikes"
+                  icon={<img src={Vector} alt="" />}
+                  title="Electric Hoverboards"
                 />
                 <BorderButton
-                  icon={<img src={MotorBike} alt="" />}
-                  title="Electric Bikes"
+                  icon={<img src={Scooter} alt="" />}
+                  title="Electric Scooters"
                 />
                 <BorderButton
-                  icon={<img src={MotorBike} alt="" />}
-                  title="Electric Bikes"
+                  icon={<img src={Skate} alt="" />}
+                  title="Electric Skateboard"
                 />
               </div>
             )}

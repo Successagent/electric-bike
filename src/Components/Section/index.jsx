@@ -1,10 +1,11 @@
 import "../Section/Section.css";
 import Button from "../Button";
 import CardTwo from "../../Components/CardTwo";
+import CardThree from "../../Components/CardThree";
 
 import BorderButton from "../BorderButton";
 
-const index = ({ card, headerTwo, button }) => {
+const index = ({ card, headerTwo, button, text }) => {
   return (
     <div
       className="product-section"
@@ -12,9 +13,20 @@ const index = ({ card, headerTwo, button }) => {
         height: `${card < 2 ? "" : ""}`,
       }}
     >
-      <h2 className="h2">{headerTwo}</h2>
-      <p className="p" style={{ marginBottom: `${card < 2 ? "40px" : ""}` }}>
-        Check out what others are buying
+      <h2
+        className="h2"
+        style={{ display: `${headerTwo == "" ? "none" : "block"}` }}
+      >
+        {headerTwo}
+      </h2>
+      <p
+        className="p"
+        style={{
+          marginBottom: `${card < 2 ? "40px" : ""}`,
+          display: `${text == "" ? "none" : "block"}`,
+        }}
+      >
+        {text}
       </p>
       {card && button == 2 ? (
         <div className="flex">
@@ -52,7 +64,7 @@ const index = ({ card, headerTwo, button }) => {
           </>
         ) : (
           <div>
-            <CardTwo
+            <CardThree
               h3="Foldable E-Scooter"
               p="Luxury electronic scooter"
               h2="N 1, 150, 000"

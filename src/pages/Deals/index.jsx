@@ -2,7 +2,7 @@ import PagesHero from "../../Components/PagesHero";
 import PageIndication from "../../Components/PageIndication";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
-import Section from "../../Components/Section";
+
 
 import "../Deals/Deals.css";
 
@@ -15,7 +15,7 @@ const index = () => {
       <section className="deals-page">
         <PagesHero />
         <PageIndication other="Deals" />
-        <Section card="2" headerTwo="Get best deals Available Now" />
+       
         <section className="review-section-two">
           <section className="flex">
             <div className="red flex">

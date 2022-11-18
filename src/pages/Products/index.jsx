@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
-import Section from "../../Components/Section";
+
 import BorderButton from "../../Components/BorderButton";
 import Button from "../../Components/Button";
 import GrayButton from "../../Components/GrayButton";
@@ -121,8 +121,7 @@ const index = () => {
         </div>
         {tab == 1 ? <Description /> : <Reviews />}
         <div className="seller-sec">
-          <Section card="1" headerTwo="Best Seller" />
-          <Section card="1" headerTwo="Recently viewed" />
+         
         </div>
       </section>
       <Footer />

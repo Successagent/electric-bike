@@ -1,0 +1,31 @@
+.search-page .products-review-sec {
+    background-color: transparent;
+    padding: 0;
+    padding: 50px;
+}
+
+.search-page .products-review-sec .products-review-item-one {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.search-page .products-review-item-one li {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 28px;
+}
+
+.search-page .products-review-sec ul li:nth-of-type(2) {
+    color: var(--blk-clr);
+}
+
+.search-page .products-review-sec ul li:nth-child(2)::after {
+    content: "";
+}
+
+.search-main-sect {
+    display: flex;
+}
