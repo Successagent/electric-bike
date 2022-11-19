@@ -38,6 +38,23 @@
   transition: all ease 400ms;
 }
 
+.card-two>div section button:nth-child(2) {
+  transition: all ease 400ms;
+}
+
+.card-two>div section button:nth-child(2):hover svg {
+  transform: translateX(0px) !important;
+}
+
+.card-two>div section button:nth-child(2):hover [type="text"] {
+  display: none !important;
+}
+
+.card-two>div section button:nth-child(2) svg {
+  transform: translateX(200px);
+  transition: all ease 400ms;
+
+}
 
 .card-two>div:hover {
   padding: 20px 15px;

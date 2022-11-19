@@ -82,13 +82,12 @@ const index = () => {
               Support
             </Link>
           </li>
+
           <li>
-            <Link to="/blog" style={{ color: "black", textDecoration: "none" }}>
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link to="/blog" style={{ color: "black", textDecoration: "none" }}>
+            <Link
+              to="/favourite"
+              style={{ color: "black", textDecoration: "none" }}
+            >
               Favourite
             </Link>
           </li>
@@ -160,14 +159,13 @@ const index = () => {
               Support
             </Link>
           </li>
-          <li>
-            <Link to="/blog" style={{ color: "white", textDecoration: "none" }}>
-              Blog
-            </Link>
-          </li>
+         
         </ul>
         <ul className="header-icons-con">
-          <Link to="/search"> <img src={searchLogo} alt="" /></Link>
+          <Link to="/search">
+            {" "}
+            <img src={searchLogo} alt="" />
+          </Link>
           <img src={heartLogo} alt="" />
           <img src={profileLogo} alt="" />
           <img src={cartLogo} alt="" />

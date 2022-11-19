@@ -1,8 +1,8 @@
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import PagesHero from "../../Components/PagesHero";
+import CardTwo from "../../Components/CardTwo";
 import SearchModal from "../../Modals/SearchModal";
-
 
 import "../Search/Search.css";
 
@@ -25,7 +25,7 @@ const index = () => {
             <SearchModal />
           </div>
           <div className="section-comp-two">
-            
+            <CardTwo />
           </div>
         </section>
       </section>

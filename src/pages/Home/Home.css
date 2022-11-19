@@ -1,3 +1,11 @@
+.home-page,
+.about-page,
+.products-page,
+.deals-page,
+.support-page {
+  padding-top: 130px;
+}
+
 .home-hero {
   background-image: url(../../assets//bg-bike.png);
   height: 600px;
