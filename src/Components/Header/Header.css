@@ -1,10 +1,13 @@
 header {
   background-color: var(--pri-clr);
-  height: 140px;
+  height: 130px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 
 .header-logo-con {

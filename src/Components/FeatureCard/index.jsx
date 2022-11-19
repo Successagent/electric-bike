@@ -16,7 +16,9 @@ import { useState } from "react";
 
 const index = ({ reverse, faq }) => {
   const [active, setActive] = useState(1);
-  const toggleActive = (e) => {};
+  const toggleActive = (e) => {
+    console.log(e.target.id);
+  };
   return (
     <div
       className="home-feature-section"
@@ -35,7 +37,7 @@ const index = ({ reverse, faq }) => {
             <div>
               <div className="flex">
                 <h3 className="h3">Do you Ship outside Lagos?</h3>
-                <div className="icon-con">
+                <div className="icon-con" id="1" onClick={toggleActive}>
                   {active == 1 ? (
                     <FaAngleUp></FaAngleUp>
                   ) : (
@@ -53,7 +55,7 @@ const index = ({ reverse, faq }) => {
             <div>
               <div className="flex">
                 <h3 className="h3">Do you Ship outside Lagos?</h3>
-                <div className="icon-con">
+                <div className="icon-con" id="2" onClick={toggleActive}>
                   {active == 2 ? (
                     <FaAngleUp></FaAngleUp>
                   ) : (
@@ -71,7 +73,7 @@ const index = ({ reverse, faq }) => {
             <div>
               <div className="flex">
                 <h3 className="h3">Do you Ship outside Lagos?</h3>
-                <div className="icon-con">
+                <div className="icon-con" id="3" onClick={toggleActive}>
                   {active == 3 ? (
                     <FaAngleUp></FaAngleUp>
                   ) : (
@@ -89,7 +91,7 @@ const index = ({ reverse, faq }) => {
             <div>
               <div className="flex">
                 <h3 className="h3">Do you Ship outside Lagos?</h3>
-                <div className="icon-con">
+                <div className="icon-con" id="4" onClick={toggleActive}>
                   {active == 4 ? (
                     <FaAngleUp></FaAngleUp>
                   ) : (
