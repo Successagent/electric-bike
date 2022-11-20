@@ -159,16 +159,16 @@ const index = () => {
               Support
             </Link>
           </li>
-         
         </ul>
         <ul className="header-icons-con">
           <Link to="/search">
-            {" "}
             <img src={searchLogo} alt="" />
           </Link>
           <img src={heartLogo} alt="" />
           <img src={profileLogo} alt="" />
-          <img src={cartLogo} alt="" />
+          <Link to="/cart">
+            <img src={cartLogo} alt="" />
+          </Link>
         </ul>
       </header>
       <form className="header-form">

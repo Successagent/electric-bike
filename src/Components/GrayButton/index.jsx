@@ -1,9 +1,9 @@
 import "../GrayButton/GrayButton.css";
 
-const index = ({ title, btn }) => {
+const index = ({ title, btn, icon }) => {
   return (
     <button id="2" className="gray-btn" onClick={btn}>
-      {title}
+      {icon} {title}
     </button>
   );
 };

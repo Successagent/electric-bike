@@ -8,6 +8,7 @@ import {
   Search,
   TermsAndConditions,
   PrivacyAndPolicy,
+  Cart,
 } from "../src/pages";
 
 import "./App.css";
@@ -24,6 +25,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/terms&conditions" element={<TermsAndConditions />} />
         <Route path="/privacy&policy" element={<PrivacyAndPolicy />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </>
   );

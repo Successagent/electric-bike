@@ -1,0 +1,145 @@
+.cart-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 120px;
+    border-top: 1px solid #CCC5C5;
+    gap: 30px;
+}
+
+.cart-hero button {
+    height: 55px;
+    width: 50%;
+}
+
+.cart-main-section {
+    padding: 30px 120px;
+}
+
+.cart-table-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    border-bottom: #D9D9D9 solid 1px;
+    gap: 50px;
+}
+
+.cart-table-header-first-child {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    gap: 20px;
+}
+
+.cart-table-header-first-child img {
+    border: 1px solid #D9D9D9;
+    padding: 10px;
+}
+
+.cart-table-header-first-child .p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #22343D;
+}
+
+.cart-table-header-secd-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.cart-table-header-secd-child .p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #F03E3D;
+}
+
+.cart-table-header-secd-child .p:nth-child(3) {
+    color: black;
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid #CCC5C5;
+    border-radius: 2px;
+    width: 135px;
+    background-color: white;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #606060;
+}
+
+.cart-btn .p {
+    color: black;
+}
+
+.cart-remove-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(240, 62, 61, 0.2);
+    border-radius: 40px;
+    padding: 5px;
+    border: none;
+    color: var(--sec-clr);
+}
+
+.cart-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 120px;
+}
+
+.cart-footer button {
+    width: 30%;
+}
+
+.cart-cal {
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+    margin: 40px 120px;
+    padding: 30px;
+}
+
+.cart-cal .btn {
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+}
+
+.cart-cal>.h3 {
+    border-bottom: 1px solid #CCC5C5;
+    padding-bottom: 20px;
+}
+
+.cart-cal .flex {
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.cart-cal .p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 60px;
+    color: #22343D;
+}

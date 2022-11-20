@@ -6,5 +6,6 @@ import Support from "./Support"
 import Search  from "./Search";
 import TermsAndConditions from "./TermsAndConditions"
 import PrivacyAndPolicy from "./PrivacyAndPolicy"
+import Cart from "./Cart"
 
-export { Home, Products,About,Deals,Support,Search,TermsAndConditions,PrivacyAndPolicy};
+export { Home, Products,About,Deals,Support,Search,TermsAndConditions,PrivacyAndPolicy,Cart};
