@@ -43,7 +43,7 @@
 }
 
 .card-two>div section button:nth-child(2):hover svg {
-  transform: translateX(0px) !important;
+  transform: translateY(0px) !important;
 }
 
 .card-two>div section button:nth-child(2):hover [type="text"] {
@@ -51,7 +51,7 @@
 }
 
 .card-two>div section button:nth-child(2) svg {
-  transform: translateX(200px);
+  transform: translateY(100px);
   transition: all ease 400ms;
 
 }

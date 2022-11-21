@@ -22,8 +22,8 @@ import { Link } from "react-router-dom";
 
 const index = () => {
   const [visible, setVisible] = useState(false);
-  const toggleVisible = () => {
-    setVisible(!visible);
+  const toggleVisible = (e) => {
+    setVisible(!visible); 
   };
   return (
     <>
@@ -161,9 +161,7 @@ const index = () => {
           </li>
         </ul>
         <ul className="header-icons-con">
-          <Link to="/search">
-            <img src={searchLogo} alt="" />
-          </Link>
+          <img src={searchLogo} alt="" onClick={toggleVisible} />
           <img src={heartLogo} alt="" />
           <img src={profileLogo} alt="" />
           <Link to="/cart">
@@ -171,7 +169,7 @@ const index = () => {
           </Link>
         </ul>
       </header>
-      <form className="header-form">
+      <form className="header-form" data-visible={visible}>
         <div>
           <input type="text" placeholder="Search" />
           <Button icon={<FaSearch></FaSearch>} />
