@@ -1,6 +1,8 @@
 import Button from "../Button";
+import GrayButton from "../GrayButton";
 
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaTimes } from "react-icons/fa";
+import { CiLock } from "react-icons/ci";
 
 import "../Header/Header.css";
 
@@ -16,14 +18,24 @@ import close from "../../assets/Button.png";
 import MobileInstaLogo from "../../assets/mobile-insta.png";
 import MobileTwitterLogo from "../../assets/mobile-twit.png";
 import MobileFaceLogo from "../../assets/mobile-face.png";
+import CartIcon from "../../assets/cart-table-logo.png";
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const index = () => {
   const [visible, setVisible] = useState(false);
+  const [cart, setCart] = useState(false);
   const toggleVisible = (e) => {
-    setVisible(!visible); 
+    switch (e.target.className) {
+      case "cart":
+        setCart(!cart);
+        break;
+      case "search":
+        setVisible(!visible);
+        break;
+    }
+    console.log(e);
   };
   return (
     <>
@@ -161,12 +173,15 @@ const index = () => {
           </li>
         </ul>
         <ul className="header-icons-con">
-          <img src={searchLogo} alt="" onClick={toggleVisible} />
+          <img
+            src={searchLogo}
+            alt=""
+            className="search"
+            onClick={toggleVisible}
+          />
           <img src={heartLogo} alt="" />
           <img src={profileLogo} alt="" />
-          <Link to="/cart">
-            <img src={cartLogo} alt="" />
-          </Link>
+          <img src={cartLogo} alt="" className="cart" onClick={toggleVisible} />
         </ul>
       </header>
       <form className="header-form" data-visible={visible}>
@@ -175,6 +190,82 @@ const index = () => {
           <Button icon={<FaSearch></FaSearch>} />
         </div>
       </form>
+      <div className="carts" data-visible={cart}>
+        <div></div>
+        <div className="main-cart" data-visible={cart}>
+          <div className="main-cart-header">
+            <h3 className="h3">Shopping Cart (3)</h3>
+            <button className="cart-remove-btn" onClick={() => setCart(false)}>
+              <FaTimes></FaTimes>
+            </button>
+          </div>
+          <div className="main-cart-main">
+            <div className="main-cart-img-con">
+              <img src={CartIcon} alt="" />
+            </div>
+            <div className="main-cart-text-con">
+              <p className="p">Foldable E-Scooter</p>
+              <h3 className="h3">N 1, 150, 000</h3>
+              <div className="main-cart-header">
+                <button className="cart-btn">
+                  <p className="p">-</p>
+                  <p className="p">0</p>
+                  <p className="p">+</p>
+                </button>
+                <button className="cart-remove-btn">
+                  <FaTimes></FaTimes>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="main-cart-main">
+            <div className="main-cart-img-con">
+              <img src={CartIcon} alt="" />
+            </div>
+            <div className="main-cart-text-con">
+              <p className="p">Foldable E-Scooter</p>
+              <h3 className="h3">N 1, 150, 000</h3>
+              <div className="main-cart-header">
+                <button className="cart-btn">
+                  <p className="p">-</p>
+                  <p className="p">0</p>
+                  <p className="p">+</p>
+                </button>
+                <button className="cart-remove-btn">
+                  <FaTimes></FaTimes>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="main-cart-main">
+            <div className="main-cart-img-con">
+              <img src={CartIcon} alt="" />
+            </div>
+            <div className="main-cart-text-con">
+              <p className="p">Foldable E-Scooter</p>
+              <h3 className="h3">N 1, 150, 000</h3>
+              <div className="main-cart-header">
+                <button className="cart-btn">
+                  <p className="p">-</p>
+                  <p className="p">0</p>
+                  <p className="p">+</p>
+                </button>
+                <button className="cart-remove-btn">
+                  <FaTimes></FaTimes>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="main-cart-header main-cart-header-two">
+            <p className="p">Subtotal</p>
+            <h3 className="h3">N 3,200,000</h3>
+          </div>
+          <div className="main-cart-footer">
+            <Button icon={<CiLock></CiLock>} title="Proceed to Checkout" />
+            <GrayButton title="View and Edit Cart" />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
