@@ -191,7 +191,7 @@ const index = () => {
         </div>
       </form>
       <div className="carts" data-visible={cart}>
-        <div></div>
+        <div onClick={() => setCart(false)}></div>
         <div className="main-cart" data-visible={cart}>
           <div className="main-cart-header">
             <h3 className="h3">Shopping Cart (3)</h3>

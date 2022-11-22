@@ -44,12 +44,17 @@ const index = () => {
           <Link to="/terms&conditions">
             <p className="p">Terms and Conditions</p>
           </Link>
-          <Link to="/privacy&policy"> <p className="p">Privacy Policy</p></Link>
+          <Link to="/privacy&policy">
+           
+            <p className="p">Privacy Policy</p>
+          </Link>
         </ul>
         <ul>
           <h3 className="h3">Help</h3>
           <p className="p">Support</p>
-          <p className="p">Track Your Order</p>
+          <Link to="/cart">
+            <p className="p">Track Your Order</p>
+          </Link>
         </ul>
         <ul>
           <h3 className="h3">Contact Us</h3>

@@ -77,3 +77,24 @@
   }
 
 }
+
+@media(min-width:750px) and (max-width:1020px) {
+  .card-one {
+    display: grid;
+    grid-template-areas:
+      "header header header2 header2"
+      ". footer footer .";
+  }
+
+  .card-one>div:nth-child(1) {
+    grid-area: header;
+  }
+
+  .card-one>div:nth-child(2) {
+    grid-area: header2;
+  }
+
+  .card-one>div:nth-child(3) {
+    grid-area: footer;
+  }
+}
