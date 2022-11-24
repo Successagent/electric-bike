@@ -2,3 +2,17 @@
     justify-content: center !important;
     padding: 70px 0;
 }
+
+.deals-card-section {
+    background-color: #F9F9F9;
+    padding: 40px 80px;
+}
+
+.deals-card-section>.card-two {
+    margin-bottom: 70px;
+}
+
+.deals-hero-sect {
+    padding: 50px;
+    padding-bottom: 20px;
+}

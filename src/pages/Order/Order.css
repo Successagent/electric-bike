@@ -1,0 +1,68 @@
+.order-hero-section {
+    background-color: white;
+    padding: 40px 140px;
+}
+
+.order-hero-section .p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 200%;
+    color: #606060;
+}
+
+.tracking-form {
+    padding-bottom: 100px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.order-hero-section .h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #22343D;
+    margin-bottom: 10px;
+}
+
+.tracking-form input {
+    width: 100%;
+}
+
+.order-hero-section .flex {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+
+.order-hero-section .flex .h3 {
+    width: 50%;
+
+}
+
+.order-hero-section .flex .p {
+    width: 50%;
+}
+
+
+@media(max-width:1020px) {
+
+
+    .order-hero-section {
+        padding: 30px 15px;
+    }
+
+    .order-hero-section .flex {
+        flex-direction: column;
+    }
+
+    .order-hero-section .flex .h3 {
+        width: 100%;
+    }
+
+    .order-hero-section .flex .p {
+        width: 100%;
+    }
+}

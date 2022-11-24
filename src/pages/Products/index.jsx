@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import Header from "../../Components/Header";
-import Footer from "../../Components/Footer";
 
 import BorderButton from "../../Components/BorderButton";
 import Button from "../../Components/Button";
@@ -12,7 +10,6 @@ import Reviews from "../Reviews";
 
 import "../Products/Products.css";
 
-import Global from "../../assets/global.png";
 import ProductImage from "../../assets/Product-main-logo.svg";
 
 import { FaCheck } from "react-icons/fa";
@@ -32,7 +29,7 @@ const index = () => {
 
   return (
     <>
-      <Header />
+     
       <section className="products-page">
         <PagesHero />
         <section className="products-review-sec">
@@ -120,11 +117,8 @@ const index = () => {
           <GrayButton btn={toggleTab} title="Customers Review"></GrayButton>
         </div>
         {tab == 1 ? <Description /> : <Reviews />}
-        <div className="seller-sec">
-         
-        </div>
+        <div className="seller-sec"></div>
       </section>
-      <Footer />
     </>
   );
 };

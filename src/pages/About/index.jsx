@@ -1,7 +1,5 @@
 import "../About/About.css";
 
-import Header from "../../Components/Header";
-import Footer from "../../Components/Footer";
 import FeatureCard from "../../Components/FeatureCard";
 import PagesHero from "../../Components/PagesHero";
 import PageIndication from "../../Components/PageIndication";
@@ -12,24 +10,11 @@ import Globaltwo from "../../assets/global-two.png";
 import Next from "../../assets/next.png";
 import Prev from "../../assets/prev.png";
 import ReviewLogo from "../../assets/reviewlogo.png";
-import { useState } from "react";
+
 
 const index = () => {
-  const [content, setContent] = useState(1);
-  const toggleContent = () => {
-    if (e.target == 1) {
-      setContent(1);
-    } else if (e.target == 2) {
-      setContent(2);
-    } else if (e.target == 3) {
-      setContent(3);
-    } else if (e.target == 4) {
-      setContent(4);
-    }
-  };
   return (
     <>
-      <Header />
       <section className="about-page">
         <PagesHero />
         <PageIndication page="About" other="Support" />
@@ -86,7 +71,6 @@ const index = () => {
           </div>
         </section>
       </section>
-      <Footer />
     </>
   );
 };

@@ -50,14 +50,14 @@ header {
   width: 40%;
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 100px;
   left: 50%;
   display: none;
   transition: all 400ms ease-in-out;
 }
 
-.header-form[data-visible=true] {
+.header-form[data-visible="true"] {
   display: flex !important;
   transition: all 400ms ease-in-out;
 }
@@ -114,6 +114,7 @@ header {
   width: 65%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 
 .main-cart {
   background-color: white;
@@ -223,14 +224,19 @@ header {
     overflow-y: scroll;
     transition: transform ease-in 100ms;
     z-index: 99;
+    transform: translateX(-200%);
   }
 
-  .hide-menu {
-    transform: translateX(-200%) !important;
+  .close {
+    cursor: pointer;
   }
 
-  .show-menu {
+  .mobile-list[data-visible=true] {
     transform: translateX(0%) !important;
+  }
+
+  .mobile-list[data-visible=false] {
+    transform: translateX(-200%) !important;
   }
 
   .close-icon {

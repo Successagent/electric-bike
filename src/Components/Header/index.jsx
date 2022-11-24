@@ -20,28 +20,19 @@ import MobileTwitterLogo from "../../assets/mobile-twit.png";
 import MobileFaceLogo from "../../assets/mobile-face.png";
 import CartIcon from "../../assets/cart-table-logo.png";
 
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const index = () => {
-  const [visible, setVisible] = useState(false);
-  const [cart, setCart] = useState(false);
-  const toggleVisible = (e) => {
-    switch (e.target.className) {
-      case "cart":
-        setCart(!cart);
-        break;
-      case "search":
-        setVisible(!visible);
-        break;
-    }
-    console.log(e);
-  };
+const index = ({ cart, visible, formVisible, toggleVisible, setCart }) => {
   return (
     <>
       <header>
         <div className="menu">
-          <img onClick={toggleVisible} src={MenuLogo} alt="" />
+          <img
+            onClick={toggleVisible}
+            className="close"
+            src={MenuLogo}
+            alt=""
+          />
         </div>
         <div className="header-logo-con">
           <img src={headerLogo} alt="header-logo" />
@@ -49,13 +40,9 @@ const index = () => {
         <div className="mobile-cart-con">
           <img src={cartLogo} alt="" />
         </div>
-        <ul
-          className={`mobile-list ${
-            visible == false ? "hide-menu" : "show-menu"
-          }`}
-        >
+        <ul className="mobile-list" data-visible={visible}>
           <div className="close-icon">
-            <img src={close} alt="" onClick={toggleVisible} />
+            <img src={close} className="close" alt="" onClick={toggleVisible} />
           </div>
           <li>
             <Link to="/" style={{ color: "black", textDecoration: "none" }}>
@@ -184,18 +171,21 @@ const index = () => {
           <img src={cartLogo} alt="" className="cart" onClick={toggleVisible} />
         </ul>
       </header>
-      <form className="header-form" data-visible={visible}>
+      <form className="header-form" data-visible={formVisible}>
         <div>
           <input type="text" placeholder="Search" />
           <Button icon={<FaSearch></FaSearch>} />
         </div>
       </form>
       <div className="carts" data-visible={cart}>
-        <div onClick={() => setCart(false)}></div>
+        <div onClick={toggleVisible} className="cart" data-visible={cart}></div>
         <div className="main-cart" data-visible={cart}>
           <div className="main-cart-header">
             <h3 className="h3">Shopping Cart (3)</h3>
-            <button className="cart-remove-btn" onClick={() => setCart(false)}>
+            <button
+              className="cart-remove-btn"
+              onClick={() => (cart == true ? setCart(false) : setCart(true))}
+            >
               <FaTimes></FaTimes>
             </button>
           </div>

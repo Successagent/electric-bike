@@ -16,8 +16,18 @@ import { useState } from "react";
 
 const index = ({ reverse, faq }) => {
   const [active, setActive] = useState(1);
-  const toggleActive = (e) => {
-    console.log(e.target.id);
+
+  const toggleVisibility = (id) => {
+    if (id == 1) {
+      setActive(1);
+    } else if (id == 2) {
+      setActive(2);
+    } else if (id == 3) {
+      setActive(3);
+    } else if (id == 4) {
+      setActive(4);
+    }
+    console.log(id);
   };
   return (
     <div
@@ -37,11 +47,15 @@ const index = ({ reverse, faq }) => {
             <div>
               <div className="flex">
                 <h3 className="h3">Do you Ship outside Lagos?</h3>
-                <div className="icon-con" id="1" onClick={toggleActive}>
+                <div
+                  className={`icon-con ${active == 1 ? "active-bg" : "'"}`}
+                  id="1"
+                  onClick={(e) => toggleVisibility(e.target.id)}
+                >
                   {active == 1 ? (
-                    <FaAngleUp></FaAngleUp>
+                    <FaAngleUp id="1"></FaAngleUp>
                   ) : (
-                    <FaAngleDown></FaAngleDown>
+                    <FaAngleDown id="1"></FaAngleDown>
                   )}
                 </div>
               </div>
@@ -55,11 +69,15 @@ const index = ({ reverse, faq }) => {
             <div>
               <div className="flex">
                 <h3 className="h3">Do you Ship outside Lagos?</h3>
-                <div className="icon-con" id="2" onClick={toggleActive}>
+                <div
+                  className={`icon-con ${active == 2 ? "active-bg" : "'"}`}
+                  id="2"
+                  onClick={(e) => toggleVisibility(e.target.id)}
+                >
                   {active == 2 ? (
-                    <FaAngleUp></FaAngleUp>
+                    <FaAngleUp id="2"></FaAngleUp>
                   ) : (
-                    <FaAngleDown></FaAngleDown>
+                    <FaAngleDown id="2"></FaAngleDown>
                   )}
                 </div>
               </div>
@@ -73,11 +91,15 @@ const index = ({ reverse, faq }) => {
             <div>
               <div className="flex">
                 <h3 className="h3">Do you Ship outside Lagos?</h3>
-                <div className="icon-con" id="3" onClick={toggleActive}>
+                <div
+                  className={`icon-con ${active == 3 ? "active-bg" : "'"}`}
+                  id="3"
+                  onClick={(e) => toggleVisibility(e.target.id)}
+                >
                   {active == 3 ? (
-                    <FaAngleUp></FaAngleUp>
+                    <FaAngleUp id="3"></FaAngleUp>
                   ) : (
-                    <FaAngleDown></FaAngleDown>
+                    <FaAngleDown id="3"></FaAngleDown>
                   )}
                 </div>
               </div>
@@ -91,11 +113,15 @@ const index = ({ reverse, faq }) => {
             <div>
               <div className="flex">
                 <h3 className="h3">Do you Ship outside Lagos?</h3>
-                <div className="icon-con" id="4" onClick={toggleActive}>
+                <div
+                  className={`icon-con ${active == 4 ? "active-bg" : "'"}`}
+                  id="4"
+                  onClick={(e) => toggleVisibility(e.target.id)}
+                >
                   {active == 4 ? (
-                    <FaAngleUp></FaAngleUp>
+                    <FaAngleUp id="4"></FaAngleUp>
                   ) : (
-                    <FaAngleDown></FaAngleDown>
+                    <FaAngleDown id="4"></FaAngleDown>
                   )}
                 </div>
               </div>

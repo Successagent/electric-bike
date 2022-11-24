@@ -1,7 +1,6 @@
 import PagesHero from "../../Components/PagesHero";
 import PageIndication from "../../Components/PageIndication";
-import Header from "../../Components/Header";
-import Footer from "../../Components/Footer";
+
 import FeatureCard from "../../Components/FeatureCard";
 import Button from "../../Components/Button";
 
@@ -9,13 +8,13 @@ import sms from "../../assets/sms.png";
 import location from "../../assets/location.png";
 import clock from "../../assets/clock.png";
 import call from "../../assets/call.png";
+import map from "../../assets/map.png";
 
 import "../Support/Support.css";
 
 const index = () => {
   return (
     <>
-      <Header />
       <section className="support-page">
         <PagesHero />
         <PageIndication page="Support" other="Support" />
@@ -68,8 +67,10 @@ const index = () => {
         <div className="faq-section">
           <FeatureCard faq="faq" />
         </div>
+        <div className="map-section">
+          <img src={map} alt="" />
+        </div>
       </section>
-      <Footer />
     </>
   );
 };

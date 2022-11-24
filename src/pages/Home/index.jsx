@@ -1,5 +1,3 @@
-import Header from "../../Components/Header";
-import Footer from "../../Components/Footer";
 import CardOne from "../../Components/CardOne";
 import CardThree from "../../Components/CardThree";
 import CardTwo from "../../Components/CardTwo";
@@ -18,10 +16,9 @@ import { CgFacebook, CgInstagram } from "react-icons/cg";
 import { CiTwitter } from "react-icons/ci";
 import { AiOutlineGlobal } from "react-icons/ai";
 
-const index = () => {
+const index = ({ active, toggleVisible }) => {
   return (
     <>
-      <Header />
       <div className="home-page">
         <div className="home-hero">
           <ul className="home-hero-social-link">
@@ -146,7 +143,6 @@ const index = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

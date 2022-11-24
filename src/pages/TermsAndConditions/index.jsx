@@ -1,14 +1,12 @@
 import "../TermsAndConditions/TermsAndConditions.css";
 
-import Header from "../../Components/Header";
-import Footer from "../../Components/Footer";
 import PageHero from "../../Components/PagesHero";
 import PageIndication from "../../Components/PageIndication";
 
 const index = () => {
   return (
     <>
-      <Header />
+      
       <PageHero />
       <div className="condition">
         <PageIndication
@@ -55,7 +53,7 @@ const index = () => {
           </div>
         </div>
       </section>
-      <Footer />
+     
     </>
   );
 };

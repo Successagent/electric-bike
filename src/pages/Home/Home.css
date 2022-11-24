@@ -3,7 +3,8 @@
 .products-page,
 .deals-page,
 .support-page,
-.cart-page {
+.cart-page,
+.order-page {
   padding-top: 100px;
 }
 
@@ -267,12 +268,15 @@
 .faq-section .icon-con {
   border: 1px solid black;
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  height: 35px;
+  width: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
+
+
 
 .order-section {
   display: flex;

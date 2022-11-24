@@ -10,19 +10,10 @@ import "../Cart/Cart.css";
 import { useState } from "react";
 
 const index = () => {
-  const [cartValue, setCartValue] = useState(3);
-
-  const [active, setActive] = useState("shopping");
-  const toggleActive = (e) => {
-    if (e.target.id == 1) {
-      setActive("shopping");
-    } else if (e.target.id == 2) {
-      setActive("checkout");
-    }
-  };
+ 
   return (
     <>
-      <Header />
+      
       <section className="cart-page">
         <PagesHero />
         <div className="cart-hero">

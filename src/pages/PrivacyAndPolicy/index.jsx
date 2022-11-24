@@ -1,5 +1,4 @@
-import Header from "../../Components/Header";
-import Footer from "../../Components/Footer";
+
 import PageHero from "../../Components/PagesHero";
 import PageIndication from "../../Components/PageIndication";
 
@@ -8,7 +7,7 @@ import "../PrivacyAndPolicy/PrivacyAndPolicy.css";
 const index = () => {
   return (
     <>
-      <Header />
+      
       <PageHero />
       <div className="condition">
         <PageIndication page="Privacy and Policy" other="Privacy and Policy" />
@@ -52,7 +51,7 @@ const index = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      
     </>
   );
 };
