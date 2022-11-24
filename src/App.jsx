@@ -19,11 +19,10 @@ import "./App.css";
 
 function App() {
   const [cart, setCart] = useState(false);
-  const [cartValue, setCartValue] = useState(3);
-  const [content, setContent] = useState(1);
   const [active, setActive] = useState(1);
   const [visible, setVisible] = useState(false);
   const [formVisible, setFormVisible] = useState(false);
+  const [favorite, setFavorite] = useState(false);
 
   const toggleVisible = (e) => {
     switch (e.target.className) {
@@ -36,8 +35,11 @@ function App() {
       case "close":
         setVisible(!visible);
         break;
+      case "favorite":
+        setFavorite(!favorite);
+        break;
     }
-    console.log(formVisible);
+    console.log(favorite);
   };
 
   return (
@@ -48,6 +50,8 @@ function App() {
         formVisible={formVisible}
         toggleVisible={toggleVisible}
         setCart={setCart}
+        setFavorite={setFavorite}
+        favorite={favorite}
       />
       <Routes>
         <Route
