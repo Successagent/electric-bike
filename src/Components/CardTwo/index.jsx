@@ -1,6 +1,9 @@
 import "../CardTwo/CardTwo.css";
-import { BsStarFill, BsHeart, BsCart3 } from "react-icons/bs";
+import { BsStarFill, BsCart3 } from "react-icons/bs";
+import { FaHeart } from "react-icons/fa";
 import Button from "../Button";
+import { useState } from "react";
+
 const index = ({ h2, h3, p }) => {
   return (
     <div className="card-two">
@@ -17,7 +20,7 @@ const index = ({ h2, h3, p }) => {
         <p className="p">{p}</p>
         <h2 className="h2">{h2}</h2>
         <section className="hover">
-          <BsHeart></BsHeart>
+          <FaHeart></FaHeart>
           <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
         </section>
       </div>
@@ -34,7 +37,7 @@ const index = ({ h2, h3, p }) => {
         <p className="p">{p}</p>
         <h2 className="h2">{h2}</h2>
         <section className="hover">
-          <BsHeart></BsHeart>
+          <FaHeart></FaHeart>
           <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
         </section>
       </div>
@@ -50,8 +53,8 @@ const index = ({ h2, h3, p }) => {
         <h3 className="h3">{h3}</h3>
         <p className="p">{p}</p>
         <h2 className="h2">{h2}</h2>
-        <section>
-          <BsHeart></BsHeart>
+        <section className="hover">
+          <FaHeart></FaHeart>
           <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
         </section>
       </div>
@@ -67,8 +70,8 @@ const index = ({ h2, h3, p }) => {
         <h3 className="h3">{h3}</h3>
         <p className="p">{p}</p>
         <h2 className="h2">{h2}</h2>
-        <section>
-          <BsHeart></BsHeart>
+        <section className="hover">
+          <FaHeart></FaHeart>
           <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
         </section>
       </div>

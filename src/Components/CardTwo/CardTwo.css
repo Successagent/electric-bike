@@ -102,6 +102,28 @@
   margin: 10px 0;
 }
 
+.hover>svg {
+  color: red;
+  font-size: 20px;
+}
+
+
+.hover>svg {
+  color: red;
+  font-size: 20px;
+}
+
+
+.hover>svg {
+  color: red;
+  font-size: 20px;
+}
+
+.hover>svg {
+  color: red;
+  font-size: 20px;
+}
+
 @media(max-width:1020px) {
   .card-two {
     flex-direction: column;

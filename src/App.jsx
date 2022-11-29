@@ -12,6 +12,7 @@ import {
   TermsAndConditions,
   PrivacyAndPolicy,
   Cart,
+  Product,
 } from "../src/pages";
 import Order from "./pages/Order";
 
@@ -23,6 +24,7 @@ function App() {
   const [visible, setVisible] = useState(false);
   const [formVisible, setFormVisible] = useState(false);
   const [favorite, setFavorite] = useState(false);
+  const [addFavorite, setAddFavorite] = useState(1);
 
   const toggleVisible = (e) => {
     switch (e.target.className) {
@@ -38,6 +40,7 @@ function App() {
       case "favorite":
         setFavorite(!favorite);
         break;
+      case "addfavorite":
     }
     console.log(favorite);
   };
@@ -59,6 +62,7 @@ function App() {
           element={<Home active={active} toggleVisible={toggleVisible} />}
         />
         <Route path="/products" element={<Products />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/about" element={<About />} />
         <Route path="/deals" element={<Deals />} />
         <Route path="/support" element={<Support />} />

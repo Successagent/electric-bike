@@ -354,4 +354,8 @@ header {
     width: 40px;
     height: 40px;
   }
+
+  .header-form {
+    z-index: 900;
+  }
 }

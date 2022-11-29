@@ -1,5 +1,6 @@
 import Home from "./Home";
 import Products from "./Products"
+import Product from "./Product"
 import About from "./About"
 import Deals from "./Deals"
 import Support from "./Support"
@@ -8,4 +9,4 @@ import TermsAndConditions from "./TermsAndConditions"
 import PrivacyAndPolicy from "./PrivacyAndPolicy"
 import Cart from "./Cart"
 
-export { Home, Products,About,Deals,Support,Search,TermsAndConditions,PrivacyAndPolicy,Cart};
+export { Home, Products,About,Deals,Support,Search,TermsAndConditions,PrivacyAndPolicy,Cart,Product};
