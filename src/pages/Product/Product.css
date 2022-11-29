@@ -39,7 +39,7 @@
 
 .product-section-two {
     display: flex;
-    align-items: center;
+    gap: 30px;
     padding: 30px 70px;
 }
 
@@ -66,4 +66,69 @@
 .diff {
     background-color: white;
     border-radius: 8px;
+}
+
+
+.product-section-two .flex {
+    margin-top: 25px;
+    align-items: center;
+}
+
+.product-section-two .flex .h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #22343D;
+    margin-left: 15px;
+}
+
+.product-section-two .input-con {
+    width: 230px;
+    height: 46px;
+    border: 1px solid #CCC5C5;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #606060;
+    margin-top: 20px;
+}
+
+
+.input-con .p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.input-con svg {
+    font-size: 24px;
+}
+
+.product-section-two-item-two {
+    width: 75%;
+}
+
+.product-section-two-item-two .card-three>div:nth-child(1) {
+    display: none;
+}
+
+.product-section-two-item-two .card-three {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
+}
+
+.product-section-two-item-two .card-three>div {
+    width: 100%;
+}
+
+ .product-section-two .flex {
+    margin-top: 0;
 }
