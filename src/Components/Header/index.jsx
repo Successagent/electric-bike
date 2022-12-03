@@ -19,7 +19,7 @@ import MobileInstaLogo from "../../assets/mobile-insta.png";
 import MobileTwitterLogo from "../../assets/mobile-twit.png";
 import MobileFaceLogo from "../../assets/mobile-face.png";
 import CartIcon from "../../assets/cart-table-logo.png";
-
+import ProductImage from "../../assets/Product-main-logo.svg";
 import { Link } from "react-router-dom";
 
 const index = ({
@@ -30,10 +30,69 @@ const index = ({
   setCart,
   favorite,
   setFavorite,
+  productVisible,
+  setProductVisible,
 }) => {
+  const toggleProductVisible = () => {
+    return productVisible == true
+      ? setProductVisible(false)
+      : setProductVisible(true);
+  };
   return (
     <>
       <header>
+        <section className="show-products" data-visible={productVisible}>
+          <Link
+            to="/product"
+            style={{ color: "black" }}
+            onClick={toggleProductVisible}
+          >
+            <div className="all-product-con">
+              <h2 className="h2">All Products</h2>
+              <h3 className="h3">Ride the world with us</h3>
+            </div>
+          </Link>
+          <Link
+            to="/product"
+            style={{ color: "black" }}
+            onClick={toggleProductVisible}
+          >
+            <div className="all-product-con">
+              <img src={ProductImage} alt="" />
+              <h3 className="h3">Ride the world with us</h3>
+            </div>
+          </Link>
+          <Link
+            to="/product"
+            style={{ color: "black" }}
+            onClick={toggleProductVisible}
+          >
+            <div className="all-product-con">
+              <img src={ProductImage} alt="" />
+              <h3 className="h3">Ride the world with us</h3>
+            </div>
+          </Link>
+          <Link
+            to="/product"
+            style={{ color: "black" }}
+            onClick={toggleProductVisible}
+          >
+            <div className="all-product-con">
+              <img src={ProductImage} alt="" />
+              <h3 className="h3">Ride the world with us</h3>
+            </div>
+          </Link>
+          <Link
+            to="/product"
+            style={{ color: "black" }}
+            onClick={toggleProductVisible}
+          >
+            <div className="all-product-con">
+              <img src={ProductImage} alt="" />
+              <h3 className="h3">Ride the world with us</h3>
+            </div>
+          </Link>
+        </section>
         <div className="menu">
           <img
             onClick={toggleVisible}
@@ -65,13 +124,16 @@ const index = ({
               About
             </Link>
           </li>
-          <li>
-            <Link
-              to="/products"
-              style={{ color: "black", textDecoration: "none" }}
-            >
-              Products
-            </Link>
+          <li
+            onClick={toggleVisible}
+            className="product"
+            style={{
+              color: "black",
+              textDecoration: "none",
+              cursor: "pointer",
+            }}
+          >
+            Products
           </li>
           <li>
             <Link
@@ -142,13 +204,16 @@ const index = ({
               About
             </Link>
           </li>
-          <li>
-            <Link
-              to="/products"
-              style={{ color: "white", textDecoration: "none" }}
-            >
-              Products
-            </Link>
+          <li
+            onClick={toggleVisible}
+            className="product"
+            style={{
+              color: "white",
+              textDecoration: "none",
+              cursor: "pointer",
+            }}
+          >
+            Products
           </li>
           <li>
             <Link

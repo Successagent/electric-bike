@@ -224,6 +224,80 @@ header {
   font-weight: 600;
 }
 
+.show-products {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 280px;
+  inset: 0;
+  top: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding: 0 30px;
+  transition: all ease-in-out 400ms;
+}
+
+.show-products[data-visible="false"] {
+  display: none !important;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 280px;
+  inset: 0;
+  top: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding: 0 30px;
+  transition: all ease-in-out 400ms;
+}
+
+.show-products[data-visible="true"] {
+  display: flex !important;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 280px;
+  inset: 0;
+  top: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding: 0 30px;
+  transition: all ease-in-out 400ms;
+}
+
+.show-products :link {
+  border-radius: 10px;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.show-products :link .h2 {
+  font: 500 22px "Poppins";
+}
+
+
+.show-products :link .h3 {
+  font: 400 18px "Poppins";
+  margin-top: 5px;
+}
+
+.show-products :link img {
+  height: 150px;
+  width: 100%;
+}
+
 @media (max-width: 1020px) {
   header {
     height: 80px;

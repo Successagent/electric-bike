@@ -22,6 +22,7 @@ function App() {
   const [cart, setCart] = useState(false);
   const [active, setActive] = useState(1);
   const [visible, setVisible] = useState(false);
+  const [productVisible, setProductVisible] = useState(false);
   const [formVisible, setFormVisible] = useState(false);
   const [favorite, setFavorite] = useState(false);
   const [addFavorite, setAddFavorite] = useState(1);
@@ -41,8 +42,10 @@ function App() {
         setFavorite(!favorite);
         break;
       case "addfavorite":
+      case "product":
+        setProductVisible(!productVisible);
     }
-    console.log(favorite);
+    console.log(visible);
   };
 
   return (
@@ -50,11 +53,13 @@ function App() {
       <Header
         cart={cart}
         visible={visible}
+        productVisible={productVisible}
         formVisible={formVisible}
         toggleVisible={toggleVisible}
         setCart={setCart}
         setFavorite={setFavorite}
         favorite={favorite}
+        setProductVisible={setProductVisible}
       />
       <Routes>
         <Route
@@ -62,7 +67,10 @@ function App() {
           element={<Home active={active} toggleVisible={toggleVisible} />}
         />
         <Route path="/products" element={<Products />} />
-        <Route path="/product" element={<Product />} />
+        <Route
+          path="/product"
+          element={<Product toggleVisible={toggleVisible} />}
+        />
         <Route path="/about" element={<About />} />
         <Route path="/deals" element={<Deals />} />
         <Route path="/support" element={<Support />} />

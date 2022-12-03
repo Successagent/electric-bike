@@ -1,14 +1,14 @@
 import "../CardThree/CardThree.css";
 import { BsStarFill, BsHeart, BsCart3 } from "react-icons/bs";
 
-const index = ({ h2, h3, p }) => {
+const index = ({ h2, h3, p, toggleVisible }) => {
   return (
     <div className="card-three">
       <div>
         <div className="bg-img"></div>
         <section>
           <BsHeart />
-          <BsCart3 />
+          <BsCart3></BsCart3>
         </section>
         <h3 className="h3">{h3}</h3>
         <div className="flex">
@@ -25,7 +25,11 @@ const index = ({ h2, h3, p }) => {
         <div className="bg-img"></div>
         <section>
           <BsHeart />
-          <BsCart3 />
+          <BsCart3
+            onClick={toggleVisible}
+            className="favorite"
+            style={{ cursor: "pointer" }}
+          ></BsCart3>
         </section>
         <h3 className="h3">{h3}</h3>
         <div className="flex">
@@ -42,7 +46,11 @@ const index = ({ h2, h3, p }) => {
         <div className="bg-img"></div>
         <section>
           <BsHeart />
-          <BsCart3 />
+          <BsCart3
+            onClick={toggleVisible}
+            className="favorite"
+            style={{ cursor: "pointer" }}
+          ></BsCart3>
         </section>
         <h3 className="h3">{h3}</h3>
         <div className="flex">
@@ -59,7 +67,11 @@ const index = ({ h2, h3, p }) => {
         <div className="bg-img"></div>
         <section>
           <BsHeart />
-          <BsCart3 />
+          <BsCart3
+            onClick={toggleVisible}
+            className="favorite"
+            style={{ cursor: "pointer" }}
+          ></BsCart3>
         </section>
         <h3 className="h3">{h3}</h3>
         <div className="flex">
