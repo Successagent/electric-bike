@@ -4,7 +4,7 @@
 }
 
 .order-hero-section .p {
-    font-family: 'Poppins';
+ font-family: var(--prim-fntfam);
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -18,7 +18,7 @@
 }
 
 .order-hero-section .h3 {
-    font-family: 'Poppins';
+ font-family: var(--prim-fntfam);
     font-style: normal;
     font-weight: 500;
     font-size: 20px;

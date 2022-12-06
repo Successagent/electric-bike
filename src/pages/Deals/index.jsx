@@ -7,7 +7,12 @@ import "../Deals/Deals.css";
 
 import { GrNext, GrPrevious } from "react-icons/gr";
 
-const index = () => {
+const index = ({
+  cartFavorite,
+  setCartFavorite,
+  setCartFavoriteActive,
+  cartFavoriteActive,
+}) => {
   return (
     <>
       <section className="deals-page">
@@ -24,11 +29,19 @@ const index = () => {
             h3="Foldable E-Scooter"
             p="luxuory electronic scooter"
             h2="N 1, 150, 000"
+            cartFavorite={cartFavorite}
+            setCartFavorite={setCartFavorite}
+            cartFavoriteActive={cartFavoriteActive}
+            setCartFavoriteActive={setCartFavoriteActive}
           />
           <CardTwo
             h3="Foldable E-Scooter"
             p="luxuory electronic scooter"
             h2="N 1, 150, 000"
+            cartFavorite={cartFavorite}
+            setCartFavorite={setCartFavorite}
+            cartFavoriteActive={cartFavoriteActive}
+            setCartFavoriteActive={setCartFavoriteActive}
           />
         </section>
         <section className="review-section-two">

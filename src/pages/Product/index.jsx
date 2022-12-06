@@ -16,6 +16,7 @@ import Skate from "../../assets/icons8-skateboard.png";
 import Scooter from "../../assets/icons8-gyroscooter.png";
 import ArrowRight from "../../assets/arrow-right.png";
 
+
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { FaSearch } from "react-icons/fa";

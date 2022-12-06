@@ -27,7 +27,7 @@
 
 .home-footer-form input {
   border: none;
-  font-family: var(--secfntfam);
+  font-family: var(--prim-fntfam);
   padding-left: 10px;
   outline: none;
 }

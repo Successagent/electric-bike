@@ -10,7 +10,7 @@
     text-align: center;
     gap: 20px;
     justify-content: center;
-    font-family: var(--secfntfam);
+    font-family: var(--prim-fntfam);
     z-index: 11;
 }
 

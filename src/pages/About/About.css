@@ -34,6 +34,14 @@
 .home-feature-sect .home-feature-section>div:nth-child(2)>div {
     position: static;
     inset: 0;
+    margin-top: -120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-page .home-feature-sect .home-feature-section>div:nth-child(2)>div {
+    margin: 0;
 }
 
 .feature-card-two .home-feature-section img {
@@ -68,7 +76,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    font-family: var(--secfntfam);
+    font-family: var(--prim-fntfam);
     color: #606060;
 }
 
@@ -82,7 +90,7 @@
 }
 
 .about-footer-sect>.p {
-    font-family: 'Inter';
+    font-family: var(--prim-fntfam);
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -99,7 +107,7 @@
 }
 
 .sqre>.p {
-    font-family: 'Inter';
+    font-family: var(--prim-fntfam);
     font-style: normal;
     font-weight: 400;
     font-size: 15px;

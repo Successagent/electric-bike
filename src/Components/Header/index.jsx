@@ -20,6 +20,8 @@ import MobileTwitterLogo from "../../assets/mobile-twit.png";
 import MobileFaceLogo from "../../assets/mobile-face.png";
 import CartIcon from "../../assets/cart-table-logo.png";
 import ProductImage from "../../assets/Product-main-logo.svg";
+import CardOneLogo from "../../assets/card-one.png";
+
 import { Link } from "react-router-dom";
 
 const index = ({
@@ -88,7 +90,7 @@ const index = ({
             onClick={toggleProductVisible}
           >
             <div className="all-product-con">
-              <img src={ProductImage} alt="" />
+              <img src={CardOneLogo} alt="" />
               <h3 className="h3">Ride the world with us</h3>
             </div>
           </Link>
@@ -103,6 +105,14 @@ const index = ({
         </div>
         <div className="header-logo-con">
           <img src={headerLogo} alt="header-logo" />
+        </div>
+        <div className="mobile-cart-con">
+          <img
+            src={searchLogo}
+            alt=""
+            className="search"
+            onClick={toggleVisible}
+          />
         </div>
         <div className="mobile-cart-con">
           <img src={cartLogo} alt="" />
@@ -360,11 +370,7 @@ const index = ({
               <p className="p">Foldable E-Scooter</p>
               <h3 className="h3">N 1, 150, 000</h3>
               <div className="main-cart-header">
-                <button className="cart-btn">
-                  <p className="p">-</p>
-                  <p className="p">0</p>
-                  <p className="p">+</p>
-                </button>
+                <Button title="Add to cart" />
                 <button className="cart-remove-btn">
                   <FaTimes></FaTimes>
                 </button>
@@ -379,11 +385,7 @@ const index = ({
               <p className="p">Foldable E-Scooter</p>
               <h3 className="h3">N 1, 150, 000</h3>
               <div className="main-cart-header">
-                <button className="cart-btn">
-                  <p className="p">-</p>
-                  <p className="p">0</p>
-                  <p className="p">+</p>
-                </button>
+                <Button title="Add to cart" />
                 <button className="cart-remove-btn">
                   <FaTimes></FaTimes>
                 </button>
@@ -398,11 +400,7 @@ const index = ({
               <p className="p">Foldable E-Scooter</p>
               <h3 className="h3">N 1, 150, 000</h3>
               <div className="main-cart-header">
-                <button className="cart-btn">
-                  <p className="p">-</p>
-                  <p className="p">0</p>
-                  <p className="p">+</p>
-                </button>
+                <Button title="Add to cart" />
                 <button className="cart-remove-btn">
                   <FaTimes></FaTimes>
                 </button>

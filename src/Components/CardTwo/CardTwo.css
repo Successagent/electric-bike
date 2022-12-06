@@ -4,7 +4,7 @@
   text-align: center;
   gap: 20px;
   justify-content: center;
-  font-family: var(--secfntfam);
+  font-family: var(--prim-fntfam);
   z-index: 11;
 }
 
@@ -26,6 +26,9 @@
   height: 0px;
   opacity: 0;
   transition: all ease 400ms;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-two>div section {
@@ -102,26 +105,15 @@
   margin: 10px 0;
 }
 
-.hover>svg {
-  color: red;
-  font-size: 20px;
-}
-
-
-.hover>svg {
-  color: red;
-  font-size: 20px;
-}
-
-
-.hover>svg {
-  color: red;
-  font-size: 20px;
+.active-favorite {
+  color: red !important;
+  transition: all 400ms ease-in-out;
 }
 
 .hover>svg {
-  color: red;
-  font-size: 20px;
+  font-size: 30px;
+  color: #606060;
+  transition: all 400ms ease-in-out;
 }
 
 @media(max-width:1020px) {

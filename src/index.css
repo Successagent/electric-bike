@@ -1,10 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
@@ -12,19 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
 
 :root {
   --prim-fntfam: 'Inter', sans-serif;
-  --secfntfam: 'Poppins', sans-serif;
-  --otherfntfam: 'Montserrat', sans-serif;
   --pri-clr: black;
   --sec-clr: #f03e3d;
   --other-clr: #faf2ef;
@@ -111,7 +95,7 @@ img {
     font-weight: 500;
     font-size: 22px;
     line-height: 24px;
-    font-family: 'Poppins';
+    font-family: 'Inter', sans-serif;
   }
 
 }

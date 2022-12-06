@@ -12,8 +12,10 @@
 .home-hero {
   background-image: url(../../assets//bg-bike.png);
   height: 600px;
+  box-shadow: 0px 2px 20px 20px rgba(0, 0, 0, 0.02);
   background-position: center center;
   background-repeat: no-repeat;
+  background-blend-mode: multiply;
   background-size: cover;
   padding: 80px 30px;
   display: flex;
@@ -61,21 +63,48 @@
 }
 
 .home-hero-social-link>div {
-  background-color: white;
-  color: #f03e3d;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.16);
+  color: white;
+  border-radius: 50px;
   height: 30px;
   width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all ease-in-out 400ms;
+}
+
+.home-hero-social-link>div:hover {
+  background-color: var(--sec-clr);
 }
 
 .home-hero-intro {
-  background: rgba(26, 26, 26, 0.4);
   color: white;
   height: 451px;
   padding: 70px 30px;
+}
+
+.home-hero-intro .h3 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--sec-clr);
+}
+
+.home-hero-intro .p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.home-hero-intro .p,
+.home-hero-intro .h1 {
+  width: 50%;
 }
 
 .home-feature-sect .home-feature-section .h3 {
@@ -83,11 +112,13 @@
 }
 
 .home-hero-intro .h1 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 70px;
+  color: #FFFFFF;
   margin-bottom: 15px;
-}
-
-.home-hero-intro .h2 {
-  margin-bottom: 10px;
 }
 
 .home-hero-intro .flex {
@@ -119,7 +150,7 @@
   padding-left: 40px;
   padding-right: 20px;
   gap: 12px;
-  font-family: var(--secfntfam);
+  font-family: var(--prim-fntfam);
 }
 
 .feature-footer>div:nth-child(1) svg {
@@ -139,7 +170,7 @@
 
 .feature-card-two {
   margin-top: 0px;
-  font-family: var(--secfntfam);
+  font-family: var(--prim-fntfam);
   padding-bottom: 60px;
 }
 
@@ -175,8 +206,8 @@
 .feature-card-two .home-feature-section>div:nth-child(2) img {
   height: 350px;
   width: 400px;
-  position: absolute;
-  right: -100px;
+  margin-left: 130px;
+
 
 }
 
@@ -218,7 +249,7 @@
 
 .faq-section .home-feature-section>div {
   width: 50%;
-  font-family: var(--secfntfam);
+  font-family: var(--prim-fntfam);
 }
 
 .faq-section .home-feature-section>div:nth-child(1) {
@@ -285,7 +316,7 @@
   justify-content: space-between;
   text-align: center;
   padding: 100px 160px;
-  font-family: var(--sec-clr);
+  font-family: var(--prim-fntfam);
 }
 
 .order-section>div {
@@ -347,6 +378,23 @@
 
 @media(max-width:1020px) {
 
+  .home-page,
+  .about-page,
+  .products-page,
+  .product-page,
+  .deals-page,
+  .support-page,
+  .cart-page,
+  .order-page {
+    padding-top: 0px;
+  }
+
+
+  .home-hero-intro .p,
+  .home-hero-intro .h1 {
+    width: 100%;
+  }
+
   .slate {
     display: none !important;
     position: static;
@@ -363,9 +411,13 @@
 
   .home-hero-intro {
     padding: 30px;
-    text-align: center;
-    width: 90%;
+    text-align: start;
     margin: auto;
+    margin-top: 100px;
+  }
+
+  .home-hero-intro .flex {
+    flex-direction: column;
   }
 
   .home-hero-intro .h1 {
@@ -393,8 +445,9 @@
 
   .home-hero-intro .p {
     font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: var(--prim-fntfam);
     line-height: 15px;
   }
 

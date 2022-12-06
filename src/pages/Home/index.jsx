@@ -16,7 +16,7 @@ import { CgFacebook, CgInstagram } from "react-icons/cg";
 import { CiTwitter } from "react-icons/ci";
 import { AiOutlineGlobal } from "react-icons/ai";
 
-const index = ({ active, toggleVisible }) => {
+const index = () => {
   return (
     <>
       <div className="home-page">
@@ -33,22 +33,13 @@ const index = ({ active, toggleVisible }) => {
             </div>
           </ul>
           <div className="home-hero-intro">
-            <h1 className="h1">FAT TIRE MATT</h1>
-            <h2 className="h2">Electronic Bike</h2>
-            <div className="flex">
-              <div>
-                <h3 className="h3">Feature 1</h3>
-                <p className="p">Description</p>
-              </div>
-              <div>
-                <h3 className="h3">Feature 1</h3>
-                <p className="p">Description</p>
-              </div>
-              <div>
-                <h3 className="h3">Feature 1</h3>
-                <p className="p">Description</p>
-              </div>
-            </div>
+            <h3 className="h3">Luxury Rides</h3>
+            <h1 className="h1">Explore and Ride The World with Us</h1>
+            <p className="p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              quisque dignissim tellus, tempus nec donec aliquam enim, posuere.
+              Massa volutpat amet odio urna vel aliquet. Cras
+            </p>
             <div className="flex">
               <Button title="Learn More" />
               <Button title="Buy More" />

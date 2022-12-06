@@ -5,7 +5,7 @@
 }
 
 .checkout-section .review-form>.p:last-child {
-    font-family: 'Poppins';
+    font-family: var(--prim-fntfam);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

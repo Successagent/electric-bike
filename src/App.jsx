@@ -25,7 +25,6 @@ function App() {
   const [productVisible, setProductVisible] = useState(false);
   const [formVisible, setFormVisible] = useState(false);
   const [favorite, setFavorite] = useState(false);
-  const [addFavorite, setAddFavorite] = useState(1);
 
   const toggleVisible = (e) => {
     switch (e.target.className) {
@@ -41,11 +40,9 @@ function App() {
       case "favorite":
         setFavorite(!favorite);
         break;
-      case "addfavorite":
       case "product":
         setProductVisible(!productVisible);
     }
-    console.log(visible);
   };
 
   return (
