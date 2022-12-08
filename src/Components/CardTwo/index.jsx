@@ -5,133 +5,80 @@ import "../CardTwo/CardTwo.css";
 import { BsStarFill, BsCart3 } from "react-icons/bs";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
-import Button from "../Button";
+import CartLogo from "../../assets/cart-table-logo.png";
 
-const index = ({ h2, h3, p }) => {
+const index = ({ h2, h3, p, addToCart, addToFavorite }) => {
   const [cartFavorite, setCartFavorite] = useState(false);
-  const [cartFavoriteActive, setCartFavoriteActive] = useState(0);
 
-  const toggleCartFavorite = (e) => {
-    if (e.target.id == 1) {
-      if (cartFavoriteActive != 1) {
-        setCartFavoriteActive(1);
-      } else if (cartFavoriteActive == 1) {
-        setCartFavoriteActive(0);
-      }
-    }
+  const [cardTwo, setCardTwo] = useState([
+    {
+      name: `${h3}`,
+      price: `${h2}`,
+      ptext: `${p}`,
+      src: `${CartLogo}`,
+      id: 1,
+      qtny: 1,
+    },
+    {
+      name: `${h3}`,
+      price: `${h2}`,
+      ptext: `${p}`,
+      src: `${CartLogo}`,
+      id: 2,
+      qtny: 1,
+    },
+    {
+      name: `${h3}`,
+      price: `${h2}`,
+      ptext: `${p}`,
+      src: `${CartLogo}`,
+      id: 3,
+      qtny: 1,
+    },
+    {
+      name: `${h3}`,
+      price: `${h2}`,
+      ptext: `${p}`,
+      src: `${CartLogo}`,
+      id: 4,
+      qtny: 1,
+    },
+  ]);
+
+  const toggleCartFavorite = (id) => {
     setCartFavorite(!cartFavorite);
-
-    console.log(cartFavoriteActive);
   };
   return (
     <div className="card-two">
-      <div>
-        <div className="bg-img"></div>
-        <div className="flex">
-          <p className="p">
-            <BsStarFill className="bsStar"></BsStarFill>
-            5/5
-          </p>
-          <p className="p">12 Reviews</p>
-        </div>
-        <h3 className="h3">{h3}</h3>
-        <p className="p">{p}</p>
-        <h2 className="h2">{h2}</h2>
-        <section className="hover">
-          {cartFavoriteActive == 1 ? (
-            <AiFillHeart id="1" onClick={toggleCartFavorite}></AiFillHeart>
-          ) : cartFavorite == false ? (
-            <AiOutlineHeart
-              id="1"
-              onClick={toggleCartFavorite}
-            ></AiOutlineHeart>
-          ) : (
-            <AiOutlineHeart
-              id="1"
-              onClick={toggleCartFavorite}
-            ></AiOutlineHeart>
-          )}
-          <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
-        </section>
-      </div>
-      <div>
-        <div className="bg-img"></div>
-        <div className="flex">
-          <p className="p">
-            <BsStarFill className="bsStar"></BsStarFill>
-            5/5
-          </p>
-          <p className="p">12 Reviews</p>
-        </div>
-        <h3 className="h3">{h3}</h3>
-        <p className="p">{p}</p>
-        <h2 className="h2">{h2}</h2>
-        <section className="hover">
-          {cartFavoriteActive == 2 ? (
-            <AiFillHeart id="2" onClick={toggleCartFavorite}></AiFillHeart>
-          ) : cartFavorite == false ? (
-            <AiOutlineHeart
-              id="2"
-              onClick={toggleCartFavorite}
-            ></AiOutlineHeart>
-          ) : (
-            <AiOutlineHeart id="2"></AiOutlineHeart>
-          )}
-          <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
-        </section>
-      </div>
-      <div>
-        <div className="bg-img"></div>
-        <div className="flex">
-          <p className="p">
-            <BsStarFill className="bsStar"></BsStarFill>
-            5/5
-          </p>
-          <p className="p">12 Reviews</p>
-        </div>
-        <h3 className="h3">{h3}</h3>
-        <p className="p">{p}</p>
-        <h2 className="h2">{h2}</h2>
-        <section className="hover">
-          {cartFavoriteActive == 3 ? (
-            <AiFillHeart id="3" onClick={toggleCartFavorite}></AiFillHeart>
-          ) : cartFavorite == false ? (
-            <AiOutlineHeart
-              id="3"
-              onClick={toggleCartFavorite}
-            ></AiOutlineHeart>
-          ) : (
-            <AiOutlineHeart id="3"></AiOutlineHeart>
-          )}
-          <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
-        </section>
-      </div>
-      <div>
-        <div className="bg-img"></div>
-        <div className="flex">
-          <p className="p">
-            <BsStarFill className="bsStar"></BsStarFill>
-            5/5
-          </p>
-          <p className="p">12 Reviews</p>
-        </div>
-        <h3 className="h3">{h3}</h3>
-        <p className="p">{p}</p>
-        <h2 className="h2">{h2}</h2>
-        <section className="hover">
-          {cartFavoriteActive == 4 ? (
-            <AiFillHeart id="4" onClick={toggleCartFavorite}></AiFillHeart>
-          ) : cartFavorite == false ? (
-            <AiOutlineHeart
-              id="4"
-              onClick={toggleCartFavorite}
-            ></AiOutlineHeart>
-          ) : (
-            <AiOutlineHeart id="4"></AiOutlineHeart>
-          )}
-          <Button title="Add to cart" icon={<BsCart3></BsCart3>} />
-        </section>
-      </div>
+      {cardTwo.map((card, idx) => {
+        return (
+          <div key={idx}>
+            <div className="bg-img"></div>
+            <div className="flex">
+              <p className="p">
+                <BsStarFill className="bsStar"></BsStarFill>
+                5/5
+              </p>
+              <p className="p">12 Reviews</p>
+            </div>
+            <h3 className="h3">{card.name}</h3>
+            <p className="p">{card.ptext}</p>
+            <h2 className="h2">{card.price}</h2>
+            <section className="hover">
+              {cartFavorite == false ? (
+                <AiOutlineHeart
+                  onClick={() => addToFavorite(card)}
+                ></AiOutlineHeart>
+              ) : (
+                ""
+              )}
+              <button className="btn" onClick={() => addToCart(card)}>
+                Add to cart <BsCart3></BsCart3>
+              </button>
+            </section>
+          </div>
+        );
+      })}
     </div>
   );
 };

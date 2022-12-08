@@ -36,6 +36,20 @@ header {
 .header-icons-con {
   width: 35%;
   gap: 50px;
+  position: relative;
+}
+
+.cart-p {
+  position: absolute;
+  color: var(--sec-clr);
+  z-index: 100;
+  font-size: 15px;
+  right: 30px;
+  top: 0;
+  padding: 5px 8px;
+  background-color: white;
+  border-radius: 50px;
+
 }
 
 .mobile-cart-con,
@@ -124,7 +138,7 @@ header {
 .cart-two .main-cart-header .btn {
   height: 35px;
   width: 157px;
-   font-family: var(--prim-fntfam);
+  font-family: var(--prim-fntfam);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -186,7 +200,7 @@ header {
 }
 
 .main-cart-text-con>.p {
-   font-family: var(--prim-fntfam);
+  font-family: var(--prim-fntfam);
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -196,7 +210,7 @@ header {
 }
 
 .main-cart-text-con>.h3 {
-   font-family: var(--prim-fntfam);
+  font-family: var(--prim-fntfam);
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
@@ -311,7 +325,28 @@ header {
   width: 100%;
 }
 
+.favorite-p {
+  left: 0;
+  background-color: white;
+  color: var(--sec-clr);
+  padding: 5px 8px;
+  border-radius: 50px;
+  position: absolute;
+  left: 90px;
+  top: 0px;
+}
+
 @media (max-width: 1020px) {
+
+  .show-products {
+    background-color: #F03E3D;
+    flex-direction: column;
+    overflow: scroll;
+    height: auto !important;
+    top: 80px !important;
+    padding-bottom: 30px;
+  }
+
   header {
     height: 80px;
     padding: 0 20px;

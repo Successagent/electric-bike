@@ -125,6 +125,15 @@
     width: 28px;
 }
 
+
+.red {
+    background-color: red !important;
+}
+
+.green {
+    background-color: green !important;
+}
+
 .active-color {
     padding: 4px;
     border: 1px solid black;
@@ -203,6 +212,10 @@
 }
 
 @media(max-width:1020px) {
+    .products-page {
+        padding-top: 50px;
+    }
+
     .products-review-sec {
         flex-direction: column;
         padding: 30px 20px;

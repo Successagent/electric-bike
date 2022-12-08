@@ -1,7 +1,7 @@
 import "../Button/Button.css";
-const index = ({ title, icon, btn }) => {
+const index = ({ title, icon, eventFunction }) => {
   return (
-    <button id="1" className="btn" onClick={btn}>
+    <button id="1" className="btn" onClick={eventFunction}>
       {title} {icon}
     </button>
   );

@@ -17,7 +17,7 @@
 }
 
 .checkout-second-child>.p {
- font-family: var(--prim-fntfam);
+    font-family: var(--prim-fntfam);
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -89,7 +89,7 @@
 }
 
 .checkout-main-item-one .p {
- font-family: var(--prim-fntfam);
+    font-family: var(--prim-fntfam);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -98,10 +98,46 @@
 }
 
 .checkout-main-item-two .p {
- font-family: var(--prim-fntfam);
+    font-family: var(--prim-fntfam);
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 27px;
     color: #22343D;
+}
+
+@media(max-width:1020px) {
+
+    .checkout-section {
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+
+    .checkout-section>div {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .checkout-orders-sect-main {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .checkout-page .btn {
+        margin-bottom: 20px;
+    }
+
+    .checkout-second-child {
+        height: auto;
+    }
+
+    .checkout-orders-sect-footer .h3 {
+        font-size: 18px;
+    }
+
+    .checkout-orders-sect .h3 {
+        font-size: 20px;
+    }
 }

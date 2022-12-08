@@ -16,7 +16,7 @@ import { CgFacebook, CgInstagram } from "react-icons/cg";
 import { CiTwitter } from "react-icons/ci";
 import { AiOutlineGlobal } from "react-icons/ai";
 
-const index = () => {
+const index = ({ favorite, cart, addToCart, addToFavorite }) => {
   return (
     <>
       <div className="home-page">
@@ -91,11 +91,15 @@ const index = () => {
             h3="Foldable E-Scooter"
             p="luxuory electronic scooter"
             h2="N 1, 150, 000"
+            addToCart={addToCart}
+            addToFavorite={addToFavorite}
           />
           <CardTwo
             h3="Foldable E-Scooter"
             p="luxuory electronic scooter"
             h2="N 1, 150, 000"
+            addToCart={addToCart}
+            addToFavorite={addToFavorite}
           />
         </div>
         <Button title="VIEW ALL PRODUCTS" />

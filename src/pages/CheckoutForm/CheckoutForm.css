@@ -28,5 +28,17 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0px;
+}
 
+@media(max-width:1020px) {
+    .checkout-page .review-form>div {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .checkout-page .review-form>div .flex {
+        width: 100%;
+        margin: 0;
+    }
 }

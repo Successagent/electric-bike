@@ -8,5 +8,7 @@ import Search  from "./Search";
 import TermsAndConditions from "./TermsAndConditions"
 import PrivacyAndPolicy from "./PrivacyAndPolicy"
 import Cart from "./Cart"
+import Checkout from "./Checkout"
+import ShoppingCart from "./ShoppingCart"
 
-export { Home, Products,About,Deals,Support,Search,TermsAndConditions,PrivacyAndPolicy,Cart,Product};
+export { Home, Products,About,Deals,Support,Search,TermsAndConditions,PrivacyAndPolicy,Cart,Product,Checkout,ShoppingCart};

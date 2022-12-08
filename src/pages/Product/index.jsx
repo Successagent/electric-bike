@@ -8,20 +8,29 @@ import "../Product/Product.css";
 
 import Brand from "../../assets/element-3.png";
 import BrandTwo from "../../assets/element-4.png";
-import StopCircle from "../../assets/stop-circle.png";
-import Sort from "../../assets/sort.png";
-import Money from "../../assets/money.png";
-import MotorBike from "../../assets/tabler_motorbike.png";
-import Skate from "../../assets/icons8-skateboard.png";
-import Scooter from "../../assets/icons8-gyroscooter.png";
-import ArrowRight from "../../assets/arrow-right.png";
 
-
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { BsArrowDown } from "react-icons/bs";
+import { TfiAngleDown, TfiAngleUp } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
-import { FaSearch } from "react-icons/fa";
+import { AiOutlineCheck } from "react-icons/ai";
+import { useState } from "react";
 
 const index = ({ toggleVisible }) => {
+  const [dropDown, setDropDown] = useState(false);
+  const [active, setActive] = useState("Price");
+
+  const toggleDropDown = (e) => {
+    if (e.target.value == "Price") {
+      setActive("Price");
+    } else if (e.target.id == "Newest") {
+      setActive("Newest");
+    } else if (e.target.id == "Popular") {
+      setActive("Popular");
+    }
+    setDropDown(!dropDown);
+    console.log(e.target.id);
+  };
+
   return (
     <section className="product-page">
       <PagesHero />
@@ -35,66 +44,53 @@ const index = ({ toggleVisible }) => {
       <section className="product-section-two">
         <div className="product-section-two-item-one">
           <div className="product-section-two-item-one-header">
-            <img className="diff" src={Brand} alt="" />
-            <img src={BrandTwo} alt="" />
+            <div>
+              <img className="diff" src={Brand} alt="" />
+              <img src={BrandTwo} alt="" />
+            </div>
+            <p className="p">Item 1 - 6 of 22 </p>
           </div>
-          <div className="product-section-two-item-one-main">
-            <div className="flex">
-              <img src={StopCircle} alt="" />
-              <h3 className="h3">Brand</h3>
-            </div>
+          <div>
+            <h3 className="h3">Sort</h3>
             <div className="input-con">
-              <p className="p">Raswheel</p>
-              <MdOutlineKeyboardArrowDown></MdOutlineKeyboardArrowDown>
+              <p className="p">{active}</p>
+              {dropDown == false ? (
+                <TfiAngleDown
+                  style={{ cursor: "pointer" }}
+                  onClick={toggleDropDown}
+                ></TfiAngleDown>
+              ) : (
+                <TfiAngleUp
+                  style={{ cursor: "pointer" }}
+                  onClick={toggleDropDown}
+                ></TfiAngleUp>
+              )}
+              <p className="p">|</p>
+              <BsArrowDown></BsArrowDown>
             </div>
-            <div className="flex">
-              <img src={Sort} alt="" />
-              <h3 className="h3">Sort</h3>
-            </div>
-            <div className="input-con">
-              <p className="p">A - Z</p>
-              <MdOutlineKeyboardArrowDown></MdOutlineKeyboardArrowDown>
-            </div>
-            <div className="flex">
-              <img src={Money} alt="" />
-              <h3 className="h3">Price (N)</h3>
-            </div>
-            <p className="p text">Min</p>
-            <div className="input-con min">
-              <p className="p">N | </p>
-              <p className="p">100,000</p>
-            </div>
-            <p className="p text">Max</p>
-            <div className="input-con max">
-              <p className="p">N | </p>
-              <p className="p">100,000</p>
+            <div className="dropdown" data-visible={dropDown}>
+              <div className="flex">
+                <p className="p" id="Price" onClick={toggleDropDown}>
+                  Price
+                </p>
+                {active == "Price" ? <AiOutlineCheck></AiOutlineCheck> : ""}
+              </div>
+              <div className="flex">
+                <p className="p" id="Newest" onClick={toggleDropDown}>
+                  Newest
+                </p>
+                {active == "Newest" ? <AiOutlineCheck></AiOutlineCheck> : ""}
+              </div>
+              <div className="flex">
+                <p className="p" id="Popular" onClick={toggleDropDown}>
+                  Popular
+                </p>
+                {active == "Popular" ? <AiOutlineCheck></AiOutlineCheck> : ""}
+              </div>
             </div>
           </div>
         </div>
         <div className="product-section-two-item-two">
-          <form className="search-form">
-            <div>
-              <input type="text" placeholder="Search" />
-              <Button icon={<FaSearch></FaSearch>} />
-            </div>
-          </form>
-          <div className="vert-roll">
-            <Button title="All" />
-            <BorderButton
-              title="Electric Bike"
-              icon={<img src={MotorBike} />}
-            />
-            <BorderButton
-              title="Electric Scooter"
-              icon={<img src={Scooter} />}
-            />
-            <BorderButton
-              title="Electric Skateboard"
-              icon={<img src={Skate} />}
-            />
-            <img src={ArrowRight} alt="" />
-          </div>
-          <p className="p">Item 1 - 6 of 22 </p>
           <CardThree
             h3="Foldable E-Scooter"
             p="N 1, 150, 000"

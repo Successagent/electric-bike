@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 import BorderButton from "../../Components/BorderButton";
 import Button from "../../Components/Button";
 import GrayButton from "../../Components/GrayButton";
@@ -15,7 +14,7 @@ import ProductImage from "../../assets/Product-main-logo.svg";
 import { FaCheck } from "react-icons/fa";
 import { BsHeart, BsShare, BsStarFill } from "react-icons/bs";
 
-const index = () => {
+const index = ({ cart, addToCart }) => {
   const [tab, setTab] = useState(1);
 
   function toggleTab(e) {
@@ -29,7 +28,6 @@ const index = () => {
 
   return (
     <>
-     
       <section className="products-page">
         <PagesHero />
         <section className="products-review-sec">
@@ -72,18 +70,18 @@ const index = () => {
                 <div></div>
               </div>
               <div>
-                <div></div>
+                <div className="red"></div>
               </div>
               <div>
-                <div></div>
+                <div className="green"></div>
               </div>
               <div>
-                <div></div>
+                <div className="yellow"></div>
               </div>
             </div>
             <div className="flex interation">
               <p>-</p>
-              <p>0</p>
+              <p>{cart.length}</p>
               <p>+</p>
             </div>
             <div className="flex products-review-btns">
@@ -91,7 +89,7 @@ const index = () => {
                 icon={<BsHeart></BsHeart>}
                 title="Add to Favorite"
               />
-              <Button title="Add to Cart" />
+              <Button eventFunction={addToCart} title="Add to Cart" />
             </div>
           </div>
           <div className="product-review-item-two">

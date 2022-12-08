@@ -5,7 +5,9 @@
 .deals-page,
 .support-page,
 .cart-page,
-.order-page {
+.order-page,
+.checkout-page,
+.shop-cart {
   padding-top: 100px;
 }
 
@@ -319,6 +321,11 @@
   font-family: var(--prim-fntfam);
 }
 
+.order-section img {
+  height: 45px;
+  width: 45px;
+}
+
 .order-section>div {
   display: flex;
   flex-direction: column;
@@ -329,7 +336,7 @@
 .order-section .h3 {
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 140%;
   text-align: center;
   color: #22343d;
@@ -338,7 +345,7 @@
 .order-section .p {
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
   text-align: center;
   color: #606060;
@@ -386,7 +393,7 @@
   .support-page,
   .cart-page,
   .order-page {
-    padding-top: 0px;
+    padding-top: 50px;
   }
 
 
