@@ -364,9 +364,7 @@
 .home-feature-sect .home-feature-section>div:nth-child(2)>div {
   border-radius: 8px;
   padding: 20px;
-  position: absolute;
   background-color: white;
-  top: -60px;
 }
 
 

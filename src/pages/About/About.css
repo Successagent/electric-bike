@@ -34,7 +34,7 @@
 }
 
 .home-feature-sect .home-feature-section>div:nth-child(2)>div {
-    position: static;
+  
     inset: 0;
     margin-top: -120px;
     display: flex;
