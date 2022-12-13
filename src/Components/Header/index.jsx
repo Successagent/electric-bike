@@ -37,6 +37,10 @@ const index = ({
   removeFromCart,
   favorite,
   addToCart,
+  getTotalPrice,
+  increamentQuantity,
+  decreamentQuantity,
+  setVisible,
 }) => {
   let totalPrice = 0;
   const toggleProductVisible = () => {
@@ -108,8 +112,9 @@ const index = ({
             onClick={toggleVisible}
           />
         </div>
-        <div className="mobile-cart-con">
-          <img src={cartLogo} alt="" />
+        <div className="mobile-cart-con cart-logo">
+          <p className="mobile-cart-val">{cart.length}</p>
+          <img src={cartLogo} alt="" className="cart" onClick={toggleVisible} />
         </div>
         <ul className="mobile-list" data-visible={visible}>
           <div className="close-icon">
@@ -156,16 +161,14 @@ const index = ({
             </Link>
           </li>
 
-          <li>
-            <Link
-              to="/favourite"
-              style={{ color: "black", textDecoration: "none" }}
-            >
-              Favourite
-            </Link>
-          </li>
-          <div className="flex">
-            <img src={MobileHeartLogo} alt="" />
+          <li style={{ color: "black", textDecoration: "none" }}>Favourite</li>
+          <div
+            className="flex"
+            onClick={() =>
+              visible == true ? setVisible(false) : setVisible(false)
+            }
+          >
+            <img src={MobileProfileLogo} alt="" />
             <li>
               <Link
                 to="/blog"
@@ -175,17 +178,7 @@ const index = ({
               </Link>
             </li>
           </div>
-          <div className="flex">
-            <img src={MobileProfileLogo} alt="" />
-            <li>
-              <Link
-                to="/blog"
-                style={{ color: "black", textDecoration: "none" }}
-              >
-                Blog
-              </Link>
-            </li>
-          </div>
+
           <p className="p">electricbikelagos@gmail.com</p>
           <p className="p">+234 232 4564 286</p>
           <section>
@@ -279,7 +272,6 @@ const index = ({
             </button>
           </div>
           {cart.map((product, idx) => {
-            totalPrice += product.price * product.id;
             return (
               <div key={idx} className="main-cart-main">
                 <div className="main-cart-img-con">
@@ -290,9 +282,19 @@ const index = ({
                   <h3 className="h3">{product.price}</h3>
                   <div className="main-cart-header">
                     <button className="cart-btn">
-                      <p className="p">-</p>
-                      <p className="p">{0}</p>
-                      <p className="p">+</p>
+                      <p
+                        className="p"
+                        onClick={() => decreamentQuantity(product.id)}
+                      >
+                        -
+                      </p>
+                      <p className="p">{product.quantity}</p>
+                      <p
+                        className="p"
+                        onClick={() => increamentQuantity(product.id)}
+                      >
+                        +
+                      </p>
                     </button>
                     <button
                       className="cart-remove-btn"
@@ -308,14 +310,28 @@ const index = ({
 
           <div className="main-cart-header main-cart-header-two">
             <p className="p">Subtotal</p>
-            <h3 className="h3">N 3,200,000</h3>
+            <h3 className="h3">N {getTotalPrice()}</h3>
           </div>
           <div className="main-cart-footer">
             <Link to="/checkout">
-              <Button icon={<CiLock></CiLock>} title="Proceed to Checkout" />
+              <button
+                className="btn"
+                onClick={() =>
+                  carts == true ? setCarts(false) : setCarts(true)
+                }
+              >
+                <CiLock></CiLock> Proceed to Checkout
+              </button>
             </Link>
             <Link to="/shopping-cart">
-              <GrayButton title="View and Edit Cart" />
+              <button
+                className="gray-btn"
+                onClick={() =>
+                  carts == true ? setCarts(false) : setCarts(true)
+                }
+              >
+                View and Edit Cart
+              </button>
             </Link>
           </div>
         </div>
@@ -364,7 +380,18 @@ const index = ({
             <h3 className="h3">N 3,200,000</h3>
           </div>
           <div className="main-cart-footer">
-            <Button icon={<CiLock></CiLock>} title="Proceed to Checkout" />
+            <Link to="/checkout">
+              <button
+                className="btn"
+                onClick={() =>
+                  toggleFavorite == true
+                    ? setToggleFavorite(false)
+                    : setToggleFavorite(true)
+                }
+              >
+                <CiLock></CiLock> Proceed to Checkout
+              </button>
+            </Link>
           </div>
         </div>
       </div>

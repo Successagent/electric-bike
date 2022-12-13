@@ -140,11 +140,6 @@
     padding: 0 !important;
   }
 
-  .card-two>div:hover .flex,
-  .card-two>div:hover section {
-    height: 0px !important;
-    opacity: 0 !important;
-  }
 }
 
 @media(min-width:750px) and (max-width:1020px) {

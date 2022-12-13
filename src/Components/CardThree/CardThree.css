@@ -20,7 +20,7 @@
     z-index: 11;
     border-radius: 8px;
     border: 1px solid rgba(240, 62, 61, 0.2);
-    padding: 20px 15px;
+    padding: 10px;
     position: relative;
 }
 
@@ -36,8 +36,8 @@
     left: 30px;
     color: #606060;
     border-radius: 4px;
-    transition: all 800ms ease-in-out;
-    transform: translateX(-45px);
+    transition: all 400ms ease-in-out;
+    transform: translateX(-40px);
     opacity: 0;
 }
 

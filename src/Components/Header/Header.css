@@ -345,6 +345,41 @@ header {
     height: auto !important;
     top: 80px !important;
     padding-bottom: 30px;
+
+  }
+
+
+
+  .carts .cart {
+    width: 20% !important;
+  }
+
+  .cart-logo {
+    position: relative;
+  }
+
+  .mobile-cart-val {
+    position: absolute;
+    color: var(--sec-clr);
+    background-color: white;
+    padding: 2px 6px;
+    left: 27px;
+    border-radius: 50px;
+    z-index: 90;
+  }
+
+  .main-cart {
+    width: 80%;
+  }
+
+  .main-cart-header .h3 {
+    font-size: 19px;
+  }
+
+  .cart-remove-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
 
   header {
@@ -489,5 +524,4 @@ header {
     width: 40px;
     height: 40px;
   }
-
 }

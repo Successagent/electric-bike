@@ -6,9 +6,7 @@ import "../Checkout/Checkout.css";
 
 import { FaMoneyBill } from "react-icons/fa";
 
-import CartIcon from "../../assets/cart-table-logo.png";
-
-const index = ({ cart }) => {
+const index = ({ cart, getTotalPrice }) => {
   return (
     <section className="checkout-page">
       <PagesHero />
@@ -32,7 +30,7 @@ const index = ({ cart }) => {
                 <div className="checkout-main-item-one">
                   <img src={product.src} alt={product.name} />
                   <p className="p">
-                    {product.name} X {product.qtny}
+                    {product.name} X {product.quantity}
                   </p>
                 </div>
                 <div className="checkout-main-item-two">
@@ -40,13 +38,13 @@ const index = ({ cart }) => {
                 </div>
               </div>
             ))}
-          
+
             <div className="checkout-orders-sect-footer">
               <div className="checkout-orders-sect-footer-item-one">
                 <p className="p">Subtotal</p>
               </div>
               <div className="checkout-orders-sect-footer-item-two">
-                <h3 className="h3">N 3, 000, 000</h3>
+                <h3 className="h3">N {getTotalPrice()}</h3>
               </div>
             </div>
             <div className="checkout-orders-sect-footer" id="footer-2">
@@ -62,7 +60,7 @@ const index = ({ cart }) => {
                 <p className="p">Total</p>
               </div>
               <div className="checkout-orders-sect-footer-item-two">
-                <h3 className="h3">40000</h3>
+                <h3 className="h3">N {getTotalPrice()}</h3>
               </div>
             </div>
           </div>

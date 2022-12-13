@@ -1,8 +1,6 @@
 import PagesHero from "../../Components/PagesHero";
 import PageIndication from "../../Components/PageIndication";
 import CardThree from "../../Components/CardThree";
-import Button from "../../Components/Button";
-import BorderButton from "../../Components/BorderButton";
 
 import "../Product/Product.css";
 
