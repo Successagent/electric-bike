@@ -34,7 +34,7 @@
 }
 
 .products-review-sec {
-    background-color: var(--other-clr);
+    background-color: #F8F8F8;
     padding: 50px 100px;
     display: flex;
     gap: 30px;

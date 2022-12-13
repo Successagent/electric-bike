@@ -31,7 +31,7 @@ function App() {
   const [productVisible, setProductVisible] = useState(false);
   const [formVisible, setFormVisible] = useState(false);
   const [toggleFavorite, setToggleFavorite] = useState(false);
-  const [style, setStyle] = useState(false);
+  const [style, setStyle] = useState("grid");
   const [cardTwo, setCardTwo] = useState([
     {
       name: `Foldable E-Scooter`,
@@ -79,7 +79,9 @@ function App() {
         break;
       case "product":
         setProductVisible(!productVisible);
+        break;
     }
+    console.log(style);
   };
 
   const addToCart = (product) => {
@@ -138,7 +140,15 @@ function App() {
 
   const removeFromCart = (removeProduct) => {
     return setCart(cart.filter((product) => product !== removeProduct));
-    console.log(cart);
+  };
+
+  const toggleStyle = (e) => {
+    if (e.target.id == 1) {
+      setStyle("grid");
+    } else if (e.target.id == 2) {
+      setStyle("list");
+    }
+    console.log(style);
   };
 
   const { pathname } = useLocation();
@@ -189,7 +199,13 @@ function App() {
         />
         <Route
           path="/product"
-          element={<Product toggleVisible={toggleVisible} style={style} />}
+          element={
+            <Product
+              toggleVisible={toggleVisible}
+              style={style}
+              toggleStyle={toggleStyle}
+            />
+          }
         />
         <Route path="/about" element={<About />} />
         <Route

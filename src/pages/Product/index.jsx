@@ -1,6 +1,7 @@
 import PagesHero from "../../Components/PagesHero";
 import PageIndication from "../../Components/PageIndication";
 import CardThree from "../../Components/CardThree";
+import List from "../../Components/List";
 
 import "../Product/Product.css";
 
@@ -13,7 +14,7 @@ import { GrNext, GrPrevious } from "react-icons/gr";
 import { AiOutlineCheck } from "react-icons/ai";
 import { useState } from "react";
 
-const index = ({ toggleVisible }) => {
+const index = ({ toggleVisible, style, toggleStyle }) => {
   const [dropDown, setDropDown] = useState(false);
   const [active, setActive] = useState("Price");
 
@@ -43,8 +44,20 @@ const index = ({ toggleVisible }) => {
         <div className="product-section-two-item-one">
           <div className="product-section-two-item-one-header">
             <div>
-              <img className="diff" src={Brand} alt="" />
-              <img src={BrandTwo} alt="" />
+              <img
+                className={` ${style == "grid" ? "diff" : ""}`}
+                id="1"
+                onClick={toggleStyle}
+                src={Brand}
+                alt=""
+              />
+              <img
+                src={BrandTwo}
+                className={` ${style == "list" ? "diff" : ""}`}
+                id="2"
+                onClick={toggleStyle}
+                alt=""
+              />
             </div>
             <p className="p">Item 1 - 6 of 22 </p>
           </div>
@@ -89,16 +102,29 @@ const index = ({ toggleVisible }) => {
           </div>
         </div>
         <div className="product-section-two-item-two">
-          <CardThree
-            h3="Foldable E-Scooter"
-            p="N 1, 150, 000"
-            toggleVisible={toggleVisible}
-          />
-          <CardThree
-            h3="Foldable E-Scooter"
-            p="N 1, 150, 000"
-            oggleVisible={toggleVisible}
-          />
+          {style == "list" ? (
+            <div>
+              <List
+                h3="Foldable E-Scooter"
+                h2="luxuory electronic scooter"
+                p="N 1, 150, 000"
+                toggleVisible={toggleVisible}
+              />
+            </div>
+          ) : (
+            <>
+              <CardThree
+                h3="Foldable E-Scooter"
+                p="N 1, 150, 000"
+                toggleVisible={toggleVisible}
+              />
+              <CardThree
+                h3="Foldable E-Scooter"
+                p="N 1, 150, 000"
+                toggleVisible={toggleVisible}
+              />
+            </>
+          )}
           <section className="review-section-two">
             <section className="flex">
               <div className="red flex">
@@ -119,3 +145,15 @@ const index = ({ toggleVisible }) => {
 };
 
 export default index;
+{
+  /* <CardThree
+h3="Foldable E-Scooter"
+p="N 1, 150, 000"
+toggleVisible={toggleVisible}
+/>
+<CardThree
+h3="Foldable E-Scooter"
+p="N 1, 150, 000"
+toggleVisible={toggleVisible}
+/> */
+}
