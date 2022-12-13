@@ -348,8 +348,6 @@ header {
 
   }
 
-
-
   .carts .cart {
     width: 20% !important;
   }
@@ -440,7 +438,8 @@ header {
   .mobile-list>.p {
     font-size: 14px;
     margin: 20px 0;
-    padding: 0 10px;
+    padding: 0;
+    padding-left: 30px;
   }
 
   .mobile-list li {

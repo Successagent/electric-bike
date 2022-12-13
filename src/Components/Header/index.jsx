@@ -120,12 +120,20 @@ const index = ({
           <div className="close-icon">
             <img src={close} className="close" alt="" onClick={toggleVisible} />
           </div>
-          <li>
+          <li
+            onClick={() =>
+              visible == true ? setVisible(false) : setVisible(false)
+            }
+          >
             <Link to="/" style={{ color: "black", textDecoration: "none" }}>
               Home
             </Link>
           </li>
-          <li>
+          <li
+            onClick={() =>
+              visible == true ? setVisible(false) : setVisible(false)
+            }
+          >
             <Link
               to="/about"
               style={{ color: "black", textDecoration: "none" }}
@@ -134,7 +142,14 @@ const index = ({
             </Link>
           </li>
           <li
-            onClick={toggleVisible}
+            onClick={(e) => {
+              toggleVisible(e);
+              if (visible == true) {
+                setVisible(false);
+              } else {
+                setVisible(true);
+              }
+            }}
             className="product"
             style={{
               color: "black",
@@ -144,7 +159,11 @@ const index = ({
           >
             Products
           </li>
-          <li>
+          <li
+            onClick={() =>
+              visible == true ? setVisible(false) : setVisible(false)
+            }
+          >
             <Link
               to="/deals"
               style={{ color: "black", textDecoration: "none" }}
@@ -152,7 +171,11 @@ const index = ({
               Deals
             </Link>
           </li>
-          <li>
+          <li
+            onClick={() =>
+              visible == true ? setVisible(false) : setVisible(false)
+            }
+          >
             <Link
               to="/support"
               style={{ color: "black", textDecoration: "none" }}
@@ -178,7 +201,6 @@ const index = ({
               </Link>
             </li>
           </div>
-
           <p className="p">electricbikelagos@gmail.com</p>
           <p className="p">+234 232 4564 286</p>
           <section>
