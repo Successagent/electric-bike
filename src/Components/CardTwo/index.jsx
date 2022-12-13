@@ -13,7 +13,9 @@ const index = ({ addToCart, addToFavorite, cardTwo, getTotalPrice }) => {
       {cardTwo.map((card, idx) => {
         return (
           <div key={idx}>
-            <div className="bg-img"></div>
+            <div className="bg-img">
+              <img src={card.src} alt="" />
+            </div>
             <div className="flex">
               <p className="p">
                 <BsStarFill className="bsStar"></BsStarFill>

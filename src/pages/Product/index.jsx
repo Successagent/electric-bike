@@ -112,12 +112,10 @@ const index = ({
           {style == "list" ? (
             <div>
               <List
-                h3="Foldable E-Scooter"
-                h2="luxuory electronic scooter"
-                p="N 1, 150, 000"
                 toggleVisible={toggleVisible}
                 addToCart={addToCart}
                 addToFavorite={addToFavorite}
+                cardThree={cardThree}
               />
             </div>
           ) : (
@@ -156,15 +154,3 @@ const index = ({
 };
 
 export default index;
-{
-  /* <CardThree
-h3="Foldable E-Scooter"
-p="N 1, 150, 000"
-toggleVisible={toggleVisible}
-/>
-<CardThree
-h3="Foldable E-Scooter"
-p="N 1, 150, 000"
-toggleVisible={toggleVisible}
-/> */
-}

@@ -185,6 +185,7 @@
 
 .active-img {
     border: 1px solid var(--sec-clr);
+    transition: all 500ms ease-in-out;
 }
 
 .select-img img {

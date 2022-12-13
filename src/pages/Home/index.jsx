@@ -112,7 +112,11 @@ const index = ({
             headerTwo="Featured Products"
             text="Check out what others are buying"
           />
-          <CardThree cardThree={cardThree} />
+          <CardThree
+            cardThree={cardThree}
+            addToCart={addToCart}
+            addToFavorite={addToFavorite}
+          />
         </div>
         <div className="feature-card-two">
           <FeatureCard reverse="reverse" />

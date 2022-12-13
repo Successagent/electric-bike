@@ -13,7 +13,7 @@ import profileLogo from "../../assets/profile.png";
 import heartLogo from "../../assets/heart.png";
 import MenuLogo from "../../assets/menu.svg";
 import MobileProfileLogo from "../../assets/mobile-profile.png";
-import MobileHeartLogo from "../../assets/mobile-heart.png";
+
 import close from "../../assets/Button.png";
 import MobileInstaLogo from "../../assets/mobile-insta.png";
 import MobileTwitterLogo from "../../assets/mobile-twit.png";
@@ -41,8 +41,9 @@ const index = ({
   increamentQuantity,
   decreamentQuantity,
   setVisible,
+  getQuantityTotal,
+  cardThree,
 }) => {
-  let totalPrice = 0;
   const toggleProductVisible = () => {
     return productVisible == true
       ? setProductVisible(false)
@@ -52,46 +53,19 @@ const index = ({
     <>
       <header>
         <section className="show-products" data-visible={productVisible}>
-          <Link
-            to="/product"
-            style={{ color: "black" }}
-            onClick={toggleProductVisible}
-          >
-            <div className="all-product-con">
-              <img src={ProductImage} alt="" />
-              <h3 className="h3">Ride the world with us</h3>
-            </div>
-          </Link>
-          <Link
-            to="/product"
-            style={{ color: "black" }}
-            onClick={toggleProductVisible}
-          >
-            <div className="all-product-con">
-              <img src={ProductImage} alt="" />
-              <h3 className="h3">Ride the world with us</h3>
-            </div>
-          </Link>
-          <Link
-            to="/product"
-            style={{ color: "black" }}
-            onClick={toggleProductVisible}
-          >
-            <div className="all-product-con">
-              <img src={ProductImage} alt="" />
-              <h3 className="h3">Ride the world with us</h3>
-            </div>
-          </Link>
-          <Link
-            to="/product"
-            style={{ color: "black" }}
-            onClick={toggleProductVisible}
-          >
-            <div className="all-product-con">
-              <img src={CardOneLogo} alt="" />
-              <h3 className="h3">Ride the world with us</h3>
-            </div>
-          </Link>
+          {cardThree.map((product, idx) => (
+            <Link
+              to="/product"
+              style={{ color: "black" }}
+              onClick={toggleProductVisible}
+              key={idx}
+            >
+              <div className="all-product-con">
+                <img src={product.src} alt="" />
+                <h3 className="h3">Ride the world with us</h3>
+              </div>
+            </Link>
+          ))}
         </section>
         <div className="menu">
           <img
@@ -113,7 +87,7 @@ const index = ({
           />
         </div>
         <div className="mobile-cart-con cart-logo">
-          <p className="mobile-cart-val">{cart.length}</p>
+          <p className="mobile-cart-val">{getQuantityTotal()}</p>
           <img src={cartLogo} alt="" className="cart" onClick={toggleVisible} />
         </div>
         <ul className="mobile-list" data-visible={visible}>
@@ -272,7 +246,7 @@ const index = ({
             onClick={toggleVisible}
           />
 
-          <p className="p cart-p">{cart.length}</p>
+          <p className="p cart-p">{getQuantityTotal()}</p>
           <img
             src={heartLogo}
             alt=""

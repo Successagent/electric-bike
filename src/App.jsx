@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 
-import CartLogo from "./assets/cart-table-logo.png";
-import HeaderSet from "./assets/headset.jfif";
+import ListLogo from "./assets/list-img.png";
 import Watch from "./assets/watch.jfif";
 import Camera from "./assets/camera.jpg";
+import HoverBoard from "./assets/image203.svg";
+
 import {
   Home,
   Products,
@@ -36,19 +37,19 @@ function App() {
   const [toggleFavorite, setToggleFavorite] = useState(false);
   const [style, setStyle] = useState("grid");
   const [tab, setTab] = useState(1);
-  const [cardTwo, setCardTwo] = useState([
+  const [cardTwo] = useState([
     {
       name: `Foldable E-Scooter`,
       price: 500,
       ptext: `luxuory electronic scooter`,
-      src: `${CartLogo}`,
+      src: `${ListLogo}`,
       id: 1,
     },
     {
       name: `Foldable E-Skakeboard`,
       price: 600,
       ptext: `luxuory electronic scooter`,
-      src: `${HeaderSet}`,
+      src: `${HoverBoard}`,
       id: 2,
     },
     {
@@ -67,19 +68,19 @@ function App() {
     },
   ]);
 
-  const [cardThree, setCardThree] = useState([
+  const [cardThree] = useState([
     {
       name: `Foldable E-Scooter`,
       price: 500,
       ptext: `luxuory electronic scooter`,
-      src: `${CartLogo}`,
+      src: `${ListLogo}`,
       id: 1,
     },
     {
       name: `Foldable E-Skakeboard`,
       price: 600,
       ptext: `luxuory electronic scooter`,
-      src: `${HeaderSet}`,
+      src: `${HoverBoard}`,
       id: 2,
     },
     {
@@ -97,6 +98,8 @@ function App() {
       id: 4,
     },
   ]);
+
+  const navigate = () => useNavigate();
 
   const toggleVisible = (e) => {
     switch (e.target.className) {
@@ -219,6 +222,8 @@ function App() {
         increamentQuantity={increamentQuantity}
         decreamentQuantity={decreamentQuantity}
         setVisible={setVisible}
+        getQuantityTotal={getQuantityTotal}
+        cardThree={cardThree}
       />
       <Routes>
         <Route

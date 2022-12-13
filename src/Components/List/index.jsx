@@ -3,93 +3,35 @@ import { BsStarFill, BsHeart } from "react-icons/bs";
 
 import ListLogo from "../../assets/list-img.png";
 
-const index = ({ h3, p, toggleVisible, h2 }) => {
+const index = ({ cardThree, addToCart, addToFavorite }) => {
   return (
     <div className="list">
-      <div>
-        <div className="list-item-one">
-          <img src={ListLogo} alt="" />
-        </div>
-        <div className="list-item-two">
-          <h3 className="h3">{h3}</h3>
-          <p className="p">{h2}</p>
-          <div className="flex">
-            <p className="p">
-              <BsStarFill className="bsStar"></BsStarFill>
-              5/5
-            </p>
-            <p className="p">12 Reviews</p>
+      {cardThree.map((product, idx) => {
+        return (
+          <div key={idx}>
+            <div className="list-item-one">
+              <img src={product.src} alt={product.name} />
+            </div>
+            <div className="list-item-two">
+              <h3 className="h3">{product.name}</h3>
+              <p className="p">{product.ptext}</p>
+              <div className="flex">
+                <p className="p">
+                  <BsStarFill className="bsStar"></BsStarFill> 5/5
+                </p>
+                <p className="p">12 Reviews</p>
+              </div>
+              <h2 className="h2">N{product.price}</h2>
+            </div>
+            <div className="list-item-three">
+              <BsHeart onClick={() => addToFavorite(product)}></BsHeart>
+              <button className="btn" onClick={() => addToCart(product)}>
+                Add to Cart
+              </button>
+            </div>
           </div>
-          <h2 className="h2">{p}</h2>
-        </div>
-        <div className="list-item-three">
-          <BsHeart></BsHeart>
-          <button className="btn">Add to Cart</button>
-        </div>
-      </div>
-      <div>
-        <div className="list-item-one">
-          <img src={ListLogo} alt="" />
-        </div>
-        <div className="list-item-two">
-          <h3 className="h3">{h3}</h3>
-          <p className="p">{h2}</p>
-          <div className="flex">
-            <p className="p">
-              <BsStarFill className="bsStar"></BsStarFill>
-              5/5
-            </p>
-            <p className="p">12 Reviews</p>
-          </div>
-          <h2 className="h2">{p}</h2>
-        </div>
-        <div className="list-item-three">
-          <BsHeart></BsHeart>
-          <button className="btn">Add to Cart</button>
-        </div>
-      </div>
-      <div>
-        <div className="list-item-one">
-          <img src={ListLogo} alt="" />
-        </div>
-        <div className="list-item-two">
-          <h3 className="h3">{h3}</h3>
-          <p className="p">{h2}</p>
-          <div className="flex">
-            <p className="p">
-              <BsStarFill className="bsStar"></BsStarFill>
-              5/5
-            </p>
-            <p className="p">12 Reviews</p>
-          </div>
-          <h2 className="h2">{p}</h2>
-        </div>
-        <div className="list-item-three">
-          <BsHeart></BsHeart>
-          <button className="btn">Add to Cart</button>
-        </div>
-      </div>
-      <div>
-        <div className="list-item-one">
-          <img src={ListLogo} alt="" />
-        </div>
-        <div className="list-item-two">
-          <h3 className="h3">{h3}</h3>
-          <p className="p">{h2}</p>
-          <div className="flex">
-            <p className="p">
-              <BsStarFill className="bsStar"></BsStarFill>
-              5/5
-            </p>
-            <p className="p">12 Reviews</p>
-          </div>
-          <h2 className="h2">{p}</h2>
-        </div>
-        <div className="list-item-three">
-          <BsHeart></BsHeart>
-          <button className="btn">Add to Cart</button>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 };

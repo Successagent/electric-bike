@@ -10,8 +10,25 @@ import ProductImage from "../../assets/Product-main-logo.svg";
 
 import { FaCheck } from "react-icons/fa";
 import { BsHeart, BsShare, BsStarFill } from "react-icons/bs";
+import { useState } from "react";
 
 const index = ({ cart, addToCart, toggleTab, tab }) => {
+  const [active, setActive] = useState(1);
+
+  const toggleActive = (e) => {
+    if (e.target.id == 1) {
+      setActive(1);
+    }
+    if (e.target.id == 2) {
+      setActive(2);
+    }
+    if (e.target.id == 3) {
+      setActive(3);
+    }
+    if (e.target.id == 4) {
+      setActive(4);
+    }
+  };
   return (
     <>
       <section className="products-page">
@@ -81,17 +98,33 @@ const index = ({ cart, addToCart, toggleTab, tab }) => {
           <div className="product-review-item-two">
             <img src={ProductImage} alt="" />
             <div className="flex select-img">
-              <div className="active-img">
-                <img src={ProductImage} alt="" />
+              <div
+                className={` ${active == 1 ? "active-img" : ""}`}
+                id="1"
+                onClick={toggleActive}
+              >
+                <img id="1" src={ProductImage} alt="" />
               </div>
-              <div>
-                <img src={ProductImage} alt="" />
+              <div
+                className={` ${active == 2 ? "active-img" : ""}`}
+                id="2"
+                onClick={toggleActive}
+              >
+                <img id="2" src={ProductImage} alt="" />
               </div>
-              <div>
-                <img src={ProductImage} alt="" />
+              <div
+                className={` ${active == 3 ? "active-img" : ""}`}
+                id="3"
+                onClick={toggleActive}
+              >
+                <img id="3" src={ProductImage} alt="" />
               </div>
-              <div>
-                <img src={ProductImage} alt="" />
+              <div
+                className={` ${active == 4 ? "active-img" : ""}`}
+                id="4"
+                onClick={toggleActive}
+              >
+                <img id="4" src={ProductImage} alt="" />
               </div>
             </div>
           </div>

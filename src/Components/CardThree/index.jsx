@@ -11,7 +11,9 @@ const index = ({ cardThree, addToCart, addToFavorite }) => {
         return (
           <div key={idx}>
             <Link to="/products">
-              <div className="bg-img"></div>
+              <div className="bg-img">
+                <img src={card.src} alt={card.name} />
+              </div>
             </Link>
             <section>
               <BsHeart

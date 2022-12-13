@@ -9,7 +9,11 @@ import { FaMoneyBill } from "react-icons/fa";
 const index = ({ cart, getTotalPrice }) => {
   return (
     <section className="checkout-page">
+      <div className="compelete-payment">
+        <div></div>
+      </div>
       <PagesHero />
+
       <section className="checkout-section">
         <div>
           <CheckoutForm />

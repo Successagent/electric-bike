@@ -1,3 +1,7 @@
+.checkout-page {
+    position: relative;
+}
+
 .checkout-section {
     display: flex;
     padding: 30px 120px;
@@ -7,6 +11,7 @@
     width: 50%;
     padding: 30px;
 }
+
 
 .checkout-second-child {
     border: 1px solid #E8E8E8;
