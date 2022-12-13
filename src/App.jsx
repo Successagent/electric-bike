@@ -4,6 +4,9 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 
 import CartLogo from "./assets/cart-table-logo.png";
+import HeaderSet from "./assets/headset.jfif";
+import Watch from "./assets/watch.jfif";
+import Camera from "./assets/camera.jpg";
 import {
   Home,
   Products,
@@ -32,6 +35,7 @@ function App() {
   const [formVisible, setFormVisible] = useState(false);
   const [toggleFavorite, setToggleFavorite] = useState(false);
   const [style, setStyle] = useState("grid");
+  const [tab, setTab] = useState(1);
   const [cardTwo, setCardTwo] = useState([
     {
       name: `Foldable E-Scooter`,
@@ -44,21 +48,52 @@ function App() {
       name: `Foldable E-Skakeboard`,
       price: 600,
       ptext: `luxuory electronic scooter`,
-      src: `${CartLogo}`,
+      src: `${HeaderSet}`,
       id: 2,
     },
     {
       name: `Foldable E-Hoverboard`,
       price: 700,
       ptext: `luxuory electronic scooter`,
-      src: `${CartLogo}`,
+      src: `${Watch}`,
       id: 3,
     },
     {
       name: `Foldable E-Bikes`,
       price: 800,
       ptext: `luxuory electronic scooter`,
+      src: `${Camera}`,
+      id: 4,
+    },
+  ]);
+
+  const [cardThree, setCardThree] = useState([
+    {
+      name: `Foldable E-Scooter`,
+      price: 500,
+      ptext: `luxuory electronic scooter`,
       src: `${CartLogo}`,
+      id: 1,
+    },
+    {
+      name: `Foldable E-Skakeboard`,
+      price: 600,
+      ptext: `luxuory electronic scooter`,
+      src: `${HeaderSet}`,
+      id: 2,
+    },
+    {
+      name: `Foldable E-Hoverboard`,
+      price: 700,
+      ptext: `luxuory electronic scooter`,
+      src: `${Watch}`,
+      id: 3,
+    },
+    {
+      name: `Foldable E-Bikes`,
+      price: 800,
+      ptext: `luxuory electronic scooter`,
+      src: `${Camera}`,
       id: 4,
     },
   ]);
@@ -81,7 +116,6 @@ function App() {
         setProductVisible(!productVisible);
         break;
     }
-    console.log(style);
   };
 
   const addToCart = (product) => {
@@ -151,6 +185,15 @@ function App() {
     console.log(style);
   };
 
+  function toggleTab(e) {
+    if (e.target.id == 2) {
+      setTab(2);
+    } else if (e.target.id == 1) {
+      setTab(1);
+    }
+    console.log(tab);
+  }
+
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -188,6 +231,7 @@ function App() {
               addToFavorite={addToFavorite}
               addToCart={addToCart}
               cardTwo={cardTwo}
+              cardThree={cardThree}
               getTotalPrice={getTotalPrice}
               increamentQuantity={increamentQuantity}
             />
@@ -195,7 +239,14 @@ function App() {
         />
         <Route
           path="/products"
-          element={<Products cart={cart} addToCart={addToCart} />}
+          element={
+            <Products
+              cart={cart}
+              addToCart={addToCart}
+              toggleTab={toggleTab}
+              tab={tab}
+            />
+          }
         />
         <Route
           path="/product"
@@ -204,6 +255,9 @@ function App() {
               toggleVisible={toggleVisible}
               style={style}
               toggleStyle={toggleStyle}
+              addToCart={addToCart}
+              addToFavorite={addToFavorite}
+              cardThree={cardThree}
             />
           }
         />

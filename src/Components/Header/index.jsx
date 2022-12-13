@@ -184,7 +184,20 @@ const index = ({
             </Link>
           </li>
 
-          <li style={{ color: "black", textDecoration: "none" }}>Favourite</li>
+          <li
+            className="favorite"
+            onClick={(e) => {
+              toggleVisible(e);
+              if (visible == true) {
+                setVisible(false);
+              } else {
+                setVisible(true);
+              }
+            }}
+            style={{ color: "black", textDecoration: "none" }}
+          >
+            Favourite
+          </li>
           <div
             className="flex"
             onClick={() =>
@@ -390,7 +403,10 @@ const index = ({
                   <button className="btn" onClick={() => addToCart(product)}>
                     Add to cart
                   </button>
-                  <button className="cart-remove-btn">
+                  <button
+                    className="cart-remove-btn"
+                    onClick={() => removeFromCart(product)}
+                  >
                     <FaTimes></FaTimes>
                   </button>
                 </div>

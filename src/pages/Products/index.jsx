@@ -1,8 +1,5 @@
-import { useState } from "react";
-
 import BorderButton from "../../Components/BorderButton";
 import Button from "../../Components/Button";
-import GrayButton from "../../Components/GrayButton";
 import PagesHero from "../../Components/PagesHero";
 import Description from "../Description";
 import Reviews from "../Reviews";
@@ -14,18 +11,7 @@ import ProductImage from "../../assets/Product-main-logo.svg";
 import { FaCheck } from "react-icons/fa";
 import { BsHeart, BsShare, BsStarFill } from "react-icons/bs";
 
-const index = ({ cart, addToCart }) => {
-  const [tab, setTab] = useState(1);
-
-  function toggleTab(e) {
-    if (e.target.id == 2) {
-      setTab(2);
-    } else if (e.target.id == 1) {
-      setTab(1);
-    }
-    console.log(tab);
-  }
-
+const index = ({ cart, addToCart, toggleTab, tab }) => {
   return (
     <>
       <section className="products-page">
@@ -111,8 +97,24 @@ const index = ({ cart, addToCart }) => {
           </div>
         </section>
         <div className="description-hero-section flex">
-          <Button btn={toggleTab} title="Description"></Button>
-          <GrayButton btn={toggleTab} title="Customers Review"></GrayButton>
+          {tab == 1 ? (
+            <button id="1" className="btn" onClick={toggleTab}>
+              Description
+            </button>
+          ) : (
+            <button id="1" className="btn gray-btn" onClick={toggleTab}>
+              Description
+            </button>
+          )}
+          {tab == 1 ? (
+            <button id="2" className="btn gray-btn" onClick={toggleTab}>
+              Customers Review
+            </button>
+          ) : (
+            <button id="2" className="btn" onClick={toggleTab}>
+              Customers Review
+            </button>
+          )}
         </div>
         {tab == 1 ? <Description /> : <Reviews />}
         <div className="seller-sec"></div>

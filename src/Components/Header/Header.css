@@ -24,6 +24,10 @@ header {
   margin-right: 100px;
 }
 
+.cart-table-header-first-child img {
+  width: 100px !important;
+}
+
 .header-list li {
   font-style: normal;
   font-weight: 600;
@@ -490,6 +494,14 @@ header {
     transition: none;
     top: 80px;
     z-index: 900;
+    display: none;
+  }
+
+  .cart-two>div:nth-child(1) {
+    width: 20% !important;
+  }
+
+  .main-cart .gray-btn {
     display: none;
   }
 

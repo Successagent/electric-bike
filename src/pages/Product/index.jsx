@@ -14,7 +14,14 @@ import { GrNext, GrPrevious } from "react-icons/gr";
 import { AiOutlineCheck } from "react-icons/ai";
 import { useState } from "react";
 
-const index = ({ toggleVisible, style, toggleStyle }) => {
+const index = ({
+  toggleVisible,
+  style,
+  toggleStyle,
+  addToCart,
+  addToFavorite,
+  cardThree,
+}) => {
   const [dropDown, setDropDown] = useState(false);
   const [active, setActive] = useState("Price");
 
@@ -109,19 +116,23 @@ const index = ({ toggleVisible, style, toggleStyle }) => {
                 h2="luxuory electronic scooter"
                 p="N 1, 150, 000"
                 toggleVisible={toggleVisible}
+                addToCart={addToCart}
+                addToFavorite={addToFavorite}
               />
             </div>
           ) : (
             <>
               <CardThree
-                h3="Foldable E-Scooter"
-                p="N 1, 150, 000"
                 toggleVisible={toggleVisible}
+                addToCart={addToCart}
+                addToFavorite={addToFavorite}
+                cardThree={cardThree}
               />
               <CardThree
-                h3="Foldable E-Scooter"
-                p="N 1, 150, 000"
                 toggleVisible={toggleVisible}
+                addToCart={addToCart}
+                addToFavorite={addToFavorite}
+                cardThree={cardThree}
               />
             </>
           )}
