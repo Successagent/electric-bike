@@ -5,7 +5,7 @@ import Footer from "./Components/Footer";
 
 import ListLogo from "./assets/list-img.png";
 import Watch from "./assets/watch.jfif";
-import Camera from "./assets/camera.jpg";
+import CardOneLogo from "./assets/card-one.png";
 import HoverBoard from "./assets/image203.svg";
 
 import {
@@ -63,7 +63,7 @@ function App() {
       name: `Foldable E-Bikes`,
       price: 800,
       ptext: `luxuory electronic scooter`,
-      src: `${Camera}`,
+      src: `${CardOneLogo}`,
       id: 4,
     },
   ]);
@@ -94,7 +94,7 @@ function App() {
       name: `Foldable E-Bikes`,
       price: 800,
       ptext: `luxuory electronic scooter`,
-      src: `${Camera}`,
+      src: `${CardOneLogo}`,
       id: 4,
     },
   ]);
