@@ -1,0 +1,116 @@
+.orders-section {
+    padding: 35px 20px;
+}
+
+.orders-header {
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.orders-header .dash-btn {
+    width: 100px;
+    font-size: 12px;
+}
+
+.orders-header .dash-btn:last-child {
+    width: 150px;
+    background-color: #342094;
+    color: white;
+}
+
+.orders-header .input-con {
+    background: #FFFFFF;
+    border: 1.5px solid rgba(52, 32, 148, 0.2);
+    box-shadow: 0px 1px 1px rgba(123, 123, 123, 0.16);
+    border-radius: 6px;
+    height: 40px;
+    width: 200px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.orders-header .input-con input {
+    border: none;
+    outline: none;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    width: 80%;
+}
+
+.orders-header .input-con img {
+    width: 20%;
+    height: 20px;
+}
+
+.orders-stats {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 20px 30px;
+    width: 100%;
+}
+
+
+.orders-stats-header {
+    justify-content: space-between;
+    background: #FAFAFA;
+    border-radius: 6px;
+    height: 60px;
+    padding: 0 15px;
+
+}
+
+.orders-stats-header .p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #5F6868;
+}
+
+.orders-stats-inner {
+    background-color: white;
+}
+
+.orders-stats-inner .p {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.action-btn {
+    width: 30px;
+    height: 30px;
+    color: #F26E6E;
+}
+
+.status-btn {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #56C456;
+    width: 74px;
+    height: 30px;
+    border: none;
+}
+
+@media(max-width:1020px) {
+
+    .orders-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dash-btn {
+        display: none !important;
+    }
+
+    .orders-stats {
+        width: 800px;
+        overflow-x: scroll !important;
+    }
+}

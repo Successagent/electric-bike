@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import MainDashboard from "./Dashboard/Components/MainDashboard";
 
 import ListLogo from "./assets/list-img.png";
 import Watch from "./assets/watch.jfif";
@@ -29,6 +30,7 @@ import "./App.css";
 function App() {
   const [carts, setCarts] = useState(false);
   const [cart, setCart] = useState([]);
+  const [visibility, setVisibility] = useState(false);
   const [favorite, setFavorite] = useState([]);
   const [active, setActive] = useState(1);
   const [visible, setVisible] = useState(false);
@@ -121,6 +123,8 @@ function App() {
     }
   };
 
+  const toggleDashboardVisibility = () => setVisibility(!visibility);
+
   const addToCart = (product) => {
     let newCart = [...cart];
 
@@ -203,106 +207,111 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
-    <>
-      <Header
-        carts={carts}
-        cart={cart}
-        addToCart={addToCart}
-        favorite={favorite}
-        visible={visible}
-        productVisible={productVisible}
-        formVisible={formVisible}
-        toggleVisible={toggleVisible}
-        setCarts={setCarts}
-        setToggleFavorite={setToggleFavorite}
-        toggleFavorite={toggleFavorite}
-        setProductVisible={setProductVisible}
-        removeFromCart={removeFromCart}
-        getTotalPrice={getTotalPrice}
-        increamentQuantity={increamentQuantity}
-        decreamentQuantity={decreamentQuantity}
-        setVisible={setVisible}
-        getQuantityTotal={getQuantityTotal}
-        cardThree={cardThree}
-      />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              active={active}
-              toggleVisible={toggleVisible}
-              cart={cart}
-              addToFavorite={addToFavorite}
-              addToCart={addToCart}
-              cardTwo={cardTwo}
-              cardThree={cardThree}
-              getTotalPrice={getTotalPrice}
-              increamentQuantity={increamentQuantity}
-            />
-          }
-        />
-        <Route
-          path="/products"
-          element={
-            <Products
-              cart={cart}
-              addToCart={addToCart}
-              toggleTab={toggleTab}
-              tab={tab}
-            />
-          }
-        />
-        <Route
-          path="/product"
-          element={
-            <Product
-              toggleVisible={toggleVisible}
-              style={style}
-              toggleStyle={toggleStyle}
-              addToCart={addToCart}
-              addToFavorite={addToFavorite}
-              cardThree={cardThree}
-            />
-          }
-        />
-        <Route path="/about" element={<About />} />
-        <Route
-          path="/deals"
-          element={
-            <Deals
-              addToCart={addToCart}
-              addToFavorite={addToFavorite}
-              cardTwo={cardTwo}
-              getTotalPrice={getTotalPrice}
-            />
-          }
-        />
-        <Route path="/support" element={<Support />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/terms&conditions" element={<TermsAndConditions />} />
-        <Route path="/privacy&policy" element={<PrivacyAndPolicy />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/order" element={<Order />} />
-        <Route
-          path="/checkout"
-          element={<Checkout cart={cart} getTotalPrice={getTotalPrice} />}
-        />
-        <Route
-          path="/shopping-cart"
-          element={
-            <ShoppingCart
-              cart={cart}
-              removeFromCart={removeFromCart}
-              getTotalPrice={getTotalPrice}
-              increamentQuantity={increamentQuantity}
-              decreamentQuantity={decreamentQuantity}
-            />
-          }
-        />
-      </Routes>
-      <Footer />
-    </>
+    <MainDashboard
+      toggleDashboardVisibility={toggleDashboardVisibility}
+      visibility={visibility}
+    />
+    // <>
+    //   <Header
+    //     carts={carts}
+    //     cart={cart}
+    //     addToCart={addToCart}
+    //     favorite={favorite}
+    //     visible={visible}
+    //     productVisible={productVisible}
+    //     formVisible={formVisible}
+    //     toggleVisible={toggleVisible}
+    //     setCarts={setCarts}
+    //     setToggleFavorite={setToggleFavorite}
+    //     toggleFavorite={toggleFavorite}
+    //     setProductVisible={setProductVisible}
+    //     removeFromCart={removeFromCart}
+    //     getTotalPrice={getTotalPrice}
+    //     increamentQuantity={increamentQuantity}
+    //     decreamentQuantity={decreamentQuantity}
+    //     setVisible={setVisible}
+    //     getQuantityTotal={getQuantityTotal}
+    //     cardThree={cardThree}
+    //   />
+    //   <Routes>
+    //     <Route
+    //       path="/"
+    //       element={
+    //         <Home
+    //           active={active}
+    //           toggleVisible={toggleVisible}
+    //           cart={cart}
+    //           addToFavorite={addToFavorite}
+    //           addToCart={addToCart}
+    //           cardTwo={cardTwo}
+    //           cardThree={cardThree}
+    //           getTotalPrice={getTotalPrice}
+    //           increamentQuantity={increamentQuantity}
+    //         />
+    //       }
+    //     />
+    //     <Route
+    //       path="/products"
+    //       element={
+    //         <Products
+    //           cart={cart}
+    //           addToCart={addToCart}
+    //           toggleTab={toggleTab}
+    //           tab={tab}
+    //         />
+    //       }
+    //     />
+    //     <Route
+    //       path="/product"
+    //       element={
+    //         <Product
+    //           toggleVisible={toggleVisible}
+    //           style={style}
+    //           toggleStyle={toggleStyle}
+    //           addToCart={addToCart}
+    //           addToFavorite={addToFavorite}
+    //           cardThree={cardThree}
+    //         />
+    //       }
+    //     />
+    //     <Route path="/about" element={<About />} />
+    //     <Route
+    //       path="/deals"
+    //       element={
+    //         <Deals
+    //           addToCart={addToCart}
+    //           addToFavorite={addToFavorite}
+    //           cardTwo={cardTwo}
+    //           getTotalPrice={getTotalPrice}
+    //         />
+    //       }
+    //     />
+    //     <Route path="/support" element={<Support />} />
+    //     <Route path="/search" element={<Search />} />
+    //     <Route path="/terms&conditions" element={<TermsAndConditions />} />
+    //     <Route path="/privacy&policy" element={<PrivacyAndPolicy />} />
+    //     <Route path="/cart" element={<Cart />} />
+    //     <Route path="/order" element={<Order />} />
+
+    //     <Route
+    //       path="/checkout"
+    //       element={<Checkout cart={cart} getTotalPrice={getTotalPrice} />}
+    //     />
+    //     <Route
+    //       path="/shopping-cart"
+    //       element={
+    //         <ShoppingCart
+    //           cart={cart}
+    //           removeFromCart={removeFromCart}
+    //           getTotalPrice={getTotalPrice}
+    //           increamentQuantity={increamentQuantity}
+    //           decreamentQuantity={decreamentQuantity}
+    //         />
+    //       }
+    //     />
+    //   </Routes>
+    //   <Footer />
+    // </>
   );
 }
 
