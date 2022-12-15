@@ -59,7 +59,26 @@
     border-radius: 6px;
     height: 60px;
     padding: 0 15px;
+}
 
+.orders-stats-header>div {
+    width: 14.3%;
+}
+
+.orders-stats-inner>div {
+    width: 14.3%;
+}
+
+.orders-stats-inner>div:nth-child(4) {
+    padding-left: 25px;
+}
+
+.orders-stats-header>div:nth-child(5) {
+    padding-left: 20px;
+}
+
+.orders-stats-inner>div:nth-child(5) {
+    padding-left: 0px;
 }
 
 .orders-stats-header .p {
@@ -78,6 +97,10 @@
 .orders-stats-inner .p {
     font-weight: 400;
     font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    line-height: 19px;
+    color: #5F6868;
 }
 
 .action-btn {

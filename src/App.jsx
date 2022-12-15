@@ -207,10 +207,7 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
-    <MainDashboard
-      toggleDashboardVisibility={toggleDashboardVisibility}
-      visibility={visibility}
-    />
+    <MainDashboard />
     // <>
     //   <Header
     //     carts={carts}

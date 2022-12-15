@@ -1,3 +1,20 @@
-.customers-stats-header .flex {
+.customers-stats-inner .flex {
     gap: 10px;
+}
+
+.customers-stats-header>div {
+    width: 20% !important;
+}
+
+
+.customers-stats-header>div:nth-child(4) {
+    padding-left: 30px;
+}
+
+.customers-stats-header>div:nth-child(4) {
+    padding-right: 20px;
+}
+
+.customers-stats-inner>div {
+    width: 20% !important;
 }

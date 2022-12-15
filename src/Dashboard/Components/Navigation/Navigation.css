@@ -14,6 +14,7 @@
 .nav-menu-sect .flex {
     margin-bottom: 15px;
     gap: 13px;
+    padding-left: 10px;
 }
 
 .nav-menu-sect img {
@@ -44,10 +45,10 @@
     border: 1px solid #F0F1F6;
     border-radius: 8px;
     background: #F6F7FB;
+    transition: all ease-in-out 400ms;
     Width: 240px;
     Height: 42px;
     padding-left: 10px;
-    transition: all ease-in-out 400ms;
 }
 
 .dash-p {

@@ -1,6 +1,5 @@
 import "../MainDashboard/MainDashboard.css";
-import Navigation from "../Navigation";
-import DashHeader from "../DashHeader";
+
 import Orders from "../../pages/Orders";
 import Customers from "../../pages/Customers";
 import Transaction from "../../pages/Transaction";
@@ -13,7 +12,7 @@ import Categories from "../../pages/Categories";
 import { useState } from "react";
 
 const index = ({ visibility, toggleDashboardVisibility }) => {
-  const [active, setActive] = useState("customers");
+  const [active, setActive] = useState("categories");
   const toggleActive = (e) => {
     if (e.target.id == "dashboard") {
       setActive("dashboard");
@@ -35,36 +34,65 @@ const index = ({ visibility, toggleDashboardVisibility }) => {
   };
 
   return (
-    <div className="dashboard">
-      <Navigation
-        visibility={visibility}
-        toggleActive={toggleActive}
-        active={active}
-      />
-      <div className="dashboard-body">
-        <DashHeader
-          toggleDashboardVisibility={toggleDashboardVisibility}
+    <>
+      {active == "orders" ? (
+        <Orders
           active={active}
+          toggleActive={toggleActive}
+          toggleDashboardVisibility={toggleDashboardVisibility}
+          visibility={visibility}
         />
-        {active == "orders" ? (
-          <Orders />
-        ) : active == "customers" ? (
-          <Customers />
-        ) : active == "categories" ? (
-          <Categories />
-        ) : active == "message" ? (
-          <Message />
-        ) : active == "discount" ? (
-          <Discount />
-        ) : active == "products" ? (
-          <Products />
-        ) : active == "transaction" ? (
-          <Transaction />
-        ) : (
-          <DashBoard />
-        )}
-      </div>
-    </div>
+      ) : active == "customers" ? (
+        <Customers
+          active={active}
+          toggleActive={toggleActive}
+          toggleDashboardVisibility={toggleDashboardVisibility}
+          visibility={visibility}
+        />
+      ) : active == "categories" ? (
+        <Categories
+          active={active}
+          toggleActive={toggleActive}
+          toggleDashboardVisibility={toggleDashboardVisibility}
+          visibility={visibility}
+        />
+      ) : active == "message" ? (
+        <Message
+          active={active}
+          toggleActive={toggleActive}
+          toggleDashboardVisibility={toggleDashboardVisibility}
+          visibility={visibility}
+        />
+      ) : active == "discount" ? (
+        <Discount
+          active={active}
+          toggleActive={toggleActive}
+          toggleDashboardVisibility={toggleDashboardVisibility}
+          visibility={visibility}
+        />
+      ) : active == "products" ? (
+        <Products
+          active={active}
+          toggleActive={toggleActive}
+          toggleDashboardVisibility={toggleDashboardVisibility}
+          visibility={visibility}
+        />
+      ) : active == "transaction" ? (
+        <Transaction
+          active={active}
+          toggleActive={toggleActive}
+          toggleDashboardVisibility={toggleDashboardVisibility}
+          visibility={visibility}
+        />
+      ) : (
+        <DashBoard
+          active={active}
+          toggleActive={toggleActive}
+          toggleDashboardVisibility={toggleDashboardVisibility}
+          visibility={visibility}
+        />
+      )}
+    </>
   );
 };
 

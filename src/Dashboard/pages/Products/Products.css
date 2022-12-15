@@ -1,0 +1,32 @@
+.on-act {
+    background: #CCC5C5;
+    width: 41px;
+    height: 24px;
+    border-radius: 50px;
+}
+
+
+.act-btn {
+    background: #342094;
+}
+
+.products-stats-header>div {
+    width: 16.7% !important;
+}
+
+.products-stats-inner>div {
+    width: 16.7% !important;
+    gap: 10px !important;
+}
+
+.products-stats-header>div:nth-child(2) {
+    padding-left: 30px !important;
+}
+
+.products-stats-inner>div:nth-child(2) {
+    padding-left: 20px !important;
+}
+
+.products-stats-inner>div:nth-child(4) {
+    margin-right: 30px !important;
+}
