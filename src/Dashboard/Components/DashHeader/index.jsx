@@ -11,7 +11,16 @@ const index = ({ toggleDashboardVisibility, active }) => {
         <AiOutlineMenu onClick={toggleDashboardVisibility}></AiOutlineMenu>
       </div>
       <div className="flex">
-        <p className="p">Menu</p>
+        <p className="p">
+          {active == "customers" ||
+          active == "categories" ||
+          active == "products" ||
+          active == "discount"
+            ? "Management"
+            : active == "orders" || active == "dashboard"
+            ? "Menu"
+            : "Settings"}
+        </p>
         <p className="p" style={{ textTransform: "capitalize" }}>
           {active}
         </p>

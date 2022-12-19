@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "../Categories/Categories.css";
 
 import DashBtn from "../../Components/DashBtn";
@@ -46,78 +48,88 @@ const index = ({
             <DashBtn title="Select" icon={<img src={Select} alt="" />} />
             <DashBtn title="Export" icon={<img src={Export} alt="" />} />
             <DashBtn title="Import" icon={<img src={Import} alt="" />} />
-            <DashBtn title="New Order" icon={<p>+</p>} />
+            <Link to="/new-category">
+              <DashBtn title="New Category" icon={<p>+</p>} />
+            </Link>
           </div>
           <div className="orders-stats">
-            <div className="customers-stats-header orders-stats-header flex">
-              <div>
-                <p className="p">Category Name</p>
+            <div className="div">
+              <div className="customers-stats-header orders-stats-header flex">
+                <div>
+                  <p className="p">Category Name</p>
+                </div>
+                <div>
+                  <p className="p">Total</p>
+                </div>
+                <div>
+                  <p className="p">Modified Date</p>
+                </div>
+                <div>
+                  <p className="p">Created Date</p>
+                </div>
+                <div>
+                  <p className="p">Action</p>
+                </div>
               </div>
-              <div>
-                <p className="p">Total</p>
+              <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
+                <div>
+                  <p className="p">Electric bike</p>
+                </div>
+                <div>
+                  <p className="p">26</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div className="flex">
+                  <Link to="/edit-category">
+                    <img src={Edit} alt="" />
+                  </Link>
+                  <img src={Action} alt="" />
+                </div>
               </div>
-              <div>
-                <p className="p">Modified Date</p>
+              <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
+                <div>
+                  <p className="p">Electric bike</p>
+                </div>
+                <div>
+                  <p className="p">26</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div className="flex">
+                  <Link to="/edit-category">
+                    <img src={Edit} alt="" />
+                  </Link>
+                  <img src={Action} alt="" />
+                </div>
               </div>
-              <div>
-                <p className="p">Created Date</p>
-              </div>
-              <div>
-                <p className="p">Action</p>
-              </div>
-            </div>
-            <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
-              <div>
-                <p className="p">Electric bike</p>
-              </div>
-              <div>
-                <p className="p">26</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={Action} alt="" />
-              </div>
-            </div>
-            <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
-              <div>
-                <p className="p">Electric bike</p>
-              </div>
-              <div>
-                <p className="p">26</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={Action} alt="" />
-              </div>
-            </div>
-            <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
-              <div>
-                <p className="p">Electric bike</p>
-              </div>
-              <div>
-                <p className="p">26</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={Action} alt="" />
+              <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
+                <div>
+                  <p className="p">Electric bike</p>
+                </div>
+                <div>
+                  <p className="p">26</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div className="flex">
+                  <Link to="/edit-category">
+                    <img src={Edit} alt="" />
+                  </Link>
+                  <img src={Action} alt="" />
+                </div>
               </div>
             </div>
           </div>

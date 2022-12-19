@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../Products/Products.css";
 import "../Orders/Orders.css";
 
@@ -14,7 +15,6 @@ import Import from "../../../assets/import.svg";
 import Action from "../../../assets/action.svg";
 import Search from "../../../assets/search.svg";
 import Edit from "../../../assets/edit.svg";
-
 import Bike from "../../../assets/bike.svg";
 
 function index({
@@ -49,93 +49,103 @@ function index({
             <DashBtn title="Select" icon={<img src={Select} alt="" />} />
             <DashBtn title="Export" icon={<img src={Export} alt="" />} />
             <DashBtn title="Import" icon={<img src={Import} alt="" />} />
-            <DashBtn title="New Order" icon={<p>+</p>} />
+            <Link to="/new-product">
+              <DashBtn title="New Product" icon={<p>+</p>} />
+            </Link>
           </div>
           <div className="orders-stats">
-            <div className="products-stats-header orders-stats-header flex">
-              <div>
-                <p className="p">Product Name</p>
+            <div className="div">
+              <div className="products-stats-header orders-stats-header flex">
+                <div>
+                  <p className="p">Product Name</p>
+                </div>
+                <div>
+                  <p className="p">Price</p>
+                </div>
+                <div>
+                  <p className="p">Modified date</p>
+                </div>
+                <div>
+                  <p className="p">Created date</p>
+                </div>
+                <div>
+                  <p className="p">Action</p>
+                </div>
+                <div>
+                  <p className="p">In - Stock</p>
+                </div>
               </div>
-              <div>
-                <p className="p">Price</p>
+              <div className="products-stats-inner orders-stats-header orders-stats-inner flex">
+                <div className="flex">
+                  <img src={Bike} alt="" />
+                  <p className="p">Fat Tire Matt</p>
+                </div>
+                <div>
+                  <p className="p">1,150.000</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">28 May 2021</p>
+                </div>
+                <div className="flex">
+                  <Link to="/edit-product">
+                    <img src={Edit} alt="" />
+                  </Link>
+                  <img src={Action} alt="" />
+                </div>
+                <div>
+                  <div className="act-btn on-act"></div>
+                </div>
               </div>
-              <div>
-                <p className="p">Modified date</p>
+              <div className="products-stats-inner orders-stats-header orders-stats-inner flex">
+                <div className="flex">
+                  <img src={Bike} alt="" />
+                  <p className="p">Fat Tire Matt</p>
+                </div>
+                <div>
+                  <p className="p">1,150.000</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">28 May 2021</p>
+                </div>
+                <div className="flex">
+                  <Link to="/edit-product">
+                    <img src={Edit} alt="" />
+                  </Link>
+                  <img src={Action} alt="" />
+                </div>
+                <div>
+                  <div className="on-act"></div>
+                </div>
               </div>
-              <div>
-                <p className="p">Created date</p>
-              </div>
-              <div>
-                <p className="p">Action</p>
-              </div>
-              <div>
-                <p className="p">In - Stock</p>
-              </div>
-            </div>
-            <div className="products-stats-inner orders-stats-header orders-stats-inner flex">
-              <div className="flex">
-                <img src={Bike} alt="" />
-                <p className="p">Fat Tire Matt</p>
-              </div>
-              <div>
-                <p className="p">1,150.000</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">28 May 2021</p>
-              </div>
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={Action} alt="" />
-              </div>
-              <div>
-                <div className="act-btn on-act"></div>
-              </div>
-            </div>
-            <div className="products-stats-inner orders-stats-header orders-stats-inner flex">
-              <div className="flex">
-                <img src={Bike} alt="" />
-                <p className="p">Fat Tire Matt</p>
-              </div>
-              <div>
-                <p className="p">1,150.000</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">28 May 2021</p>
-              </div>
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={Action} alt="" />
-              </div>
-              <div>
-                <div className="on-act"></div>
-              </div>
-            </div>
-            <div className="products-stats-inner orders-stats-header orders-stats-inner flex">
-              <div className="flex">
-                <img src={Bike} alt="" />
-                <p className="p">Fat Tire Matt</p>
-              </div>
-              <div>
-                <p className="p">1,150.000</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">28 May 2021</p>
-              </div>
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={Action} alt="" />
-              </div>
-              <div>
-                <div className="on-act"></div>
+              <div className="products-stats-inner orders-stats-header orders-stats-inner flex">
+                <div className="flex">
+                  <img src={Bike} alt="" />
+                  <p className="p">Fat Tire Matt</p>
+                </div>
+                <div>
+                  <p className="p">1,150.000</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">28 May 2021</p>
+                </div>
+                <div className="flex">
+                  <Link to="/edit-product">
+                    <img src={Edit} alt="" />
+                  </Link>
+                  <img src={Action} alt="" />
+                </div>
+                <div>
+                  <div className="on-act"></div>
+                </div>
               </div>
             </div>
           </div>

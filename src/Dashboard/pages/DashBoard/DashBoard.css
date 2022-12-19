@@ -1,0 +1,84 @@
+.main-dashboard-one {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas:
+        "Header Header1 Header2 Header3 Header4 Header5 Header5";
+    padding: 30px;
+    gap: 20px;
+}
+
+.dashboard-sales {
+    grid-area: Header;
+}
+
+.dashboard-details {
+    grid-area: Header1;
+}
+
+.dashboard-customers {
+    grid-area: Header2;
+}
+
+.dashboard-products {
+    grid-area: Header3;
+}
+
+.dashboard-discount {
+    grid-area: Header4;
+}
+
+.main-dashboard-one>div {
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 232px;
+}
+
+.main-dashboard-one>div .h3 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #262D57;
+    margin-bottom: 10px;
+}
+
+
+.main-dashboard-one>div img {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 20px;
+}
+
+.main-dashboard-one>div .p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #A3A6AC;
+    margin-bottom: 15px;
+}
+
+.main-dashboard-one>div .h1 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #3A3C58;
+}
+
+.dashboard-card {
+    grid-area: Header5;
+    background: #342094 !important;
+    box-shadow: 0px 10px 30px rgba(122, 137, 254, 0.04);
+    border-radius: 10px;
+}

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "../Customers/Customers.css";
 
 import Navigation from "../../Components/Navigation";
@@ -48,86 +50,102 @@ const index = ({
             <DashBtn title="Select" icon={<img src={Select} alt="" />} />
             <DashBtn title="Export" icon={<img src={Export} alt="" />} />
             <DashBtn title="Import" icon={<img src={Import} alt="" />} />
-            <DashBtn title="New Order" icon={<p>+</p>} />
+            <Link to="/new-customer">
+              <DashBtn title="New Customer" icon={<p>+</p>} />
+            </Link>
           </div>
           <div className="orders-stats">
-            <div className="customers-stats-header orders-stats-header flex">
-              <div>
-                <p className="p">Full Name</p>
+            <div className="div">
+              <div className="customers-stats-header orders-stats-header flex">
+                <div>
+                  <p className="p">Full Name</p>
+                </div>
+                <div>
+                  <p className="p">Email</p>
+                </div>
+                <div>
+                  <p className="p">Phone Number</p>
+                </div>
+                <div>
+                  <p className="p">Created</p>
+                </div>
+                <div>
+                  <p className="p">Action</p>
+                </div>
               </div>
-              <div>
-                <p className="p">Email</p>
-              </div>
-              <div>
-                <p className="p">Phone Number</p>
-              </div>
-              <div>
-                <p className="p">Created</p>
-              </div>
-              <div>
-                <p className="p">Action</p>
-              </div>
-            </div>
-            <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
-              <div className="flex">
-                <img src={Prof} alt="" />
-                <p className="p">killan James</p>
-              </div>
-              <div>
-                <p className="p">Killan@gmail.com</p>
-              </div>
-              <div>
-                <p className="p">081 8293 9382</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
+              <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
+                <div className="flex">
+                  <img src={Prof} alt="" />
+                  <p className="p">killan James</p>
+                </div>
+                <div>
+                  <p className="p">Killan@gmail.com</p>
+                </div>
+                <div>
+                  <p className="p">081 8293 9382</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
 
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={UserProf} alt="" />
-                <img src={Action} alt="" />
+                <div className="flex">
+                  <Link to="/edit-customer">
+                    <img src={Edit} alt="" />
+                  </Link>
+                  <Link to="/view-customer">
+                    <img src={UserProf} alt="" />
+                  </Link>
+                  <img src={Action} alt="" />
+                </div>
               </div>
-            </div>
-            <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
-              <div className="flex">
-                <img src={Prof} alt="" />
-                <p className="p">killan James</p>
+              <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
+                <div className="flex">
+                  <img src={Prof} alt="" />
+                  <p className="p">killan James</p>
+                </div>
+                <div>
+                  <p className="p">Killan@gmail.com</p>
+                </div>
+                <div>
+                  <p className="p">081 8293 9382</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div className="flex">
+                  <Link to="/edit-customer">
+                    <img src={Edit} alt="" />
+                  </Link>
+                  <Link to="/view-customer">
+                    <img src={UserProf} alt="" />
+                  </Link>
+                  <img src={Action} alt="" />
+                </div>
               </div>
-              <div>
-                <p className="p">Killan@gmail.com</p>
-              </div>
-              <div>
-                <p className="p">081 8293 9382</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={UserProf} alt="" />
-                <img src={Action} alt="" />
-              </div>
-            </div>
-            <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
-              <div className="flex">
-                <img src={Prof} alt="" />
-                <p className="p">killan James</p>
-              </div>
-              <div>
-                <p className="p">Killan@gmail.com</p>
-              </div>
-              <div>
-                <p className="p">081 8293 9382</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
+              <div className="customers-stats-inner orders-stats-header orders-stats-inner flex">
+                <div className="flex">
+                  <img src={Prof} alt="" />
+                  <p className="p">killan James</p>
+                </div>
+                <div>
+                  <p className="p">Killan@gmail.com</p>
+                </div>
+                <div>
+                  <p className="p">081 8293 9382</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
 
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={UserProf} alt="" />
-                <img src={Action} alt="" />
+                <div className="flex">
+                  <Link to="/edit-customer">
+                    <img src={Edit} alt="" />
+                  </Link>
+                  <Link to="/view-customer">
+                    <img src={UserProf} alt="" />
+                  </Link>
+                  <img src={Action} alt="" />
+                </div>
               </div>
             </div>
           </div>

@@ -52,7 +52,6 @@
     width: 100%;
 }
 
-
 .orders-stats-header {
     justify-content: space-between;
     background: #FAFAFA;
@@ -132,8 +131,25 @@
         display: none !important;
     }
 
-    .orders-stats {
-        width: 800px;
-        overflow-x: scroll !important;
+    .orders-header {
+        gap: 10px;
     }
+
+    .orders-header .h3 {
+        display: none;
+    }
+
+    .dash-btn:last-child {
+        display: flex !important;
+    }
+
+    .orders-stats {
+        overflow-x: scroll;
+    }
+
+    .orders-stats>.div {
+        min-width: 700px;
+    }
+
+
 }

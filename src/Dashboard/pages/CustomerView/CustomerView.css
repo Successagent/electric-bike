@@ -1,0 +1,27 @@
+.customer-view-details-table-main>div {
+
+    width: 20% !important;
+    margin: 0 !important;
+}
+
+.customer-view-details-table-main>div:nth-child(3) {
+    width: 15% !important;
+}
+
+.customer-view-details-table-main>div:nth-child(2) {
+    width: 25% !important;
+}
+
+.customer-view-details-table-header>div {
+    width: 20% !important;
+    margin: 0 !important;
+}
+
+.customer-view-details-table-header {
+    padding: 15px 10px !important;
+}
+
+.customer-view-details-table-header .p {
+    padding: 0 !important;
+    margin: 0 !important;
+}

@@ -1,0 +1,18 @@
+.order-details-table .order-details-table-main .flex {
+    gap: 10px;
+}
+
+.order-details-item-two .order-details-item-two-sect-one .flex {
+    gap: 20px;
+}
+
+.order-details-item-two .order-details-item-two-sect-one .flex>div {
+    width: 50%;
+}
+
+.order-details-item-two .order-details-item-two-sect-one .dash-btn {
+    background-color: #342094;
+    color: white;
+    width: 181px;
+    height: 40px;
+}

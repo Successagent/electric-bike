@@ -1,5 +1,7 @@
 import "../Navigation/Navigation.css";
 
+import { Link } from "react-router-dom";
+
 import DashboardHeaderLogo from "../../../assets/dashboardlogo.png";
 import Orders from "../../../assets/orders.png";
 import DashboardLogo from "../../../assets/element-3.png";
@@ -27,139 +29,161 @@ const index = ({ visibility, active, toggleActive }) => {
       </div>
       <div className="nav-menu-sect">
         <h3 className="h3">Menu</h3>
-        <div
-          className={`flex ${active == "dashboard" ? "dash-active" : ""}`}
-          onClick={toggleActive}
-          id="dashboard"
-        >
-          <img
-            id="dashboard"
-            src={active == "dashboard" ? DashboardLogo2 : DashboardLogo}
-            alt=""
-          />
-          <p
-            className={`p ${active == "dashboard" ? "dash-p" : ""}`}
+        <Link to="/dashboard">
+          <div
+            className={`flex ${active == "dashboard" ? "dash-active" : ""}`}
+            onClick={toggleActive}
             id="dashboard"
           >
-            Dashboard
-          </p>
-        </div>
-        <div
-          className={`flex ${active == "orders" ? "dash-active" : ""}`}
-          onClick={toggleActive}
-          id="orders"
-        >
-          <img src={active == "orders" ? Orders2 : Orders} alt="" id="orders" />
-          <p className={`p ${active == "orders" ? "dash-p" : ""}`} id="orders">
-            Orders
-          </p>
-        </div>
+            <img
+              id="dashboard"
+              src={active == "dashboard" ? DashboardLogo2 : DashboardLogo}
+              alt=""
+            />
+            <p
+              className={`p ${active == "dashboard" ? "dash-p" : ""}`}
+              id="dashboard"
+            >
+              Dashboard
+            </p>
+          </div>
+        </Link>
+        <Link to="/orders">
+          <div
+            className={`flex ${active == "orders" ? "dash-active" : ""}`}
+            onClick={toggleActive}
+            id="orders"
+          >
+            <img
+              src={active == "orders" ? Orders2 : Orders}
+              alt=""
+              id="orders"
+            />
+            <p
+              className={`p ${active == "orders" ? "dash-p" : ""}`}
+              id="orders"
+            >
+              Orders
+            </p>
+          </div>
+        </Link>
       </div>
       <div className="nav-menu-sect">
         <h3 className="h3">Management</h3>
-        <div
-          className={`flex ${active == "customers" ? "dash-active" : ""}`}
-          onClick={toggleActive}
-          id="customers"
-        >
-          <img
-            src={active == "customers" ? Customers2 : Customers}
-            id="customers"
-          />
-          <p
-            className={`p ${active == "customers" ? "dash-p" : ""}`}
+        <Link to="/customers">
+          <div
+            className={`flex ${active == "customers" ? "dash-active" : ""}`}
+            onClick={toggleActive}
             id="customers"
           >
-            Customers
-          </p>
-        </div>
-        <div
-          className={`flex ${active == "products" ? "dash-active" : ""}`}
-          onClick={toggleActive}
-          id="products"
-        >
-          <img
-            src={active == "products" ? Products2 : Products}
+            <img
+              src={active == "customers" ? Customers2 : Customers}
+              id="customers"
+            />
+            <p
+              className={`p ${active == "customers" ? "dash-p" : ""}`}
+              id="customers"
+            >
+              Customers
+            </p>
+          </div>
+        </Link>
+        <Link to="/dash-products">
+          <div
+            className={`flex ${active == "products" ? "dash-active" : ""}`}
+            onClick={toggleActive}
             id="products"
-          />
-          <p
-            className={`p ${active == "products" ? "dash-p" : ""}`}
-            id="products"
           >
-            Products
-          </p>
-        </div>
-        <div
-          className={`flex ${active == "categories" ? "dash-active" : ""}`}
-          onClick={toggleActive}
-          id="categories"
-        >
-          <img
-            src={active == "categories" ? Categories2 : Categories}
-            id="categories"
-          />
-          <p
-            className={`p ${active == "categories" ? "dash-p" : ""}`}
+            <img
+              src={active == "products" ? Products2 : Products}
+              id="products"
+            />
+            <p
+              className={`p ${active == "products" ? "dash-p" : ""}`}
+              id="products"
+            >
+              Products
+            </p>
+          </div>
+        </Link>
+        <Link to="/categories">
+          <div
+            className={`flex ${active == "categories" ? "dash-active" : ""}`}
+            onClick={toggleActive}
             id="categories"
           >
-            Categories
-          </p>
-        </div>
-        <div
-          className={`flex ${active == "discount" ? "dash-active" : ""}`}
-          onClick={toggleActive}
-          id="discount"
-        >
-          <img
-            src={active == "discount" ? Discount2 : Discount}
-            alt=""
-            id="discount"
-          />
-          <p
-            className={`p ${active == "discount" ? "dash-p" : ""}`}
+            <img
+              src={active == "categories" ? Categories2 : Categories}
+              id="categories"
+            />
+            <p
+              className={`p ${active == "categories" ? "dash-p" : ""}`}
+              id="categories"
+            >
+              Categories
+            </p>
+          </div>
+        </Link>
+        <Link to="/discount">
+          <div
+            className={`flex ${active == "discount" ? "dash-active" : ""}`}
+            onClick={toggleActive}
             id="discount"
           >
-            Discount
-          </p>
-        </div>
+            <img
+              src={active == "discount" ? Discount2 : Discount}
+              alt=""
+              id="discount"
+            />
+            <p
+              className={`p ${active == "discount" ? "dash-p" : ""}`}
+              id="discount"
+            >
+              Discount
+            </p>
+          </div>
+        </Link>
       </div>
       <div className="nav-menu-sect">
         <h3 className="h3">Notifications</h3>
-
-        <div
-          className={`flex ${active == "transaction" ? "dash-active" : ""}`}
-          onClick={toggleActive}
-          id="transaction"
-        >
-          <img
-            src={active == "transaction" ? Transaction2 : Transaction}
-            alt=""
-            id="transaction"
-          />
-          <p
-            className={`p ${active == "transaction" ? "dash-p" : ""}`}
+        <Link to="/transaction">
+          <div
+            className={`flex ${active == "transaction" ? "dash-active" : ""}`}
+            onClick={toggleActive}
             id="transaction"
           >
-            Transaction
-          </p>
-        </div>
-        <div
-          className={`flex ${active == "message" ? "dash-active" : ""}`}
-          onClick={toggleActive}
-          id="message"
-        >
-          <img
-            src={active == "message" ? Message2 : Message}
-            alt=""
-            id="message"
-          />
-          <p
-            className={`p ${active == "message" ? "dash-p" : ""}`}
+            <img
+              src={active == "transaction" ? Transaction2 : Transaction}
+              alt=""
+              id="transaction"
+            />
+            <p
+              className={`p ${active == "transaction" ? "dash-p" : ""}`}
+              id="transaction"
+            >
+              Transaction
+            </p>
+          </div>
+        </Link>
+        <Link to="/message">
+          <div
+            className={`flex ${active == "message" ? "dash-active" : ""}`}
+            onClick={toggleActive}
             id="message"
           >
-            Message
-          </p>
-        </div>
+            <img
+              src={active == "message" ? Message2 : Message}
+              alt=""
+              id="message"
+            />
+            <p
+              className={`p ${active == "message" ? "dash-p" : ""}`}
+              id="message"
+            >
+              Message
+            </p>
+          </div>
+        </Link>
       </div>
     </section>
   );

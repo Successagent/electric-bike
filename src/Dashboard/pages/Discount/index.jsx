@@ -48,111 +48,113 @@ const index = ({
             <DashBtn title="New Order" icon={<p>+</p>} />
           </div>
           <div className="orders-stats">
-            <div className="discount-stats-header orders-stats-header flex">
-              <div>
-                <p className="p"> Name</p>
+            <div className="div">
+              <div className="discount-stats-header orders-stats-header flex">
+                <div>
+                  <p className="p"> Name</p>
+                </div>
+                <div>
+                  <p className="p">Type</p>
+                </div>
+                <div>
+                  <p className="p">Code</p>
+                </div>
+                <div>
+                  <p className="p">Start Date</p>
+                </div>
+                <div>
+                  <p className="p">End Date</p>
+                </div>
+                <div>
+                  <p className="p">Uses</p>
+                </div>
+                <div>
+                  <p className="p">Action</p>
+                </div>
+                <div>
+                  <p className="p">Status</p>
+                </div>
               </div>
-              <div>
-                <p className="p">Type</p>
+              <div className="discount-stats-inner orders-stats-header orders-stats-inner flex">
+                <div>
+                  <p className="p">Discount one</p>
+                </div>
+                <div>
+                  <p className="p">Free Shipping</p>
+                </div>
+                <div>
+                  <p className="p">H0L1DAY20</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">3</p>
+                </div>
+                <div className="flex">
+                  <img src={Edit} alt="" />
+                  <img src={Action} alt="" />
+                </div>
+                <div className="">
+                  <button className="status-btn">Complete</button>
+                </div>
               </div>
-              <div>
-                <p className="p">Code</p>
+              <div className="discount-stats-inner orders-stats-header orders-stats-inner flex">
+                <div>
+                  <p className="p">Discount one</p>
+                </div>
+                <div>
+                  <p className="p">Free Shipping</p>
+                </div>
+                <div>
+                  <p className="p">H0L1DAY20</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">3</p>
+                </div>
+                <div className="flex">
+                  <img src={Edit} alt="" />
+                  <img src={Action} alt="" />
+                </div>
+                <div className="">
+                  <button className="status-btn">Complete</button>
+                </div>
               </div>
-              <div>
-                <p className="p">Start Date</p>
-              </div>
-              <div>
-                <p className="p">End Date</p>
-              </div>
-              <div>
-                <p className="p">Uses</p>
-              </div>
-              <div>
-                <p className="p">Action</p>
-              </div>
-              <div>
-                <p className="p">Status</p>
-              </div>
-            </div>
-            <div className="discount-stats-inner orders-stats-header orders-stats-inner flex">
-              <div>
-                <p className="p">Discount one</p>
-              </div>
-              <div>
-                <p className="p">Free Shipping</p>
-              </div>
-              <div>
-                <p className="p">H0L1DAY20</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">3</p>
-              </div>
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={Action} alt="" />
-              </div>
-              <div className="">
-                <button className="status-btn">Complete</button>
-              </div>
-            </div>
-            <div className="discount-stats-inner orders-stats-header orders-stats-inner flex">
-              <div>
-                <p className="p">Discount one</p>
-              </div>
-              <div>
-                <p className="p">Free Shipping</p>
-              </div>
-              <div>
-                <p className="p">H0L1DAY20</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">3</p>
-              </div>
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={Action} alt="" />
-              </div>
-              <div className="">
-                <button className="status-btn">Complete</button>
-              </div>
-            </div>
-            <div className="discount-stats-inner orders-stats-header orders-stats-inner flex">
-              <div>
-                <p className="p">Discount one</p>
-              </div>
-              <div>
-                <p className="p">Free Shipping</p>
-              </div>
-              <div>
-                <p className="p">H0L1DAY20</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">30 May 2021</p>
-              </div>
-              <div>
-                <p className="p">3</p>
-              </div>
-              <div className="flex">
-                <img src={Edit} alt="" />
-                <img src={Action} alt="" />
-              </div>
-              <div className="">
-                <button className="status-btn">Complete</button>
+              <div className="discount-stats-inner orders-stats-header orders-stats-inner flex">
+                <div>
+                  <p className="p">Discount one</p>
+                </div>
+                <div>
+                  <p className="p">Free Shipping</p>
+                </div>
+                <div>
+                  <p className="p">H0L1DAY20</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">30 May 2021</p>
+                </div>
+                <div>
+                  <p className="p">3</p>
+                </div>
+                <div className="flex">
+                  <img src={Edit} alt="" />
+                  <img src={Action} alt="" />
+                </div>
+                <div className="">
+                  <button className="status-btn">Complete</button>
+                </div>
               </div>
             </div>
           </div>
