@@ -416,6 +416,14 @@
     flex-direction: column;
   }
 
+
+  .home-hero-intro .flex .btn {
+    width: 206px;
+    height: 45px;
+  }
+
+
+
   .home-hero-intro .h1 {
     font-style: normal;
     font-weight: 600;

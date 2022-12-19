@@ -10,9 +10,33 @@ import Globaltwo from "../../assets/global-two.png";
 import Next from "../../assets/next.png";
 import Prev from "../../assets/prev.png";
 import ReviewLogo from "../../assets/reviewlogo.png";
-
+import { useState } from "react";
 
 const index = () => {
+  const [activeImage, setActiveImage] = useState(1);
+
+  const ChangeActive = (e) => {
+    switch (e.target.className) {
+      case "next":
+        if (activeImage == 1) {
+          setActiveImage(2);
+        } else if (activeImage == 2) {
+          setActiveImage(3);
+        } else if (activeImage == 3) {
+          setActiveImage(1);
+        }
+        break;
+      case "prev":
+        if (activeImage == 3) {
+          setActiveImage(2);
+        } else if (activeImage == 2) {
+          setActiveImage(1);
+        } else if (activeImage == 1) {
+          setActiveImage(3);
+        }
+        break;
+    }
+  };
   return (
     <>
       <section className="about-page">
@@ -51,22 +75,51 @@ const index = () => {
           <p className="p">Check out what our customers say</p>
           <div className="about-review">
             <div className="prev">
-              <img src={Prev} alt="" />
+              <img className="prev" src={Prev} alt="" onClick={ChangeActive} />
             </div>
-            <div className="sqre">
-              <img src={ReviewLogo} alt="" />
-              <h3 className="h3">Alan Pete</h3>
-              <p className="p">
-                <BsStarFill className="bsStar"></BsStarFill> 5/5
-              </p>
-              <p className="p">
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
-                ultricies lorem viverra lacus in. Platea ullamcorper scelerisque
-                integer amet, est, nibh morbi. Sed vitae tortor, dui mauris”
-              </p>
+            <div className="scroll-con">
+              <div className={`sqre ${activeImage == 1 ? "active-con" : ""}`}>
+                <img src={ReviewLogo} alt="" />
+                <h3 className="h3">Alan Pete</h3>
+                <p className="p">
+                  <BsStarFill className="bsStar"></BsStarFill> 5/5
+                </p>
+                <p className="p">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vitae ultricies lorem viverra lacus in. Platea ullamcorper dui
+                  mauris” scelerisque integer amet, est, nibh morbi. Sed vitae
+                  tortor,
+                </p>
+              </div>
+              <div className={`sqre ${activeImage == 2 ? "active-con" : ""}`}>
+                <img src={ReviewLogo} alt="" />
+                <h3 className="h3">Alan John</h3>
+                <p className="p">
+                  <BsStarFill className="bsStar"></BsStarFill> 5/5
+                </p>
+                <p className="p">
+                  scelerisque integer amet, est, nibh morbi. Sed vitae tortor,
+                  dui mauris” “Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. Vitae ultricies lorem viverra lacus in.
+                  Platea ullamcorper
+                </p>
+              </div>
+              <div className={`sqre ${activeImage == 3 ? "active-con" : ""}`}>
+                <img src={ReviewLogo} alt="" />
+                <h3 className="h3">Alan Sarah</h3>
+                <p className="p">
+                  <BsStarFill className="bsStar"></BsStarFill> 5/5
+                </p>
+                <p className="p">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. dui
+                  mauris” Vitae ultricies lorem viverra lacus in. Platea
+                  ullamcorper scelerisque integer amet, est, nibh morbi. Sed
+                  vitae tortor,
+                </p>
+              </div>
             </div>
             <div className="next">
-              <img src={Next} alt="" />
+              <img className="next" src={Next} alt="" onClick={ChangeActive} />
             </div>
           </div>
         </section>
