@@ -15,8 +15,7 @@
   border: 1px solid #CCC5C5;
   border-radius: 16px;
   font-family: var(--prim-fntfam);
-  transition: all ease-in-out 300ms;
-
+  transition: all ease-out 400ms;
 }
 
 .card-one>div .h3 {
@@ -66,6 +65,23 @@
 
   .card-one>div {
     width: 100%;
+    transition: all ease-in-out 300ms;
+    border: none;
+  }
+
+  .card-one>div:nth-child(1) {
+    background: #FAF2EF;
+    border-radius: 16px;
+  }
+
+  .card-one>div:nth-child(2) {
+    background: #EDF2F8;
+    border-radius: 16px;
+  }
+
+  .card-one>div:nth-child(3) {
+    background: #EAF3F0;
+    border-radius: 16px;
   }
 
   .card-one .btn {

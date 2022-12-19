@@ -153,6 +153,11 @@
   padding-right: 20px;
   gap: 12px;
   font-family: var(--prim-fntfam);
+  height: 205px;
+}
+
+.feature-footer>div>div .h3 {
+  margin-bottom: 10px;
 }
 
 .feature-footer>div:nth-child(1) svg {
@@ -536,7 +541,7 @@
   }
 
   .home-feature-sect .home-feature-section .btn {
-    height: 44.8px;
+    height: 50px;
   }
 
   .home-feature-sect .home-feature-section>div:nth-child(2) {

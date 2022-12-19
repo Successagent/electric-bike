@@ -57,28 +57,44 @@ const index = ({
         </section>
         <div className="feature-footer">
           <div>
-            <AiOutlineGlobal style={{ fontSize: "80px" }}></AiOutlineGlobal>
-            <p className="p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              quisque dignissim tellus, tempus nec donec aliquam enim, posuere.
-              Massa volutpat amet odio urna
-            </p>
+            <div>
+              <AiOutlineGlobal
+                style={{ fontSize: "50px", fontWeight: "300" }}
+              ></AiOutlineGlobal>
+            </div>
+            <div>
+              <p className="p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                quisque dignissim tellus, tempus nec donec aliquam enim,
+                posuere. Massa volutpat amet odio urna
+              </p>
+            </div>
           </div>
           <div>
-            <AiOutlineGlobal style={{ fontSize: "80px" }}></AiOutlineGlobal>
-            <p className="p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              quisque dignissim tellus, tempus nec donec aliquam enim, posuere.
-              Massa volutpat amet odio urna
-            </p>
+            <div>
+              <AiOutlineGlobal
+                style={{ fontSize: "50px", fontWeight: "300" }}
+              ></AiOutlineGlobal>
+            </div>
+            <div>
+              <h3 className="h3">Foldable E-Scooter</h3>
+              <p className="p">
+                luxuory electronic scooter volutpat amet odio urna
+              </p>
+            </div>
           </div>
           <div>
-            <AiOutlineGlobal style={{ fontSize: "80px" }}></AiOutlineGlobal>
-            <p className="p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              quisque dignissim tellus, tempus nec donec aliquam enim, posuere.
-              Massa volutpat amet odio urna
-            </p>
+            <div>
+              <AiOutlineGlobal
+                style={{ fontSize: "50px", fontWeight: "300" }}
+              ></AiOutlineGlobal>
+            </div>
+            <div>
+              <h3 className="h3">Foldable E-Scooter</h3>
+              <p className="p">
+                luxuory electronic scooter volutpat amet odio urna
+              </p>
+            </div>
           </div>
         </div>
         <CardOne />

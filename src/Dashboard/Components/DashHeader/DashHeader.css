@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    position: sticky;
+    inset: 0;
+    transition: all ease-in-out 400ms;
 }
 
 .dashboard-header .flex {

@@ -5,6 +5,8 @@
     padding: 0px 30px;
     padding-top: 30px;
     height: 585px;
+    position: sticky;
+    inset: 0;
 }
 
 .nav-menu-sect {
