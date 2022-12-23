@@ -1,0 +1,15 @@
+.login-form .forget-pass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.forget-pass .flex {
+    width: 60%;
+    justify-content: flex-start;
+}
+
+.forget-pass input {
+    width: 24px !important;
+    height: 24px;
+}

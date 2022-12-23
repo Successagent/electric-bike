@@ -1,6 +1,8 @@
 import GrayButton from "../../Components/GrayButton";
 import Button from "../../Components/Button";
 import PagesHero from "../../Components/PagesHero";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
 
 import { CgArrowLeft, CgSync, CgLock } from "react-icons/cg";
 import { FaTimes } from "react-icons/fa";
@@ -8,13 +10,48 @@ import { Link } from "react-router-dom";
 
 const index = ({
   cart,
-  removeFromCart,
+  carts,
+  addToCart,
+  favorite,
+  visible,
+  productVisible,
+  formVisible,
+  toggleFavorite,
+  toggleVisible,
+  setCarts,
+  setToggleFavorite,
+  setProductVisible,
+  setVisible,
+  getQuantityTotal,
   getTotalPrice,
+  cardThree,
+  removeFromCart,
   increamentQuantity,
   decreamentQuantity,
 }) => {
   return (
     <>
+      <Header
+        carts={carts}
+        cart={cart}
+        addToCart={addToCart}
+        favorite={favorite}
+        visible={visible}
+        productVisible={productVisible}
+        formVisible={formVisible}
+        toggleVisible={toggleVisible}
+        setCarts={setCarts}
+        setToggleFavorite={setToggleFavorite}
+        toggleFavorite={toggleFavorite}
+        setProductVisible={setProductVisible}
+        removeFromCart={removeFromCart}
+        getTotalPrice={getTotalPrice}
+        increamentQuantity={increamentQuantity}
+        decreamentQuantity={decreamentQuantity}
+        setVisible={setVisible}
+        getQuantityTotal={getQuantityTotal}
+        cardThree={cardThree}
+      />
       <section className="shop-cart">
         <PagesHero />
         <div className="cart-main-section">
@@ -86,6 +123,7 @@ const index = ({
           </Link>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

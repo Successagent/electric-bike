@@ -1,0 +1,78 @@
+.register-form {
+    display: flex;
+    justify-content: center;
+    padding: 70px 100px;
+    gap: 30px;
+}
+
+.register-form>section {
+    width: 50%;
+}
+
+.register-form>div {
+    width: 50%;
+    border-left: 1px solid #D9D9D9;
+    padding-left: 40px;
+}
+
+.register-form .review-form input {
+    width: 100%;
+}
+
+.register-form section .input-con>form {
+    width: 100%;
+}
+
+.register-form .support-form-section {
+    padding: 0;
+}
+
+#p-form,
+.register-form>div .p {
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #606060;
+    width: 94%;
+}
+
+.register-form>div .btn {
+    display: block;
+    margin: auto;
+}
+
+.register-form>div .p {
+    width: 100% !important;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.support-form-section .input-con form .btn {
+    width: 100%;
+
+}
+
+@media(max-width:1020px) {
+    .register-form {
+        flex-direction: column;
+        padding: 20px;
+        gap: 50px;
+    }
+
+    .register-form>section,
+    .register-form>div {
+        width: 100%;
+    }
+
+    .register-form>div {
+        border: none;
+        padding: 0;
+    }
+
+    .register-form .btn {
+        height: 45px;
+    }
+}

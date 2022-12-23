@@ -2,14 +2,59 @@ import PagesHero from "../../Components/PagesHero";
 import PageIndication from "../../Components/PageIndication";
 import CardTwo from "../../Components/CardTwo";
 import CardHeader from "../../Components/CardHeader";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
 
 import "../Deals/Deals.css";
 
 import { GrNext, GrPrevious } from "react-icons/gr";
 
-const index = ({ cardTwo, addToCart, addToFavorite, getTotalPrice }) => {
+const index = ({
+  cardTwo,
+  addToFavorite,
+  getTotalPrice,
+  cart,
+  carts,
+  addToCart,
+  favorite,
+  visible,
+  productVisible,
+  formVisible,
+  toggleFavorite,
+  toggleVisible,
+  setCarts,
+  setToggleFavorite,
+  setProductVisible,
+  setVisible,
+  increamentQuantity,
+  decreamentQuantity,
+  removeFromCart,
+  getQuantityTotal,
+  cardThree,
+}) => {
   return (
     <>
+      <Header
+        carts={carts}
+        cart={cart}
+        addToCart={addToCart}
+        favorite={favorite}
+        visible={visible}
+        productVisible={productVisible}
+        formVisible={formVisible}
+        toggleVisible={toggleVisible}
+        setCarts={setCarts}
+        setToggleFavorite={setToggleFavorite}
+        toggleFavorite={toggleFavorite}
+        setProductVisible={setProductVisible}
+        removeFromCart={removeFromCart}
+        getTotalPrice={getTotalPrice}
+        increamentQuantity={increamentQuantity}
+        decreamentQuantity={decreamentQuantity}
+        setVisible={setVisible}
+        getQuantityTotal={getQuantityTotal}
+        cardThree={cardThree}
+      />
       <section className="deals-page">
         <PagesHero />
         <PageIndication other="Deals" />
@@ -47,6 +92,7 @@ const index = ({ cardTwo, addToCart, addToFavorite, getTotalPrice }) => {
           </section>
         </section>
       </section>
+      <Footer />
     </>
   );
 };

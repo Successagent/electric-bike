@@ -1,12 +1,54 @@
 import "../TermsAndConditions/TermsAndConditions.css";
+import Footer from "../../Components/Footer";
+import Header from "../../Components/Header";
 
 import PageHero from "../../Components/PagesHero";
 import PageIndication from "../../Components/PageIndication";
 
-const index = () => {
+const index = ({
+  cart,
+  carts,
+  addToCart,
+  favorite,
+  visible,
+  productVisible,
+  formVisible,
+  toggleFavorite,
+  toggleVisible,
+  setCarts,
+  setToggleFavorite,
+  setProductVisible,
+  setVisible,
+  increamentQuantity,
+  decreamentQuantity,
+  removeFromCart,
+  getQuantityTotal,
+  getTotalPrice,
+  cardThree,
+}) => {
   return (
     <>
-      
+      <Header
+        cart={cart}
+        carts={carts}
+        addToCart={addToCart}
+        favorite={favorite}
+        visible={visible}
+        productVisible={productVisible}
+        formVisible={formVisible}
+        toggleVisible={toggleVisible}
+        setCarts={setCarts}
+        setToggleFavorite={setToggleFavorite}
+        toggleFavorite={toggleFavorite}
+        setProductVisible={setProductVisible}
+        removeFromCart={removeFromCart}
+        getTotalPrice={getTotalPrice}
+        increamentQuantity={increamentQuantity}
+        decreamentQuantity={decreamentQuantity}
+        setVisible={setVisible}
+        getQuantityTotal={getQuantityTotal}
+        cardThree={cardThree}
+      />
       <PageHero />
       <div className="condition">
         <PageIndication
@@ -53,7 +95,7 @@ const index = () => {
           </div>
         </div>
       </section>
-     
+      <Footer />
     </>
   );
 };

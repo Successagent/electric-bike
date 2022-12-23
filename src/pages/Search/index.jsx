@@ -6,10 +6,50 @@ import SearchModal from "../../Modals/SearchModal";
 
 import "../Search/Search.css";
 
-const index = () => {
+const index = ({
+  cart,
+  carts,
+  addToCart,
+  favorite,
+  visible,
+  productVisible,
+  formVisible,
+  toggleFavorite,
+  toggleVisible,
+  setCarts,
+  setToggleFavorite,
+  setProductVisible,
+  setVisible,
+  increamentQuantity,
+  decreamentQuantity,
+  removeFromCart,
+  getQuantityTotal,
+  getTotalPrice,
+  cardThree,
+}) => {
   return (
     <>
-      <Header />
+      <Header
+        carts={carts}
+        cart={cart}
+        addToCart={addToCart}
+        favorite={favorite}
+        visible={visible}
+        productVisible={productVisible}
+        formVisible={formVisible}
+        toggleVisible={toggleVisible}
+        setCarts={setCarts}
+        setToggleFavorite={setToggleFavorite}
+        toggleFavorite={toggleFavorite}
+        setProductVisible={setProductVisible}
+        removeFromCart={removeFromCart}
+        getTotalPrice={getTotalPrice}
+        increamentQuantity={increamentQuantity}
+        decreamentQuantity={decreamentQuantity}
+        setVisible={setVisible}
+        getQuantityTotal={getQuantityTotal}
+        cardThree={cardThree}
+      />
       <PagesHero />
       <section className="search-page">
         <section className="products-review-sec">
@@ -25,7 +65,7 @@ const index = () => {
             <SearchModal />
           </div>
           <div className="section-comp-two">
-            <CardTwo />
+            <CardTwo cardTwo={cardThree} />
           </div>
         </section>
       </section>

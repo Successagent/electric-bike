@@ -5,6 +5,8 @@ import CardHeader from "../../Components/CardHeader";
 import Button from "../../Components/Button";
 import BorderButton from "../../Components/BorderButton";
 import FeatureCard from "../../Components/FeatureCard";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
 
 import "../Home/Home.css";
 
@@ -20,11 +22,48 @@ const index = ({
   addToCart,
   addToFavorite,
   cardTwo,
+  cart,
+  carts,
+  favorite,
+  visible,
+  productVisible,
+  formVisible,
+  toggleFavorite,
+  toggleVisible,
+  setCarts,
+  setToggleFavorite,
+  setProductVisible,
+  setVisible,
+  increamentQuantity,
+  decreamentQuantity,
+  removeFromCart,
+  getQuantityTotal,
   getTotalPrice,
   cardThree,
 }) => {
   return (
     <>
+      <Header
+        carts={carts}
+        cart={cart}
+        addToCart={addToCart}
+        favorite={favorite}
+        visible={visible}
+        productVisible={productVisible}
+        formVisible={formVisible}
+        toggleVisible={toggleVisible}
+        setCarts={setCarts}
+        setToggleFavorite={setToggleFavorite}
+        toggleFavorite={toggleFavorite}
+        setProductVisible={setProductVisible}
+        removeFromCart={removeFromCart}
+        getTotalPrice={getTotalPrice}
+        increamentQuantity={increamentQuantity}
+        decreamentQuantity={decreamentQuantity}
+        setVisible={setVisible}
+        getQuantityTotal={getQuantityTotal}
+        cardThree={cardThree}
+      />
       <div className="home-page">
         <div className="home-hero">
           <ul className="home-hero-social-link">
@@ -158,6 +197,7 @@ const index = ({
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

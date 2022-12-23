@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 
 import ListLogo from "./assets/list-img.png";
 import Watch from "./assets/watch.jfif";
@@ -21,6 +19,26 @@ import {
   Product,
   Checkout,
   ShoppingCart,
+  Registration,
+  Login,
+  ForgetPassword,
+  DashBoard,
+  Orders,
+  Customers,
+  Categories,
+  Message,
+  Discount,
+  DashboardProducts,
+  Transaction,
+  OrderDetails,
+  NewCustomer,
+  EditCustomer,
+  CustomerView,
+  NewProduct,
+  EditProduct,
+  NewCategory,
+  EditCategory,
+  Settings,
 } from "../src/pages";
 import Order from "./pages/Order";
 
@@ -28,6 +46,10 @@ import "./App.css";
 
 function App() {
   const [carts, setCarts] = useState(false);
+  const [val, setVal] = useState("edit");
+  const [dashVisibility, setDashVisibility] = useState(false);
+  const [dashActive, setDashActive] = useState("");
+  const [activeComponet, setActiveComponent] = useState("shopping");
   const [cart, setCart] = useState([]);
   const [favorite, setFavorite] = useState([]);
   const [active, setActive] = useState(1);
@@ -101,6 +123,29 @@ function App() {
 
   const navigate = () => useNavigate();
 
+  const toggleDashboardVisibility = () => setDashVisibility(!dashVisibility);
+
+  const toggleActive = (e) => {
+    if (e.target.id == "dashboard") {
+      setDashActive("dashboard");
+    } else if (e.target.id == "orders") {
+      setDashActive("orders");
+    } else if (e.target.id == "customers") {
+      setDashActive("customers");
+    } else if (e.target.id == "discount") {
+      setDashActive("discount");
+    } else if (e.target.id == "transaction") {
+      setDashActive("transaction");
+    } else if (e.target.id == "categories") {
+      setDashActive("categories");
+    } else if (e.target.id == "products") {
+      setDashActive("products");
+    } else if (e.target.id == "message") {
+      setDashActive("message");
+    }
+    console.log(e.target.id);
+  };
+
   const toggleVisible = (e) => {
     switch (e.target.className) {
       case "cart":
@@ -172,7 +217,6 @@ function App() {
         cart_id === item.id ? { ...item, quantity: item.quantity - 1 } : item
       )
     );
-    console.log(cart);
   };
 
   const removeFromCart = (removeProduct) => {
@@ -185,7 +229,6 @@ function App() {
     } else if (e.target.id == 2) {
       setStyle("list");
     }
-    console.log(style);
   };
 
   function toggleTab(e) {
@@ -194,7 +237,6 @@ function App() {
     } else if (e.target.id == 1) {
       setTab(1);
     }
-    console.log(tab);
   }
 
   const { pathname } = useLocation();
@@ -204,27 +246,6 @@ function App() {
   }, [pathname]);
   return (
     <>
-      <Header
-        carts={carts}
-        cart={cart}
-        addToCart={addToCart}
-        favorite={favorite}
-        visible={visible}
-        productVisible={productVisible}
-        formVisible={formVisible}
-        toggleVisible={toggleVisible}
-        setCarts={setCarts}
-        setToggleFavorite={setToggleFavorite}
-        toggleFavorite={toggleFavorite}
-        setProductVisible={setProductVisible}
-        removeFromCart={removeFromCart}
-        getTotalPrice={getTotalPrice}
-        increamentQuantity={increamentQuantity}
-        decreamentQuantity={decreamentQuantity}
-        setVisible={setVisible}
-        getQuantityTotal={getQuantityTotal}
-        cardThree={cardThree}
-      />
       <Routes>
         <Route
           path="/"
@@ -232,13 +253,26 @@ function App() {
             <Home
               active={active}
               toggleVisible={toggleVisible}
-              cart={cart}
               addToFavorite={addToFavorite}
-              addToCart={addToCart}
               cardTwo={cardTwo}
               cardThree={cardThree}
               getTotalPrice={getTotalPrice}
               increamentQuantity={increamentQuantity}
+              carts={carts}
+              cart={cart}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
             />
           }
         />
@@ -246,10 +280,28 @@ function App() {
           path="/products"
           element={
             <Products
-              cart={cart}
-              addToCart={addToCart}
               toggleTab={toggleTab}
               tab={tab}
+              addToCart={addToCart}
+              cardThree={cardThree}
+              addToFavorite={addToFavorite}
+              cardTwo={cardTwo}
+              getTotalPrice={getTotalPrice}
+              carts={carts}
+              cart={cart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
             />
           }
         />
@@ -261,12 +313,54 @@ function App() {
               style={style}
               toggleStyle={toggleStyle}
               addToCart={addToCart}
+              cardThree={cardThree}
               addToFavorite={addToFavorite}
+              cardTwo={cardTwo}
+              getTotalPrice={getTotalPrice}
+              carts={carts}
+              cart={cart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+            />
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <About
+              carts={carts}
+              cart={cart}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              getTotalPrice={getTotalPrice}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
               cardThree={cardThree}
             />
           }
         />
-        <Route path="/about" element={<About />} />
         <Route
           path="/deals"
           element={
@@ -275,34 +369,503 @@ function App() {
               addToFavorite={addToFavorite}
               cardTwo={cardTwo}
               getTotalPrice={getTotalPrice}
+              carts={carts}
+              cart={cart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
             />
           }
         />
-        <Route path="/support" element={<Support />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/terms&conditions" element={<TermsAndConditions />} />
-        <Route path="/privacy&policy" element={<PrivacyAndPolicy />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/order" element={<Order />} />
-
+        <Route
+          path="/support"
+          element={
+            <Support
+              carts={carts}
+              cart={cart}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              getTotalPrice={getTotalPrice}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
+            />
+          }
+        />
+        <Route
+          path="/search"
+          element={
+            <Search
+              cart={cart}
+              carts={carts}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              getTotalPrice={getTotalPrice}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
+            />
+          }
+        />
+        <Route
+          path="/terms&conditions"
+          element={
+            <TermsAndConditions
+              carts={carts}
+              cart={cart}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              getTotalPrice={getTotalPrice}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
+            />
+          }
+        />
+        <Route
+          path="/privacy&policy"
+          element={
+            <PrivacyAndPolicy
+              carts={carts}
+              cart={cart}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              getTotalPrice={getTotalPrice}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
+            />
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              carts={carts}
+              cart={cart}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              getTotalPrice={getTotalPrice}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
+              activeComponet={activeComponet}
+            />
+          }
+        />
+        <Route
+          path="/order"
+          element={
+            <Order
+              carts={carts}
+              cart={cart}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              getTotalPrice={getTotalPrice}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
+            />
+          }
+        />
         <Route
           path="/checkout"
-          element={<Checkout cart={cart} getTotalPrice={getTotalPrice} />}
+          element={
+            <Checkout
+              cart={cart}
+              carts={carts}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              getTotalPrice={getTotalPrice}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
+            />
+          }
         />
         <Route
           path="/shopping-cart"
           element={
             <ShoppingCart
               cart={cart}
+              carts={carts}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
               removeFromCart={removeFromCart}
               getTotalPrice={getTotalPrice}
               increamentQuantity={increamentQuantity}
               decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
+            />
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <Registration
+              cart={cart}
+              carts={carts}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              getTotalPrice={getTotalPrice}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
+            />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <Login
+              cart={cart}
+              carts={carts}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              getTotalPrice={getTotalPrice}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
+            />
+          }
+        />
+        <Route
+          path="/forget-password"
+          element={
+            <ForgetPassword
+              cart={cart}
+              carts={carts}
+              addToCart={addToCart}
+              favorite={favorite}
+              visible={visible}
+              productVisible={productVisible}
+              formVisible={formVisible}
+              toggleVisible={toggleVisible}
+              setCarts={setCarts}
+              setToggleFavorite={setToggleFavorite}
+              toggleFavorite={toggleFavorite}
+              setProductVisible={setProductVisible}
+              removeFromCart={removeFromCart}
+              getTotalPrice={getTotalPrice}
+              increamentQuantity={increamentQuantity}
+              decreamentQuantity={decreamentQuantity}
+              setVisible={setVisible}
+              getQuantityTotal={getQuantityTotal}
+              cardThree={cardThree}
+            />
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            <DashBoard
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/orders"
+          element={
+            <Orders
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/customers"
+          element={
+            <Customers
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/categories"
+          element={
+            <Categories
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/message"
+          element={
+            <Message
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/discount"
+          element={
+            <Discount
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/dash-products"
+          element={
+            <DashboardProducts
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/transaction"
+          element={
+            <Transaction
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/order-details"
+          element={
+            <OrderDetails
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/new-customer"
+          element={
+            <NewCustomer
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/edit-customer"
+          element={
+            <EditCustomer
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/view-customer"
+          element={
+            <CustomerView
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/new-product"
+          element={
+            <NewProduct
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/edit-product"
+          element={
+            <EditProduct
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+            />
+          }
+        />
+        <Route
+          path="/new-category"
+          element={
+            <NewCategory
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+              val={val}
+            />
+          }
+        />
+        <Route
+          path="/edit-category"
+          element={
+            <EditCategory
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
+              val={val}
+            />
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <Settings
+              dashActive={dashActive}
+              toggleActive={toggleActive}
+              toggleDashboardVisibility={toggleDashboardVisibility}
+              dashVisibility={dashVisibility}
             />
           }
         />
       </Routes>
-      <Footer />
     </>
   );
 }

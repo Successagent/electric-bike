@@ -3,6 +3,8 @@ import Button from "../../Components/Button";
 import PagesHero from "../../Components/PagesHero";
 import Description from "../Description";
 import Reviews from "../Reviews";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
 
 import "../Products/Products.css";
 
@@ -12,7 +14,29 @@ import { FaCheck } from "react-icons/fa";
 import { BsHeart, BsShare, BsStarFill } from "react-icons/bs";
 import { useState } from "react";
 
-const index = ({ cart, addToCart, toggleTab, tab }) => {
+const index = ({
+  toggleTab,
+  tab,
+  cart,
+  carts,
+  addToCart,
+  favorite,
+  visible,
+  productVisible,
+  formVisible,
+  toggleFavorite,
+  toggleVisible,
+  setCarts,
+  setToggleFavorite,
+  setProductVisible,
+  setVisible,
+  increamentQuantity,
+  decreamentQuantity,
+  removeFromCart,
+  getQuantityTotal,
+  getTotalPrice,
+  cardThree,
+}) => {
   const [active, setActive] = useState(1);
 
   const toggleActive = (e) => {
@@ -31,6 +55,27 @@ const index = ({ cart, addToCart, toggleTab, tab }) => {
   };
   return (
     <>
+      <Header
+        carts={carts}
+        cart={cart}
+        addToCart={addToCart}
+        favorite={favorite}
+        visible={visible}
+        productVisible={productVisible}
+        formVisible={formVisible}
+        toggleVisible={toggleVisible}
+        setCarts={setCarts}
+        setToggleFavorite={setToggleFavorite}
+        toggleFavorite={toggleFavorite}
+        setProductVisible={setProductVisible}
+        removeFromCart={removeFromCart}
+        getTotalPrice={getTotalPrice}
+        increamentQuantity={increamentQuantity}
+        decreamentQuantity={decreamentQuantity}
+        setVisible={setVisible}
+        getQuantityTotal={getQuantityTotal}
+        cardThree={cardThree}
+      />
       <section className="products-page">
         <PagesHero />
         <section className="products-review-sec">
@@ -152,6 +197,7 @@ const index = ({ cart, addToCart, toggleTab, tab }) => {
         {tab == 1 ? <Description /> : <Reviews />}
         <div className="seller-sec"></div>
       </section>
+      <Footer />
     </>
   );
 };

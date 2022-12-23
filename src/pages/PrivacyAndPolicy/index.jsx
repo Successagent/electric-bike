@@ -1,13 +1,54 @@
-
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
 import PageHero from "../../Components/PagesHero";
 import PageIndication from "../../Components/PageIndication";
 
 import "../PrivacyAndPolicy/PrivacyAndPolicy.css";
 
-const index = () => {
+const index = ({
+  cart,
+  carts,
+  addToCart,
+  favorite,
+  visible,
+  productVisible,
+  formVisible,
+  toggleFavorite,
+  toggleVisible,
+  setCarts,
+  setToggleFavorite,
+  setProductVisible,
+  setVisible,
+  increamentQuantity,
+  decreamentQuantity,
+  removeFromCart,
+  getQuantityTotal,
+  getTotalPrice,
+  cardThree,
+}) => {
   return (
     <>
-      
+      <Header
+        carts={carts}
+        cart={cart}
+        addToCart={addToCart}
+        favorite={favorite}
+        visible={visible}
+        productVisible={productVisible}
+        formVisible={formVisible}
+        toggleVisible={toggleVisible}
+        setCarts={setCarts}
+        setToggleFavorite={setToggleFavorite}
+        toggleFavorite={toggleFavorite}
+        setProductVisible={setProductVisible}
+        removeFromCart={removeFromCart}
+        getTotalPrice={getTotalPrice}
+        increamentQuantity={increamentQuantity}
+        decreamentQuantity={decreamentQuantity}
+        setVisible={setVisible}
+        getQuantityTotal={getQuantityTotal}
+        cardThree={cardThree}
+      />
       <PageHero />
       <div className="condition">
         <PageIndication page="Privacy and Policy" other="Privacy and Policy" />
@@ -51,7 +92,7 @@ const index = () => {
           </div>
         </div>
       </section>
-      
+      <Footer />
     </>
   );
 };

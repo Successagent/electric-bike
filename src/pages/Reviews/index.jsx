@@ -1,7 +1,5 @@
 import GrayButton from "../../Components/GrayButton";
 
-
-
 import { BsStarFill } from "react-icons/bs";
 import { GrPrevious, GrNext } from "react-icons/gr";
 

@@ -1,5 +1,7 @@
 import PagesHero from "../../Components/PagesHero";
 import PageIndication from "../../Components/PageIndication";
+import Footer from "../../Components/Footer";
+import Header from "../../Components/Header";
 
 import FeatureCard from "../../Components/FeatureCard";
 import Button from "../../Components/Button";
@@ -12,9 +14,50 @@ import map from "../../assets/map.png";
 
 import "../Support/Support.css";
 
-const index = () => {
+const index = ({
+  cart,
+  carts,
+  addToCart,
+  favorite,
+  visible,
+  productVisible,
+  formVisible,
+  toggleFavorite,
+  toggleVisible,
+  setCarts,
+  setToggleFavorite,
+  setProductVisible,
+  setVisible,
+  increamentQuantity,
+  decreamentQuantity,
+  removeFromCart,
+  getQuantityTotal,
+  getTotalPrice,
+  cardThree,
+}) => {
   return (
     <>
+      <Header
+        cart={cart}
+        carts={carts}
+        addToCart={addToCart}
+        favorite={favorite}
+        visible={visible}
+        productVisible={productVisible}
+        formVisible={formVisible}
+        toggleVisible={toggleVisible}
+        setCarts={setCarts}
+        setToggleFavorite={setToggleFavorite}
+        toggleFavorite={toggleFavorite}
+        setProductVisible={setProductVisible}
+        removeFromCart={removeFromCart}
+        getTotalPrice={getTotalPrice}
+        increamentQuantity={increamentQuantity}
+        decreamentQuantity={decreamentQuantity}
+        setVisible={setVisible}
+        getQuantityTotal={getQuantityTotal}
+        cardThree={cardThree}
+      />
       <section className="support-page">
         <PagesHero />
         <PageIndication page="Support" other="Support" />
@@ -71,6 +114,7 @@ const index = () => {
           <img src={map} alt="" />
         </div>
       </section>
+      <Footer />
     </>
   );
 };
